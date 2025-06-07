@@ -34,7 +34,6 @@ set(
 	PRJ_INCLUDE_DIRS
 	"${CMAKE_SOURCE_DIR}/include"
 	"${CMAKE_SOURCE_DIR}/libs"
-	# Additional include dirs...
 )
 
 # Do not modify the variables below
@@ -61,11 +60,12 @@ if(DEFINED CACHE{${PRJ_SCOPE}_BENCHMARK} AND ${PRJ_SCOPE}_BENCHMARK)
 	add_subdirectory(3rdparty/benchmark)
 endif()
 
-## Includes
-#include_directories("${CMAKE_SOURCE_DIR}/include")
-#
-## Project Source
-#add_subdirectory("")
-#
-## Testing Source
+# Includes
+include_directories(${PRJ_INCLUDE_DIRS})
+
+# Sources
+#add_subdirectory(libs)
+#add_subdirectory(src)
+
+# Testing
 #add_subdirectory(tests)
