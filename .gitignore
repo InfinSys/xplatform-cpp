@@ -1,0 +1,23 @@
+
+# Ignore IDE project directories
+.vs/*
+.vscode/*
+
+# EXCEPT THE FOLLOWING IDE PROJECT FILES:
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Ignore binary output directory
+build/*
+
+# Ignore Doxygen output directory
+docs/ref/doxygen/*
+docs/ref/index.html
+
+# Ignore Ghidra project directory
+ghidra/*
+
+# Ignore all draw.io metadata files
+docs/prj/*.bkp
+docs/prj/*.dtmp
