@@ -52,5 +52,33 @@
             }
         }
         
+    ],
+
+    "buildPresets": [
+        {
+            "name": "win32-x64-Debug",
+            "displayName": "Debug x64",
+            "configurePreset": "win32-x64-Debug",
+            "jobs": 0
+        },
+        {
+            "name": "win32-x64-Release",
+            "displayName": "Release x64",
+            "configurePreset": "win32-x64-Release",
+            "jobs": 0
+        },
+
+        {
+            "name": "linux-x64-Debug",
+            "displayName": "Debug x64",
+            "configurePreset": "linux-x64-Debug",
+            "jobs": 0
+        },
+        {
+            "name": "linux-x64-Release",
+            "displayName": "Release x64",
+            "configurePreset": "linux-x64-Release",
+            "jobs": 0
+        }
     ]
 }
