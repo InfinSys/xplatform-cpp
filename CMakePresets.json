@@ -1,0 +1,56 @@
+{
+    "version": 8,
+    "configurePresets": [
+
+        {
+            "name": "win32-x64-Debug",
+            "displayName": "Windows x64 (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "gcc.exe",
+                "CMAKE_CXX_COMPILER": "g++.exe",
+                "CMAKE_ASM_COMPILER": "gcc.exe"
+            }
+        },
+        {
+            "name": "win32-x64-Release",
+            "displayName": "Windows x64 (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "gcc.exe",
+                "CMAKE_CXX_COMPILER": "g++.exe",
+                "CMAKE_ASM_COMPILER": "gcc.exe"
+            }
+        },
+
+        {
+            "name": "linux-x64-Debug",
+            "displayName": "Linux x64 (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_ASM_COMPILER": "gcc"
+            }
+        },
+        {
+            "name": "linux-x64-Release",
+            "displayName": "Linux x64 (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_ASM_COMPILER": "gcc"
+            }
+        }
+        
+    ]
+}
