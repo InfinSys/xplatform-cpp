@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+
+        // Developer CLI executable configure task
+        {
+            "label": "Dev CLI: Configure (x64)",
+            "type": "shell",
+            "command": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$msCompile", "$gcc"],
+            "group": "build",
+
+            "windows": {
+                "args": ["--preset", "win32-x64-Debug"],
+            },
+            "linux": {
+                "args": ["--preset", "linux-x64-Debug"],
+            },
+        },
+
+        // Developer CLI executable build task
+        {
+            "label": "Dev CLI: Build (x64)",
+            "type": "shell",
+            "command": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$msCompile", "$gcc"],
+            "group": "build",
+
+            "windows": {
+                "args": ["--build", "--preset", "win32-x64-Debug"],
+            },
+            "linux": {
+                "args": ["--build", "--preset", "linux-x64-Debug"],
+            },
+
+            "dependsOn": ["Dev CLI: Configure (x64)"]
+        },
+        
+    ]
+}
