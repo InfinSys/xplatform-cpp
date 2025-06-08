@@ -1,7 +1,7 @@
 # Cross-Platform C++ Template
 
 ### **Start your next cross-platform C++ project with confidence!**
-### **This repository provides a robust and opinionated template, designed to streamline your development workflow from day one. Say goodbye to tedious boilerplate setup and dive straight into building your application, whether you're targeting Windows, Linux, macOS, or beyond. Leveraging the power of CMake, this template offers a pre-configured, highly adaptable foundation that integrates seamlessly with modern development environments like VS Code, while remaining flexible for your preferred tools**
+**This repository provides a robust and opinionated template, designed to streamline your development workflow from day one. Say goodbye to tedious boilerplate setup and dive straight into building your application, whether you're targeting Windows, Linux, macOS, or beyond. Leveraging the power of CMake, this template offers a pre-configured, highly adaptable foundation that integrates seamlessly with modern development environments like VS Code, while remaining flexible for your preferred tools**
 
 </br>
 
@@ -10,7 +10,7 @@
 > At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled flexibility and control over your project's compilation, linking, and packaging across diverse platforms. Many of the template's advanced features are powered directly by CMake's capabilities.
 
 ### **Customizable CMake Variables (Scope Convention):**
-> The template introduces a 'scope' convention for caching CMake variables. You'll define a short, unique scope identifier for your project. Furthermore, critical template-controlling variables are prefixed with `PRJ_` in the root `CMakeLists.txt`. Users are encouraged to locate these *PRJ_* prefixed variables and override their default values to tailor the template to their specific project needs.
+> The template introduces a 'scope' convention for caching CMake variables. You'll define a short, unique scope identifier for your project. Furthermore, critical template-controlling variables are prefixed with `PRJ_` in the root `CMakeLists.txt`. Users are encouraged to locate these '*PRJ_*' prefixed variables and override their default values to tailor the template to their specific project needs.
 
 ### **VS Code Integration:**
 > While fully compatible with any development environment, this template is designed with Visual Studio Code in mind. The included `.vscode` directory contains pre-configured `extensions.json`, `tasks.json`, and `launch.json` files. These configurations streamline common development tasks:
@@ -20,3 +20,11 @@
 
 ### **Automated Code Formatting (Clang-Format Compatible):**
 > Maintain a consistent codebase effortlessly. This template is "*clang-format compatible*", including a fully customized `.clang-format` file in the root directory. This allows for automated code formatting, ensuring readability and adherence to coding standards across a team.
+
+### **Integrated Testing & Benchmarking:**
+> Accelerate your development with built-in support for industry-standard testing and benchmarking frameworks. This template is configured to pull GoogleTest and Google Benchmark directly from GitHub during CMake configuration. These features can be individually activated by defining `<PRJ_SCOPE>_<FEATURE>` (*e.g.*, `MYPROJ_TEST` or `MYPROJ_BENCHMARK`) in the provided `CMakePresets.json` file. Setting these values to '*ON*' or '*OFF*' will control their inclusion during the configuration and build steps.
+
+### **Streamlined Documentation Generation:**
+> Documenting your project is made easier with a dedicated `docs` folder. This includes a pre-configured `Doxygen` file, enabling the generation of comprehensive PDF and HTML documentation for your codebase. To further simplify this process, handy `generate_docs.bat` (*for Windows*) and `generate_docs.sh` (*for Linux/macOS*) scripts are provided, automating the Doxygen invocation.
+> 
+> ***Note:*** **Doxygen must be installed on your system.**
