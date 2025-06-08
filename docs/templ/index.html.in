@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=./doxygen/html/index.html">
+    <title>@RESOLVED_SFTW_NAME@ Docs Launcher</title>
+</head>
+<body>
+    <p>If you are not redirected automatically, follow this <a href="./doxygen/html/index.html">link to the @RESOLVED_SFTW_NAME@ documentation</a>.</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# @RESOLVED_SFTW_NAME@
+##### @RESOLVED_SFTW_PUBLISHER@
+
+<br/>
+
+![Static Badge](https://img.shields.io/badge/latest_version-@CMAKE_PROJECT_VERSION_MAJOR@.@CMAKE_PROJECT_VERSION_MINOR@.@CMAKE_PROJECT_VERSION_PATCH@.@CMAKE_PROJECT_VERSION_TWEAK@-blue)
+
+<br/>
+
+### ( ***Nothing here yet, come back soon!*** )
