@@ -37,7 +37,7 @@ endmacro()
 
 # TODO: Personalize software metadata...
 set_metadata(PUBLISHER "<Publisher/Creator>" DESCRIPTION "Product publisher")
-set_metadata(PRODUCT_TYPE "<Executable or Library>" DESCRIPTION "Product publisher")
+set_metadata(PRODUCT_TYPE "<Executable or Library>" DESCRIPTION "Software type")
 set_metadata(INTERFACE_TYPE "<API, CLI, or GUI>" DESCRIPTION "Product interface")
 set_metadata(UUID "<Unique identifier>" DESCRIPTION "Product unique identifier")
 set_metadata(LICENSE_TYPE "<MIT, GPLv3, Proprietary, etc.>" DESCRIPTION "Product license type")
