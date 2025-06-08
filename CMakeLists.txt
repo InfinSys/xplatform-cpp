@@ -30,6 +30,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 
+set(PRJ_CMAKE_MODULE_DIR "${CMAKE_SOURCE_DIR}/scripts/cmake")
+list(APPEND CMAKE_MODULE_PATH "${PRJ_CMAKE_MODULE_DIR}")
+
 set(
 	PRJ_INCLUDE_DIRS
 	"${CMAKE_SOURCE_DIR}/include"
@@ -64,8 +67,8 @@ endif()
 include_directories(${PRJ_INCLUDE_DIRS})
 
 # Sources
-#add_subdirectory(libs)
-#add_subdirectory(src)
+add_subdirectory(libs)
+add_subdirectory(src)
 
 # Testing
 #add_subdirectory(tests)
