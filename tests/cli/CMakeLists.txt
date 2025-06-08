@@ -4,12 +4,12 @@
 #======================================
 
 add_executable(
-    host_cli_debug
+    dev_cli_debug
     "${CMAKE_CURRENT_SOURCE_DIR}/dev_exe.cpp"
 )
 
 target_compile_features(
-    host_cli_debug
+    dev_cli_debug
 
     PUBLIC
     cxx_std_20
@@ -19,5 +19,5 @@ target_compile_features(
 #    host_cli_debug
 #
 #    PRIVATE
-#    <N/A>
+#    [Source targets]
 #)
