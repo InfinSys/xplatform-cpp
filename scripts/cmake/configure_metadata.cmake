@@ -3,6 +3,8 @@
 #     PROJECT METADATA MODULE
 #==================================
 
+include(configure_tools)
+
 set(${PRJ_SCOPE}_PUBLISHER "<Publisher/Creator>" CACHE STRING "Product publisher" FORCE)
 set(${PRJ_SCOPE}_PRODUCT_TYPE "<Executable or Library>" CACHE STRING "Product type" FORCE)
 set(${PRJ_SCOPE}_INTERFACE_TYPE "<API, CLI, or GUI>" CACHE STRING "Product interface" FORCE)
@@ -38,46 +40,39 @@ set(
 	RESOLVED_SFTW_META_PREFIX
 )
 
-configure_file(
+configure_template(
 	"${CMAKE_SOURCE_DIR}/docs/templ/LICENSE.in"
 	"${CMAKE_SOURCE_DIR}/LICENSE"
-	@ONLY
 )
 
-configure_file(
+configure_template(
 	"${CMAKE_SOURCE_DIR}/docs/templ/README.md.in"
 	"${CMAKE_SOURCE_DIR}/README.md"
-	@ONLY
 )
 
-configure_file(
+configure_template(
 	"${CMAKE_SOURCE_DIR}/docs/templ/Doxyfile.in"
 	"${CMAKE_SOURCE_DIR}/docs/Doxyfile"
-	@ONLY
 )
 
-configure_file(
+configure_template(
 	"${CMAKE_SOURCE_DIR}/docs/templ/index.html.in"
 	"${CMAKE_SOURCE_DIR}/docs/ref/index.html"
-	@ONLY
 )
 
-configure_file(
+configure_template(
 	"${CMAKE_SOURCE_DIR}/docs/templ/inaug.md.in"
 	"${CMAKE_SOURCE_DIR}/docs/prj/inaug.md"
-	@ONLY
 )
 
-configure_file(
+configure_template(
 	"${CMAKE_SOURCE_DIR}/libs/metadata/templ/info.h.in"
 	"${CMAKE_SOURCE_DIR}/libs/metadata/info.h"
-	@ONLY
 )
 
-configure_file(
+configure_template(
 	"${CMAKE_SOURCE_DIR}/libs/metadata/templ/version.h.in"
 	"${CMAKE_SOURCE_DIR}/libs/metadata/version.h"
-	@ONLY
 )
 
 # Remove temporary cache variables
