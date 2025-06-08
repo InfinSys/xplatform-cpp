@@ -43,6 +43,8 @@ set(
 set(CLI_DEBUGGING OFF)
 set(UNIT_TESTING OFF)
 set(BENCHMARKING OFF)
+
+set(FORMATTING OFF)
 # Do not modify the variables above
 
 if(DEFINED CACHE{${PRJ_SCOPE}_CLI_DEBUG} AND ${PRJ_SCOPE}_CLI_DEBUG)
@@ -61,6 +63,19 @@ if(DEFINED CACHE{${PRJ_SCOPE}_BENCHMARK} AND ${PRJ_SCOPE}_BENCHMARK)
 	message(STATUS "${PRJ_NAME} benchmark build - enabled")
 	set(BENCHMARKING ON)
 	add_subdirectory(3rdparty/benchmark)
+endif()
+
+if(DEFINED CACHE{${PRJ_SCOPE}_FORMAT} AND ${PRJ_SCOPE}_FORMAT)
+	find_program(CLANG_FORMAT_EXECUTABLE clang-format)
+
+	if(NOT CLANG_FORMAT_EXECUTABLE)
+		message(WARNING "clang-format not found: Source code will not be formatted")
+	else()
+		message(STATUS "${PRJ_NAME} auto formatting - enabled")
+		set(FORMATTING ON)
+		include(clang_format)
+		format_source_code()
+	endif()
 endif()
 
 # Includes
