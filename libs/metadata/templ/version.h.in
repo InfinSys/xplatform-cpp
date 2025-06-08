@@ -1,0 +1,42 @@
+
+/*!
+* @file version.h
+*
+* @brief
+* Software version document.
+*
+* @details
+* Version information for @RESOLVED_SFTW_NAME@.
+*/
+
+
+#ifndef @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_VERSION_H_
+#define @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_VERSION_H_
+
+#include <stdint.h>
+
+/*!
+* @brief
+* Software version major.
+*/
+const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_MAJOR KEEP_METADATA = @CMAKE_PROJECT_VERSION_MAJOR@;
+
+/*!
+* @brief
+* Software version minor.
+*/
+const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_MINOR KEEP_METADATA = @CMAKE_PROJECT_VERSION_MINOR@;
+
+/*!
+* @brief
+* Software version patch number.
+*/
+const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_PATCH KEEP_METADATA = @CMAKE_PROJECT_VERSION_PATCH@;
+
+/*!
+* @brief
+* Software version tweak number.
+*/
+const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_TWEAK KEEP_METADATA = @CMAKE_PROJECT_VERSION_TWEAK@;
+
+#endif // @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_VERSION_H_

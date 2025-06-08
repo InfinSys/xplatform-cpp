@@ -1,0 +1,66 @@
+
+/*!
+* @file info.h
+*
+* @brief
+* Software identification document.
+*
+* @details
+* Metadata for @RESOLVED_SFTW_NAME@.
+*/
+
+
+#ifndef @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_IDENTITY_H_
+#define @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_IDENTITY_H_
+
+#include <stdint.h>
+
+/*!
+* @brief
+* @RESOLVED_SFTW_NAME@ publisher.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_PUBLISHER[] = "@RESOLVED_SFTW_PUBLISHER@";
+
+/*!
+* @brief
+* @RESOLVED_SFTW_NAME@ software type.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_TYPE[] = "@RESOLVED_SFTW_TYPE@";
+
+/*!
+* @brief
+* @RESOLVED_SFTW_NAME@ interface type.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_INTERFACE_TYPE[] = "@RESOLVED_SFTW_INTERFACE@";
+
+/*!
+* @brief
+* @RESOLVED_SFTW_NAME@ universally unique identifier.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_UUID[] = "@RESOLVED_SFTW_UUID@";
+
+/*!
+* @brief
+* @RESOLVED_SFTW_NAME@ distribution license type.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_LICENSE_TYPE[] = "@RESOLVED_SFTW_LICENSE_TYPE@";
+
+/*!
+* @brief
+* Software full name.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_FULL_NAME[] = "@RESOLVED_SFTW_NAME@";
+
+/*!
+* @brief
+* Software short name.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_SHORT_NAME[] = "@RESOLVED_SFTW_SHORT_NAME@";
+
+/*!
+* @brief
+* @RESOLVED_SFTW_NAME@ main binary name.
+*/
+const char @RESOLVED_SFTW_META_PREFIX@_MAIN_BINARY[] = "@RESOLVED_SFTW_MAIN_BINARY@";
+
+#endif // @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_IDENTITY_H_
