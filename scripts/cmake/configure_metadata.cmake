@@ -3,17 +3,48 @@
 #     PROJECT METADATA MODULE
 #==================================
 
-include(configure_tools)
+# Configure a templated file
+macro(configure_template TEMPLATE_PATH DESTINATION_PATH)
+    configure_file(
+        ${TEMPLATE_PATH}
+        ${DESTINATION_PATH}
+        @ONLY
+    )
 
-set(${PRJ_SCOPE}_PUBLISHER "<Publisher/Creator>" CACHE STRING "Product publisher" FORCE)
-set(${PRJ_SCOPE}_PRODUCT_TYPE "<Executable or Library>" CACHE STRING "Product type" FORCE)
-set(${PRJ_SCOPE}_INTERFACE_TYPE "<API, CLI, or GUI>" CACHE STRING "Product interface" FORCE)
-set(${PRJ_SCOPE}_UUID "<Unique identifier>" CACHE STRING "Product unique identifier" FORCE)
-set(${PRJ_SCOPE}_LICENSE_TYPE "<MIT, GPLv3, Proprietary, etc.>" CACHE STRING "Product license type" FORCE)
-set(${PRJ_SCOPE}_FULL_NAME "<Name>" CACHE STRING "Product name" FORCE)
-set(${PRJ_SCOPE}_SHORT_NAME "<Short name>" CACHE STRING "Product short name" FORCE)
-set(${PRJ_SCOPE}_MAIN_BINARY_NAME "<Main binary name>" CACHE STRING "Main binary" FORCE)
-set(${PRJ_SCOPE}_META_PREFIX "${PRJ_SCOPE}" CACHE STRING "Project metadata prefix" FORCE)
+    message(STATUS "Configured file: ${DESTINATION_PATH}")
+endmacro()
+
+# Cache project metadata
+macro(set_metadata FIELD VALUE)
+	set(options "")
+	set(one_value_keywords DESCRIPTION)
+	set(multi_value_keywords "")
+
+	cmake_parse_arguments(
+		ARGSS
+		"${options}"
+		"${one_value_keywords}"
+		"${multi_value_keywords}"
+		${ARGN}
+	)
+
+	if(ARGSS_DESCRIPTION STREQUAL "")
+		set(ARGSS_DESCRIPTION "No description provided for '${FIELD}'")
+	endif()
+
+	set(${PRJ_SCOPE}_${FIELD} "${VALUE}" CACHE STRING "${ARGSS_DESCRIPTION}" FORCE)
+endmacro()
+
+# TODO: Personalize software metadata...
+set_metadata(PUBLISHER "<Publisher/Creator>" DESCRIPTION "Product publisher")
+set_metadata(PRODUCT_TYPE "<Executable or Library>" DESCRIPTION "Product publisher")
+set_metadata(INTERFACE_TYPE "<API, CLI, or GUI>" DESCRIPTION "Product interface")
+set_metadata(UUID "<Unique identifier>" DESCRIPTION "Product unique identifier")
+set_metadata(LICENSE_TYPE "<MIT, GPLv3, Proprietary, etc.>" DESCRIPTION "Product license type")
+set_metadata(FULL_NAME "<Name>" DESCRIPTION "Product name")
+set_metadata(SHORT_NAME "<Short name>" DESCRIPTION "Product short name")
+set_metadata(MAIN_BINARY_NAME "<Main binary name>" DESCRIPTION "Main binary")
+set_metadata(META_PREFIX "${PRJ_SCOPE}" DESCRIPTION "Project metadata prefix")
 
 # Temporarily cached variables
 set(RESOLVED_SFTW_PUBLISHER "${${PRJ_SCOPE}_PUBLISHER}" CACHE STRING "Temporary" FORCE)
