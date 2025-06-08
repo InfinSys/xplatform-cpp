@@ -4,5 +4,3 @@
 #==========================================
 
 include(configure_metadata)
-
-# Continue...
