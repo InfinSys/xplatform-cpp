@@ -71,4 +71,4 @@ add_subdirectory(libs)
 add_subdirectory(src)
 
 # Testing
-#add_subdirectory(tests)
+add_subdirectory(tests)
