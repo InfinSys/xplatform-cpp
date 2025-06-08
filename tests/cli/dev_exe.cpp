@@ -9,8 +9,6 @@
 *
 * ~ CLI Debug Executable Notes / TO-DO List ~
 *
-* -> [] Create VS Code Configure/Build tasks for dev_cli_debug
-* -> [] Create VS Code dev_cli_debug launch spec
 * -> [] n/a
 *
 \* /// \\\ /// \\\ ///  | END |  \\\ /// \\\ /// \\\ */
