@@ -13,16 +13,6 @@ set(${PRJ_SCOPE}_SHORT_NAME "<Short name>" CACHE STRING "Product short name" FOR
 set(${PRJ_SCOPE}_MAIN_BINARY_NAME "<Main binary name>" CACHE STRING "Main binary" FORCE)
 set(${PRJ_SCOPE}_META_PREFIX "${LOCAL_PROJECT_SCOPE}" CACHE STRING "Project metadata prefix" FORCE)
 
-if(WIN32)
-	set(${PRJ_SCOPE}_COMPILE_PLATFORM 0 CACHE STRING "Binary compiled on Windows platform" FORCE)
-elseif(APPLE)
-	set(${PRJ_SCOPE}_COMPILE_PLATFORM 2 CACHE STRING "Binary compiled on macOS platform" FORCE)
-elseif(UNIX)
-	set(${PRJ_SCOPE}_COMPILE_PLATFORM 1 CACHE STRING "Binary compiled on Linux platform" FORCE)
-else()
-	set(${PRJ_SCOPE}_COMPILE_PLATFORM -1 CACHE STRING "Binary compiled on unknown platform" FORCE)
-endif()
-
 # Temporarily cached variables
 set(RESOLVED_SFTW_PUBLISHER "${${PRJ_SCOPE}_PUBLISHER}" CACHE STRING "Temporary" FORCE)
 set(RESOLVED_SFTW_TYPE "${${PRJ_SCOPE}_PRODUCT_TYPE}" CACHE STRING "Temporary" FORCE)
@@ -33,7 +23,6 @@ set(RESOLVED_SFTW_NAME "${${PRJ_SCOPE}_FULL_NAME}" CACHE STRING "Temporary" FORC
 set(RESOLVED_SFTW_SHORT_NAME "${${PRJ_SCOPE}_SHORT_NAME}" CACHE STRING "Temporary" FORCE)
 set(RESOLVED_SFTW_MAIN_BINARY "${${PRJ_SCOPE}_MAIN_BINARY_NAME}" CACHE STRING "Temporary" FORCE)
 set(RESOLVED_SFTW_META_PREFIX "${${PRJ_SCOPE}_META_PREFIX}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_COMPILE_PLATFORM "${${PRJ_SCOPE}_COMPILE_PLATFORM}" CACHE STRING "Temporary" FORCE)
 
 set(
 	TEMP_CACHE_VARS
@@ -47,7 +36,6 @@ set(
 	RESOLVED_SFTW_SHORT_NAME
 	RESOLVED_SFTW_MAIN_BINARY
 	RESOLVED_SFTW_META_PREFIX
-	RESOLVED_SFTW_COMPILE_PLATFORM
 )
 
 configure_file(
@@ -80,21 +68,19 @@ configure_file(
 	@ONLY
 )
 
+configure_file(
+	"${CMAKE_SOURCE_DIR}/libs/metadata/templ/info.h.in"
+	"${CMAKE_SOURCE_DIR}/libs/metadata/info.h"
+	@ONLY
+)
+
+configure_file(
+	"${CMAKE_SOURCE_DIR}/libs/metadata/templ/version.h.in"
+	"${CMAKE_SOURCE_DIR}/libs/metadata/version.h"
+	@ONLY
+)
+
 # Remove temporary cache variables
 foreach(TEMPVAR ${TEMP_CACHE_VARS})
 	unset(${TEMPVAR} CACHE)
 endforeach()
-
-
-
-#configure_file(
-#	"${CMAKE_SOURCE_DIR}/include/meta/templ/version.h.in"
-#	"${CMAKE_SOURCE_DIR}/include/meta/version.h"
-#	@ONLY
-#)
-#
-#configure_file(
-#	"${CMAKE_SOURCE_DIR}/include/meta/templ/info.h.in"
-#	"${CMAKE_SOURCE_DIR}/include/meta/info.h"
-#	@ONLY
-#)
