@@ -47,12 +47,12 @@ endmacro()
 
 # TODO: Personalize software metadata...
 set_metadata(PUBLISHER "<Publisher/Creator>" DESCRIPTION "Product publisher")
-set_metadata(PRODUCT_TYPE "<Executable or Library>" DESCRIPTION "Software type")
-set_metadata(INTERFACE_TYPE "<API, CLI, or GUI>" DESCRIPTION "Product interface")
+set_metadata(PRODUCT_TYPE "<Executable, Library, or Firmware>" DESCRIPTION "Software type")
+set_metadata(INTERFACE_TYPE "<GUI, CLI, API, or HSI>" DESCRIPTION "Product interface")
 set_metadata(UUID "<Unique identifier>" DESCRIPTION "Product unique identifier")
 set_metadata(LICENSE_TYPE "<MIT, GPLv3, Proprietary, etc.>" DESCRIPTION "Product license type")
-set_metadata(FULL_NAME "<Name>" DESCRIPTION "Product name")
-set_metadata(SHORT_NAME "<Short name>" DESCRIPTION "Product short name")
+set_metadata(FULL_NAME "<Software name>" DESCRIPTION "Product name")
+set_metadata(SHORT_NAME "<Software shorter name>" DESCRIPTION "Product short name")
 set_metadata(MAIN_BINARY_NAME "<Main binary name>" DESCRIPTION "Main binary")
 set_metadata(META_PREFIX "${PRJ_SCOPE}" DESCRIPTION "Project metadata prefix")
 
