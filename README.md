@@ -32,7 +32,7 @@
 > - `PRJ_INCLUDE_DIRS`
 >
 > ### </br>Users are expected to customize these variables to better align with their project requirements.
-> *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. Additionally, the `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic. The variables listed above however, are not the only customizable elements to this template.
+> *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. Additionally, the `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic. The variables listed above however, are not the only easily customizable elements in this template.
 
 ### **Centralized Project Metadata Configuration:**</br>
 > This template includes a [`configure_metadata.cmake`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/scripts/cmake/configure_metadata.cmake) script to centralize and manage essential software metadata. This script allows users to define key project attributes that are then "baked" into the resulting executables or libraries by configuring template `.in` files.
