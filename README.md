@@ -7,12 +7,23 @@
 
 </br>
 
+## Setup
+#### Clone this repository using the CLI: </br> `git clone https://github.com/InfinSys/xplatform-cpp.git <destination>`,
+
+### **OR**
+
+#### by [downloading the source ZIP file](https://github.com/InfinSys/xplatform-cpp/archive/refs/heads/main.zip) and extracting it to a prefered location.
+
+</br>
+
 ## Designed with several key characteristics to empower cross-platform C++ development
-> ### **CMake-Centric Build System:**
+### **CMake-Centric Build System:**</br>
 > At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled flexibility and control over your project's compilation, linking, and packaging across diverse platforms. Many of the template's advanced features are powered directly by CMake's capabilities.
 
-> ### **Customizable CMake Variables (Scope Convention):**
-> This template introduces a project-specific 'scope' convention for CMake cache variables. This mechanism is crucial for preventing silent cache clashes when managing multiple projects derived from this template, or when integrating with other CMake-based workflows. You'll define a short, unique scope identifier for your project that will be used by CMake to mask the project cache variables behind a prefix. This scope prefix can be specified in the root `CMakeLists.txt` file by modifying the `PRJ_SCOPE` variable. Furthermore, critical template configuration is controlled by similar variables (prefixed with `PRJ_`) in the root `CMakeLists.txt`. These include:
+### **Customizable CMake Variables (Scope Convention):**</br>
+> This template introduces a project-specific 'scope' convention for CMake cache variables. This mechanism is crucial for preventing silent cache clashes when managing multiple projects derived from this template, or when integrating with other CMake-based workflows. You'll define a short, unique scope identifier for your project that will be used by CMake to mask the project cache variables behind a prefix. This scope prefix can be specified in the root `CMakeLists.txt` file by modifying the `PRJ_SCOPE` variable. Furthermore, critical template configuration is controlled by similar variables (prefixed with `PRJ_`) in the root `CMakeLists.txt`.
+>
+> ### </br>Template CMake Variables:
 > - `PRJ_NAME`
 > - `PRJ_SCOPE`
 > - `PRJ_C_STANDARD`
@@ -20,7 +31,7 @@
 > - `PRJ_CMAKE_MODULE_DIR`
 > - `PRJ_INCLUDE_DIRS`
 >
-> Users are expected to customize these variables to better align with their project requirements. **The `PRJ_SCOPE` variable is particularly significant**; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. These `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic.
+> ### </br>Users are expected to customize these variables to better align with their project requirements. *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. These `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic.
 
 > ### **VS Code Integration:**
 > While fully compatible with any development environment, this template is designed with Visual Studio Code in mind. The included `.vscode` directory contains pre-configured `extensions.json`, `tasks.json`, and `launch.json` files. These configurations streamline common development tasks:
