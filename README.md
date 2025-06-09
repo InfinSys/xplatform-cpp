@@ -16,6 +16,21 @@
 
 </br>
 
+Once you have the repository locally available, you can begin modifying the template as you please and configure/build the project. This template is designed to achieve both of these straight out of the box, so you need not modify anything to verify everything is functioning accordingly. Simply `cd` to the repositories directory and run the following command:
+### For Windows:
+```bash
+cmake --preset win32-x64-Debug
+```
+
+### For Linux:
+```bash
+cmake --preset linux-x64-Debug
+```
+
+### ***HEADS-UP:*** Once you instruct CMake to configure the project, this README will be overwritten by the configured version.
+
+</br>
+
 ## Designed with several key characteristics to empower cross-platform C++ development
 ### **CMake-Centric Build System:**</br>
 > At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled flexibility and control over your project's compilation, linking, and packaging across diverse platforms. Many of the template's advanced features are powered directly by CMake's capabilities. You can find the [official CMake documentation here](https://cmake.org/cmake/help/latest/index.html).
