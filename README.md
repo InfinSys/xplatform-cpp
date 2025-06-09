@@ -3,7 +3,7 @@
 
 ### **Accelerate your cross-platform C++ development**
 
-**This repository offers a robust template, designed to provide a comprehensive foundation for your next C++ project. It eliminates the complexities of initial setup, allowing developers to focus immediately on application logic across diverse operating systems such as Windows, Linux, and macOS. Using CMake, this template integrates seamlessly with modern development tools and environments like VS Code, Visual Studio, CLion, and more, while maintaining the flexibility to adapt to your preferred toolchain.**
+**This repository offers a robust template, designed to provide a comprehensive foundation for your next C++ project. It eliminates the complexities of initial setup, allowing you to focus immediately on application logic across diverse operating systems such as Windows, Linux, and macOS. Using CMake, this template integrates seamlessly with modern development tools and environments like VS Code, Visual Studio, CLion, and more, while maintaining the flexibility to adapt to your preferred toolchain.**
 
 </br>
 
@@ -21,7 +21,7 @@
 > At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled flexibility and control over your project's compilation, linking, and packaging across diverse platforms. Many of the template's advanced features are powered directly by CMake's capabilities. You can find the [official CMake documentation here](https://cmake.org/cmake/help/latest/index.html).
 
 ### **Customizable CMake Variables (Scope Convention):**</br>
-> This template introduces a *project-specific 'scope'* convention for CMake cache variables. This mechanism is crucial for preventing silent cache clashes when managing multiple projects derived from this template, or when integrating with other CMake-based workflows. You'll define a short, unique scope identifier for your project that will be used by CMake to mask the project cache variables behind a prefix. This scope prefix can be specified in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt) file by modifying the `PRJ_SCOPE` variable. Furthermore, critical template configuration is controlled by similar variables (prefixed with `PRJ_`) in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt).
+> This template features a *project-specific 'scope'* convention for CMake cache variables. This mechanism is crucial for preventing silent cache clashes when managing multiple projects derived from this template, or when integrating with other CMake-based workflows. You'll define a short, unique scope identifier for your project that will be used by CMake to mask the project cache variables behind a prefix. This scope prefix can be specified in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt) file by modifying the `PRJ_SCOPE` variable. Furthermore, critical template configuration is controlled by similar variables (prefixed with `PRJ_`) in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt).
 >
 > ### </br>Template CMake Variables:
 > - `PRJ_NAME`
@@ -31,11 +31,11 @@
 > - `PRJ_CMAKE_MODULE_DIR`
 > - `PRJ_INCLUDE_DIRS`
 >
-> ### </br>Users are expected to customize these variables to better align with their project requirements.
-> *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. Additionally, the `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic. The variables listed above however, are not the only easily customizable elements in this template.
+> ### </br>Users are expected to customize these variables to align with their project requirements.
+> *The* `PRJ_SCOPE` *variable is especially significant*; it defines the unique prefix for your project's cached variables, ensuring isolation and preventing conflicts. CMake script variables prefixed with `PRJ_` are integral to the template and initial CMake setup but can also be leveraged throughout your project's CMake logic. The variables listed above are not the only easily customizable elements of this template.
 
 ### **Centralized Project Metadata Configuration:**</br>
-> This template includes a [`configure_metadata.cmake`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/scripts/cmake/configure_metadata.cmake) script to centralize and manage essential software metadata. This script allows users to define key project attributes that are then "baked" into the resulting executables or libraries by configuring template `.in` files.
+> This template includes a [`configure_metadata.cmake`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/scripts/cmake/configure_metadata.cmake) script to centralize and manage essential software metadata. This script allows you to define key project attributes that are then "baked" into the resulting executables or libraries by configuring template `.in` files.
 > - **Configurable Fields:** Key metadata fields include: `PUBLISHER`, `PRODUCT_TYPE` (*e.g.*, Executable, Library, or Firmware), `INTERFACE_TYPE` (*e.g.*, GUI, CLI, API, or HSI), `UUID`, `LICENSE_TYPE` (*e.g.*, MIT, GPLv3, Proprietary, etc.), `FULL_NAME`, `SHORT_NAME`, `MAIN_BINARY_NAME`, and `META_PREFIX` (*for generated in-code metadata symbols*).</br>
 > - **Project-Wide Consistency:** These defined values are cached and used to configure critical project files, such as [`README.md`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/docs/templ/README.md.in), [`LICENSE`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/docs/templ/LICENSE.in), [`Doxyfile`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/docs/templ/Doxyfile.in), and internal software metadata/version headers. This mechanism ensures consistent version strings and project details across all relevant documentation and binaries, significantly reducing potential inconsistencies.
 >
