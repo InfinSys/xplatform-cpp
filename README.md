@@ -21,7 +21,7 @@
 > At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled flexibility and control over your project's compilation, linking, and packaging across diverse platforms. Many of the template's advanced features are powered directly by CMake's capabilities.
 
 ### **Customizable CMake Variables (Scope Convention):**</br>
-> This template introduces a project-specific 'scope' convention for CMake cache variables. This mechanism is crucial for preventing silent cache clashes when managing multiple projects derived from this template, or when integrating with other CMake-based workflows. You'll define a short, unique scope identifier for your project that will be used by CMake to mask the project cache variables behind a prefix. This scope prefix can be specified in the root `CMakeLists.txt` file by modifying the `PRJ_SCOPE` variable. Furthermore, critical template configuration is controlled by similar variables (prefixed with `PRJ_`) in the root `CMakeLists.txt`.
+> This template introduces a *project-specific 'scope'* convention for CMake cache variables. This mechanism is crucial for preventing silent cache clashes when managing multiple projects derived from this template, or when integrating with other CMake-based workflows. You'll define a short, unique scope identifier for your project that will be used by CMake to mask the project cache variables behind a prefix. This scope prefix can be specified in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt) file by modifying the `PRJ_SCOPE` variable. Furthermore, critical template configuration is controlled by similar variables (prefixed with `PRJ_`) in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt).
 >
 > ### </br>Template CMake Variables:
 > - `PRJ_NAME`
@@ -31,12 +31,12 @@
 > - `PRJ_CMAKE_MODULE_DIR`
 > - `PRJ_INCLUDE_DIRS`
 >
-> ### </br>Users are expected to customize these variables to better align with their project requirements. *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. These `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic.
+> ### </br>Users are expected to customize these variables to better align with their project requirements. *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. Additionally, the `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic.
 
-> ### **VS Code Integration:**
-> While fully compatible with any development environment, this template is designed with Visual Studio Code in mind. The included `.vscode` directory contains pre-configured `extensions.json`, `tasks.json`, and `launch.json` files. These configurations streamline common development tasks:
+### **VS Code Integration:**</br>
+> While fully compatible with any development environment, this template is designed with [**Visual Studio Code**](https://code.visualstudio.com/) in mind. The included [`.vscode`](https://github.com/InfinSys/xplatform-cpp/tree/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode) directory contains pre-configured [`extensions.json`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode/extensions.json), [`tasks.json`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode/tasks.json), and [`launch.json`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode/launch.json) files. These configurations streamline common development tasks:
 > - **Tasks:** Pre-configured tasks automate CMake configuration and building of the primary developer command-line interface (CLI) executable.
-> - **Launchers:** The debugger (`launch.json`) is set up to automatically run these CMake tasks before launching the developer CLI executable, ensuring a smooth "Run and Debug" experience directly within VS Code.
+> - **Launchers:** The debugger ([`launch.json`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode/launch.json)) is set up to automatically run these CMake tasks before launching the developer CLI executable, ensuring a smooth "Run and Debug" experience directly within VS Code.
 > - ***Note:*** *(The provided VS Code configurations are specifically tailored for the developer CLI executable to avoid over-imposing on prospective project structures.)*
 
 > ### **Automated Code Formatting (Clang-Format Compatible):**
