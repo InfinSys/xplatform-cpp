@@ -1,4 +1,8 @@
 
+#====================================================
+#     CODEBASE FORMATTING MODULE (Clang-Format)
+#====================================================
+
 # Search directories recursively for formattable source files
 macro(format_source_code)
     set(
@@ -39,6 +43,6 @@ macro(format_source_code)
 
         COMMAND clang-format -i ${SOURCE_FILE_LIST}
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        COMMENT "Running clang-format on source files..."
+        COMMENT "Formatting source files..."
     )
 endmacro()
