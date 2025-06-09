@@ -3,47 +3,9 @@
 #     PROJECT METADATA MODULE
 #==================================
 
-# Configure a templated file
-macro(configure_template TEMPLATE_PATH DESTINATION_PATH)
-    configure_file(
-        ${TEMPLATE_PATH}
-        ${DESTINATION_PATH}
-        @ONLY
-    )
+include(metadata_tools)
 
-    message(STATUS "Configured file: ${DESTINATION_PATH}")
-endmacro()
-
-# Cache project metadata
-macro(set_metadata FIELD VALUE)
-	set(options "")
-	set(one_value_keywords DESCRIPTION)
-	set(multi_value_keywords "")
-
-	cmake_parse_arguments(
-		ARGSS
-		"${options}"
-		"${one_value_keywords}"
-		"${multi_value_keywords}"
-		${ARGN}
-	)
-
-	if(ARGSS_DESCRIPTION STREQUAL "")
-		set(ARGSS_DESCRIPTION "No description provided for '${FIELD}'")
-	endif()
-
-	set(${PRJ_SCOPE}_${FIELD} "${VALUE}" CACHE STRING "${ARGSS_DESCRIPTION}" FORCE)
-endmacro()
-
-# Cache a temporary simplified variable for use in file configuration
-macro(create_template_reference REF_NAME REF_KEY)
-	if(REF_NAME STREQUAL "")
-		message(FATAL_ERROR "No reference name provided for '${${PRJ_SCOPE}_${REF_KEY}}' value")
-	endif()
-	
-	set(RESOLVED_${REF_NAME} ${${PRJ_SCOPE}_${REF_KEY}} CACHE STRING "Temporary" FORCE)
-	list(APPEND TEMP_CACHE_VARS RESOLVED_${REF_NAME})
-endmacro()
+set(TEMP_CACHE_VARS "")
 
 # TODO: Personalize software metadata...
 set_metadata(PUBLISHER "<Publisher/Creator>" DESCRIPTION "Product publisher")
@@ -55,8 +17,6 @@ set_metadata(FULL_NAME "<Software name>" DESCRIPTION "Product name")
 set_metadata(SHORT_NAME "<Software shorter name>" DESCRIPTION "Product short name")
 set_metadata(MAIN_BINARY_NAME "<Main binary name>" DESCRIPTION "Main binary")
 set_metadata(META_PREFIX "${PRJ_SCOPE}" DESCRIPTION "Project metadata prefix")
-
-set(TEMP_CACHE_VARS "")
 
 # Temporarily cached variables for code generation
 create_template_reference(SFTW_PUBLISHER    PUBLISHER)
@@ -70,41 +30,38 @@ create_template_reference(SFTW_MAIN_BINARY  MAIN_BINARY_NAME)
 create_template_reference(SFTW_META_PREFIX  META_PREFIX)
 
 configure_template(
-	"${CMAKE_SOURCE_DIR}/docs/templ/LICENSE.in"
-	"${CMAKE_SOURCE_DIR}/LICENSE"
+    "${CMAKE_SOURCE_DIR}/docs/templ/LICENSE.in"
+    "${CMAKE_SOURCE_DIR}/LICENSE"
 )
 
 configure_template(
-	"${CMAKE_SOURCE_DIR}/docs/templ/README.md.in"
-	"${CMAKE_SOURCE_DIR}/README.md"
+    "${CMAKE_SOURCE_DIR}/docs/templ/README.md.in"
+    "${CMAKE_SOURCE_DIR}/README.md"
 )
 
 configure_template(
-	"${CMAKE_SOURCE_DIR}/docs/templ/Doxyfile.in"
-	"${CMAKE_SOURCE_DIR}/docs/Doxyfile"
+    "${CMAKE_SOURCE_DIR}/docs/templ/Doxyfile.in"
+    "${CMAKE_SOURCE_DIR}/docs/Doxyfile"
 )
 
 configure_template(
-	"${CMAKE_SOURCE_DIR}/docs/templ/index.html.in"
-	"${CMAKE_SOURCE_DIR}/docs/ref/index.html"
+    "${CMAKE_SOURCE_DIR}/docs/templ/index.html.in"
+    "${CMAKE_SOURCE_DIR}/docs/ref/index.html"
 )
 
 configure_template(
-	"${CMAKE_SOURCE_DIR}/docs/templ/inaug.md.in"
-	"${CMAKE_SOURCE_DIR}/docs/prj/inaug.md"
+    "${CMAKE_SOURCE_DIR}/docs/templ/inaug.md.in"
+    "${CMAKE_SOURCE_DIR}/docs/prj/inaug.md"
 )
 
 configure_template(
-	"${CMAKE_SOURCE_DIR}/libs/metadata/templ/info.h.in"
-	"${CMAKE_SOURCE_DIR}/libs/metadata/info.h"
+    "${CMAKE_SOURCE_DIR}/libs/metadata/templ/info.h.in"
+    "${CMAKE_SOURCE_DIR}/libs/metadata/info.h"
 )
 
 configure_template(
-	"${CMAKE_SOURCE_DIR}/libs/metadata/templ/version.h.in"
-	"${CMAKE_SOURCE_DIR}/libs/metadata/version.h"
+    "${CMAKE_SOURCE_DIR}/libs/metadata/templ/version.h.in"
+    "${CMAKE_SOURCE_DIR}/libs/metadata/version.h"
 )
 
-# Remove temporary cache variables
-foreach(TEMPVAR ${TEMP_CACHE_VARS})
-	unset(${TEMPVAR} CACHE)
-endforeach()
+clear_temporary_cache()
