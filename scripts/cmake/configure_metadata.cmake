@@ -35,6 +35,16 @@ macro(set_metadata FIELD VALUE)
 	set(${PRJ_SCOPE}_${FIELD} "${VALUE}" CACHE STRING "${ARGSS_DESCRIPTION}" FORCE)
 endmacro()
 
+# Cache a temporary simplified variable for use in file configuration
+macro(create_template_reference REF_NAME REF_KEY)
+	if(REF_NAME STREQUAL "")
+		message(ERROR "No reference name provided for '${${PRJ_SCOPE}_${REF_KEY}}' value")
+	endif()
+	
+	set(RESOLVED_${REF_NAME} ${${PRJ_SCOPE}_${REF_KEY}} CACHE STRING "Temporary" FORCE)
+	list(APPEND TEMP_CACHE_VARS RESOLVED_${REF_NAME})
+endmacro()
+
 # TODO: Personalize software metadata...
 set_metadata(PUBLISHER "<Publisher/Creator>" DESCRIPTION "Product publisher")
 set_metadata(PRODUCT_TYPE "<Executable or Library>" DESCRIPTION "Software type")
@@ -46,30 +56,18 @@ set_metadata(SHORT_NAME "<Short name>" DESCRIPTION "Product short name")
 set_metadata(MAIN_BINARY_NAME "<Main binary name>" DESCRIPTION "Main binary")
 set_metadata(META_PREFIX "${PRJ_SCOPE}" DESCRIPTION "Project metadata prefix")
 
-# Temporarily cached variables
-set(RESOLVED_SFTW_PUBLISHER "${${PRJ_SCOPE}_PUBLISHER}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_TYPE "${${PRJ_SCOPE}_PRODUCT_TYPE}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_INTERFACE "${${PRJ_SCOPE}_INTERFACE_TYPE}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_UUID "${${PRJ_SCOPE}_UUID}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_LICENSE_TYPE "${${PRJ_SCOPE}_LICENSE_TYPE}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_NAME "${${PRJ_SCOPE}_FULL_NAME}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_SHORT_NAME "${${PRJ_SCOPE}_SHORT_NAME}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_MAIN_BINARY "${${PRJ_SCOPE}_MAIN_BINARY_NAME}" CACHE STRING "Temporary" FORCE)
-set(RESOLVED_SFTW_META_PREFIX "${${PRJ_SCOPE}_META_PREFIX}" CACHE STRING "Temporary" FORCE)
+set(TEMP_CACHE_VARS "")
 
-set(
-	TEMP_CACHE_VARS
-
-	RESOLVED_SFTW_PUBLISHER
-	RESOLVED_SFTW_TYPE
-	RESOLVED_SFTW_INTERFACE
-	RESOLVED_SFTW_UUID
-	RESOLVED_SFTW_LICENSE_TYPE
-	RESOLVED_SFTW_NAME
-	RESOLVED_SFTW_SHORT_NAME
-	RESOLVED_SFTW_MAIN_BINARY
-	RESOLVED_SFTW_META_PREFIX
-)
+# Temporarily cached variables for code generation
+create_template_reference(SFTW_PUBLISHER    PUBLISHER)
+create_template_reference(SFTW_TYPE         PRODUCT_TYPE)
+create_template_reference(SFTW_INTERFACE    INTERFACE_TYPE)
+create_template_reference(SFTW_UUID         UUID)
+create_template_reference(SFTW_LICENSE_TYPE LICENSE_TYPE)
+create_template_reference(SFTW_NAME         FULL_NAME)
+create_template_reference(SFTW_SHORT_NAME   SHORT_NAME)
+create_template_reference(SFTW_MAIN_BINARY  MAIN_BINARY_NAME)
+create_template_reference(SFTW_META_PREFIX  META_PREFIX)
 
 configure_template(
 	"${CMAKE_SOURCE_DIR}/docs/templ/LICENSE.in"
