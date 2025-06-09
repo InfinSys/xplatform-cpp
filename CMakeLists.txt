@@ -14,9 +14,9 @@ set(PRJ_C_STANDARD 23)
 set(PRJ_CXX_STANDARD 20)
 
 project(
-	${PRJ_NAME}
-	VERSION 0.0.0.0
-	LANGUAGES C CXX ASM
+    ${PRJ_NAME}
+    VERSION 0.0.0.0
+    LANGUAGES C CXX ASM
 )
 
 set(CMAKE_C_STANDARD ${PRJ_C_STANDARD})
@@ -34,9 +34,9 @@ set(PRJ_CMAKE_MODULE_DIR "${CMAKE_SOURCE_DIR}/scripts/cmake")
 list(APPEND CMAKE_MODULE_PATH "${PRJ_CMAKE_MODULE_DIR}")
 
 set(
-	PRJ_INCLUDE_DIRS
-	"${CMAKE_SOURCE_DIR}/include"
-	"${CMAKE_SOURCE_DIR}/libs"
+    PRJ_INCLUDE_DIRS
+    "${CMAKE_SOURCE_DIR}/include"
+    "${CMAKE_SOURCE_DIR}/libs"
 )
 
 # Do not modify the variables below
@@ -48,34 +48,34 @@ set(FORMATTING OFF)
 # Do not modify the variables above
 
 if(DEFINED CACHE{${PRJ_SCOPE}_CLI_DEBUG} AND ${PRJ_SCOPE}_CLI_DEBUG)
-	message(STATUS "${PRJ_NAME} CLI debug build - enabled")
-	set(CLI_DEBUGGING ON)
+    message(STATUS "${PRJ_NAME} CLI debug build - enabled")
+    set(CLI_DEBUGGING ON)
 endif()
 
 if(DEFINED CACHE{${PRJ_SCOPE}_UNIT_TEST} AND ${PRJ_SCOPE}_UNIT_TEST)
-	message(STATUS "${PRJ_NAME} unit-test build - enabled")
-	set(UNIT_TESTING ON)
-	enable_testing()
-	add_subdirectory(3rdparty/googletest)
+    message(STATUS "${PRJ_NAME} unit-test build - enabled")
+    set(UNIT_TESTING ON)
+    enable_testing()
+    add_subdirectory(3rdparty/googletest)
 endif()
 
 if(DEFINED CACHE{${PRJ_SCOPE}_BENCHMARK} AND ${PRJ_SCOPE}_BENCHMARK)
-	message(STATUS "${PRJ_NAME} benchmark build - enabled")
-	set(BENCHMARKING ON)
-	add_subdirectory(3rdparty/benchmark)
+    message(STATUS "${PRJ_NAME} benchmark build - enabled")
+    set(BENCHMARKING ON)
+    add_subdirectory(3rdparty/benchmark)
 endif()
 
 if(DEFINED CACHE{${PRJ_SCOPE}_FORMAT} AND ${PRJ_SCOPE}_FORMAT)
-	find_program(CLANG_FORMAT_EXECUTABLE clang-format)
+    find_program(CLANG_FORMAT_EXECUTABLE clang-format)
 
-	if(NOT CLANG_FORMAT_EXECUTABLE)
-		message(WARNING "clang-format not found: Source code will not be formatted")
-	else()
-		message(STATUS "${PRJ_NAME} auto formatting - enabled")
-		set(FORMATTING ON)
-		include(clang_format)
-		format_source_code()
-	endif()
+    if(NOT CLANG_FORMAT_EXECUTABLE)
+        message(WARNING "clang-format not found: Source code will not be formatted")
+    else()
+        message(STATUS "${PRJ_NAME} auto formatting - enabled")
+        set(FORMATTING ON)
+        include(clang_format)
+        format_source_code()
+    endif()
 endif()
 
 # Includes

@@ -4,13 +4,13 @@
 #=======================================
 
 if(CLI_DEBUGGING)
-	add_subdirectory(cli)
+    add_subdirectory(cli)
 endif()
 
 if(UNIT_TESTING)
-	add_subdirectory(unit)
+    add_subdirectory(unit)
 endif()
 
 if(BENCHMARKING)
-	add_subdirectory(benchmark)
+    add_subdirectory(benchmark)
 endif()
