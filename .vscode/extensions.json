@@ -6,7 +6,8 @@
         "ms-vscode.cpptools-extension-pack",
         "ms-vscode.cmake-tools",
         "VisualStudioExptTeam.vscodeintellicode",
-        "GitHub.vscode-pull-request-github"
+        "GitHub.vscode-pull-request-github",
+        "ms-vscode.hexeditor"
     ],
     "unwantedRecommendations": ["twxs.cmake"]
 }
