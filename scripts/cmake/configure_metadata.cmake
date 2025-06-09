@@ -38,7 +38,7 @@ endmacro()
 # Cache a temporary simplified variable for use in file configuration
 macro(create_template_reference REF_NAME REF_KEY)
 	if(REF_NAME STREQUAL "")
-		message(ERROR "No reference name provided for '${${PRJ_SCOPE}_${REF_KEY}}' value")
+		message(FATAL_ERROR "No reference name provided for '${${PRJ_SCOPE}_${REF_KEY}}' value")
 	endif()
 	
 	set(RESOLVED_${REF_NAME} ${${PRJ_SCOPE}_${REF_KEY}} CACHE STRING "Temporary" FORCE)
