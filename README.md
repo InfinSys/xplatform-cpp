@@ -3,7 +3,7 @@
 
 ### **Accelerate your cross-platform C++ development**
 
-**This repository offers a robust template, designed to provide a comprehensive foundation for your next C++ project. It eliminates the complexities of initial setup, allowing developers to focus immediately on application logic across diverse operating systems such as Windows, Linux, and macOS. Using CMake, this template integrates seamlessly with modern development environments like VS Code, Visual Studio, CLion, and more, while maintaining the flexibility to adapt to your preferred toolchain and needs.**
+**This repository offers a robust template, designed to provide a comprehensive foundation for your next C++ project. It eliminates the complexities of initial setup, allowing developers to focus immediately on application logic across diverse operating systems such as Windows, Linux, and macOS. Using CMake, this template integrates seamlessly with modern development tools and environments like VS Code, Visual Studio, CLion, and more, while maintaining the flexibility to adapt to your preferred toolchain.**
 
 </br>
 
@@ -18,7 +18,7 @@
 
 ## Designed with several key characteristics to empower cross-platform C++ development
 ### **CMake-Centric Build System:**</br>
-> At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled flexibility and control over your project's compilation, linking, and packaging across diverse platforms. Many of the template's advanced features are powered directly by CMake's capabilities.
+> At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled flexibility and control over your project's compilation, linking, and packaging across diverse platforms. Many of the template's advanced features are powered directly by CMake's capabilities. You can find the [official CMake documentation here](https://cmake.org/cmake/help/latest/index.html).
 
 ### **Customizable CMake Variables (Scope Convention):**</br>
 > This template introduces a *project-specific 'scope'* convention for CMake cache variables. This mechanism is crucial for preventing silent cache clashes when managing multiple projects derived from this template, or when integrating with other CMake-based workflows. You'll define a short, unique scope identifier for your project that will be used by CMake to mask the project cache variables behind a prefix. This scope prefix can be specified in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt) file by modifying the `PRJ_SCOPE` variable. Furthermore, critical template configuration is controlled by similar variables (prefixed with `PRJ_`) in the root [`CMakeLists.txt`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/CMakeLists.txt).
@@ -31,7 +31,8 @@
 > - `PRJ_CMAKE_MODULE_DIR`
 > - `PRJ_INCLUDE_DIRS`
 >
-> ### </br>Users are expected to customize these variables to better align with their project requirements. *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. Additionally, the `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic.
+> ### </br>Users are expected to customize these variables to better align with their project requirements.
+> *The* `PRJ_SCOPE` *variable is particularly significant*; it defines a unique identifier for your project's cached variables, ensuring isolation and preventing conflicts. Additionally, the `PRJ_` prefixed variables are integral to the initial CMake setup and can be leveraged throughout your project's CMake logic.
 
 ### **VS Code Integration:**</br>
 > While fully compatible with any development environment, this template is designed with [**Visual Studio Code**](https://code.visualstudio.com/) in mind. The included [`.vscode`](https://github.com/InfinSys/xplatform-cpp/tree/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode) directory contains pre-configured [`extensions.json`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode/extensions.json), [`tasks.json`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode/tasks.json), and [`launch.json`](https://github.com/InfinSys/xplatform-cpp/blob/b86575e355d7e92912cc33ecb97e35759eee3e14/.vscode/launch.json) files. These configurations streamline common development tasks:
