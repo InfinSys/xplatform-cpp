@@ -8,7 +8,7 @@
 </br>
 
 ## Setup
-#### Clone this repository using the CLI: </br> `git clone https://github.com/InfinSys/xplatform-cpp.git [destination]`,
+#### Clone this repository using the CLI: </br> `git clone https://github.com/InfinSys/xplatform-cpp.git [destination]`
 
 ### **OR**
 
@@ -16,19 +16,32 @@
 
 </br>
 
-Once you have the repository locally available, you can begin modifying the template as you please and configure/build the project. This template is designed to achieve both of these straight out of the box, so you need not modify anything to verify everything is functioning accordingly. Simply `cd` to the repositories directory and run the following command:
-### For Windows:
-```bash
-cmake --preset win32-x64-Debug
-```
-
-### For Linux:
-```bash
-cmake --preset linux-x64-Debug
-```
+> Once you have the repository locally available, you can begin modifying the template as you please and configure/build the project. This template is designed to achieve both of these straight out of the box, so you need not modify anything to verify everything is functioning accordingly. Simply `cd` to the repositories directory and run the following command:
+> ### Windows:
+> ```bash
+>cmake --preset win32-x64-Debug
+> ```
+>
+> ### Linux:
+>```bash
+>cmake --preset linux-x64-Debug
+>```
 
 ### ***HEADS-UP:*** </br>Once you instruct CMake to configure the project, this README will be overwritten by the configured version.
-You can modify the README by changing the template [`README.md.in`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/docs/templ/README.md.in)
+#### You can modify the README by changing the template [`README.md.in`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/docs/templ/README.md.in)
+
+</br>
+
+> You could alternatively command CMake to build the project and the configuration step will be taken care of automatically:
+> ### Windows:
+>```bash
+>cmake --build --preset win32-x64-Debug
+>```
+>
+> ### Linux:
+>```bash
+>cmake --build --preset linux-x64-Debug
+>```
 
 </br>
 
