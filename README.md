@@ -8,7 +8,7 @@
 </br>
 
 ## Setup
-#### Clone this repository using the CLI: </br> `git clone https://github.com/InfinSys/xplatform-cpp.git <destination>`,
+#### Clone this repository using the CLI: </br> `git clone https://github.com/InfinSys/xplatform-cpp.git [destination]`,
 
 ### **OR**
 
