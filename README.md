@@ -27,7 +27,7 @@
 >cmake --preset linux-x64-Debug
 >```
 
-### ***HEADS-UP:*** </br>Once you instruct CMake to configure the project, this README will be overwritten by the configured version.
+### ***HEADS-UP:*** </br>Once you instruct CMake to configure the project, this README will be overwritten by the configured version!
 #### You can modify the README by changing the template [`README.md.in`](https://github.com/InfinSys/xplatform-cpp/blob/b06d854d63d8c083ee801c989dd81c896d28e89b/docs/templ/README.md.in)
 
 </br>
