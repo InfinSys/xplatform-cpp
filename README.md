@@ -116,13 +116,9 @@ This is not an HTML document.
     <h3><strong>Centralized Project Metadata Configuration:</strong></h3>
     <blockquote>
         <p>
-            This template includes a
-            <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/scripts/cmake/configure_metadata.cmake">
-                configure_metadata.cmake
-            </a>
-            script to centralize and manage essential software metadata. This script allows you to define key project attributes
-            that are then "baked" into the resulting executables or libraries by configuring template <code>.in</code> source
-            files.
+            This template includes a script to centralize and manage essential software metadata. This script allows you to
+            define key project attributes that are then "baked" into the resulting executables or libraries by configuring
+            template <code>.in</code> source files.
         </p>
         <ul type="circle">
             <li>
