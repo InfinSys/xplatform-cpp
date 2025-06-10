@@ -37,7 +37,7 @@ This is not an HTML document.
         Once you have the repository locally available, you can begin modifying the template as you please and configure/build
         the project. This template is designed to achieve both of these straight out of the box, so you need not modify anything
         to verify everything is functioning accordingly. Simply <code>cd</code> to the repositories directory and run the following
-        command:
+        command to configure the project:
     </p>
     <blockquote>
         <h3>Windows:</h3>
@@ -53,7 +53,8 @@ This is not an HTML document.
         file.
     </h4></br>
     <p>
-        You alternatively could command CMake to build the project and the configuration step will be taken care of automatically:
+        You alternatively could command CMake to build the project and the CMake configuration step will be taken care of
+        automatically:
     </p>
     <blockquote>
         <h3>Windows:</h3>
@@ -67,7 +68,7 @@ This is not an HTML document.
 </br>
 
 <div>
-    <h2 align="center">Designed with several key characteristics to empower C++ development</h2>
+    <h2 align="center">Designed with Several Key Characteristics to Empower C++ Development</h2>
     <h3><strong>CMake-Centric Build System:</strong></h3>
     <blockquote>
         <p>
@@ -101,7 +102,7 @@ This is not an HTML document.
                 <tr><td><code>PRJ_CMAKE_MODULE_DIR</code></td></tr>
                 <tr><td><code>PRJ_INCLUDE_DIRS</code></td></tr>
             </table>
-        </div></br>
+        </div>
         <h3>Users are expected to customize these variables to align with their project requirements.</h3>
         <p>
             <em>The</em> <code>PRJ_SCOPE</code> <em>variable is especially important</em>; it defines the unique prefix for your
