@@ -34,9 +34,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Configure CMake Preset
-      run: >
-        cmake --preset ${{ matrix.cmake_preset }}
+      run: cmake --preset ${{ matrix.cmake_preset }}
 
     - name: Build CMake Preset
-      run: >
-        cmake --build --preset ${{ matrix.cmake_preset }}
+      run: cmake --build --preset ${{ matrix.cmake_preset }}
