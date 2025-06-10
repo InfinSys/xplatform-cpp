@@ -88,7 +88,7 @@ This is not an HTML document.
             <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/CMakeLists.txt">CMakeLists.txt</a>
             file by modifying the <code>PRJ_SCOPE</code> variable. Furthermore, critical template configuration is controlled by
             similar variables (prefixed with <code>PRJ_</code> in the root
-            <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/CMakeLists.txt">CMakeLists.txt</a>.
+            <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/CMakeLists.txt">CMakeLists.txt</a>.)
         </p></br>
         <div align="center">
             <table>
