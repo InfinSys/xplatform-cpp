@@ -19,15 +19,20 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         
-        # TODO: Setup 'release' preset build combinations...
         include:
             # --- Linux Presets ---
           - os: ubuntu-latest
             cmake_preset: linux-x64-Debug
+          
+          - os: ubuntu-latest
+            cmake_preset: linux-x64-Release
 
             # --- Windows Presets ---
           - os: windows-latest
             cmake_preset: win32-x64-Debug
+          
+          - os: windows-latest
+            cmake_preset: win32-x64-Release
 
     steps:
     - name: Checkout Repository
