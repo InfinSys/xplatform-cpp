@@ -102,7 +102,7 @@ This is not an HTML document.
                 <tr><td><code>PRJ_CMAKE_MODULE_DIR</code></td></tr>
                 <tr><td><code>PRJ_INCLUDE_DIRS</code></td></tr>
             </table>
-        </div>
+        </div></br>
         <h3>Users are expected to customize these variables to align with their project requirements.</h3>
         <p>
             <em>The</em> <code>PRJ_SCOPE</code> <em>variable is especially important</em>; it defines the unique prefix for your
