@@ -15,7 +15,7 @@ set_metadata(UUID "<Unique identifier>" DESCRIPTION "Product unique identifier")
 set_metadata(LICENSE_TYPE "<MIT, GPLv3, Proprietary, etc.>" DESCRIPTION "Product license type")
 set_metadata(FULL_NAME "<Software name>" DESCRIPTION "Product name")
 set_metadata(SHORT_NAME "<Software shorter name>" DESCRIPTION "Product short name")
-set_metadata(MAIN_BINARY_NAME "<Main binary name>" DESCRIPTION "Main binary")
+set_metadata(MAIN_BINARY_NAME "demo" DESCRIPTION "Main binary")
 set_metadata(META_PREFIX "${PRJ_SCOPE}" DESCRIPTION "Project metadata prefix")
 
 # Temporarily cached variables for code generation
