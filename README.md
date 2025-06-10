@@ -103,7 +103,9 @@ This is not an HTML document.
                 <tr><td><code>PRJ_INCLUDE_DIRS</code></td></tr>
             </table>
         </div></br>
-        <h3>Users are expected to customize these variables to align with their project requirements.</h3>
+        <h3 align="center">
+            Users are expected to customize these variables to align with their project requirements.
+        </h3>
         <p>
             <em>The</em> <code>PRJ_SCOPE</code> <em>variable is especially important</em>; it defines the unique prefix for your
             project's cached variables, ensuring isolation and preventing conflicts. CMake script variables prefixed with
@@ -129,7 +131,7 @@ This is not an HTML document.
                 <ul type="square">
                     <li><code>PUBLISHER</code></li>
                     <li><code>PRODUCT_TYPE</code> (e.g., <em>Executable</em>, <em>Library</em>, or <em>Firmware</em>)</li>
-                    <li><code>INTERFACE_TYPE</code> (e.g., <em>GUI</em>, <em>CLI</em>, <em>API</em>, or <em>HSI</em>)</li>
+                    <li><code>INTERFACE_TYPE</code> (e.g., <em>GUI</em>, <em>CLI</em>, <em>API</em>, or <em>HDI</em>)</li>
                     <li><code>UUID</code></li>
                     <li><code>LICENSE_TYPE</code> (e.g., <em>MIT</em>, <em>GPLv3</em>, <em>Proprietary</em>, etc.)</li>
                     <li><code>FULL_NAME</code></li>
@@ -144,8 +146,8 @@ This is not an HTML document.
                     </a>
                     using predefined macros such as <code>set_metadata()</code> and <code>create_template_reference()</code>.
                     Both of these macros make the process of generating template source files through CMake straight-forward.
-                    The <code>set_metadata()</code> macro caches the provided variable and hides it behind the projects scope
-                    prefix, and <code>create_template_reference()</code> binds a defined metadata field to a variable name that
+                    The <code>set_metadata()</code> macro caches a provided value and hides it behind the projects scope prefix,
+                    and <code>create_template_reference()</code> binds a defined metadata field value to a variable name that
                     can be used to configure template files (<em>this simplifies the referenced variable name in said files.</em>).
                 </p>
             </li>
