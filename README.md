@@ -170,9 +170,8 @@ This is not an HTML document.
             The metadata "<em>fields</em>" mentioned above cannot be referenced as they appear in
             <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/scripts/cmake/configure_metadata.cmake">
                 configure_metadata.cmake
-            </a>. These names are components of the full variable name. The <code>set_metadata()</code> macro abstracts these details
-            away and makes it easy to add additional metadata fields, and <code>create_template_reference()</code> makes it effortless
-            to use those values in template files.
+            </a>, these names are components of the full variable name. The <code>set_metadata()</code> and
+            <code>create_template_reference()</code> macros abstract these details away.
         </p>
     </blockquote></br>
     <!--Continue-->
