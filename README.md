@@ -25,11 +25,11 @@ This is not an HTML document.
 </br>
 
 <div>
-    <h2 align="center">Setup</h2>
+    <h2>Setup</h2>
     <h4>Clone this repository using the CLI:</h4>
-    <pre><code>git clone https://github.com/InfinSys/xplatform-cpp.git [destination]</code></pre>
-    <strong><h3>OR</h3></strong>
-    <h4>
+    <pre align="center"><code>git clone https://github.com/InfinSys/xplatform-cpp.git [destination]</code></pre>
+    <strong><h3 align="center">OR</h3></strong>
+    <h4 align="center">
         <a href="https://github.com/InfinSys/xplatform-cpp/archive/refs/heads/main.zip">download the source ZIP file</a>
         and extract it to a preferred location.
     </h4></br>
@@ -88,7 +88,7 @@ This is not an HTML document.
             file by modifying the <code>PRJ_SCOPE</code> variable. Furthermore, critical template configuration is controlled by
             similar variables (prefixed with <code>PRJ_</code> in the root
             <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/CMakeLists.txt">CMakeLists.txt</a>.
-        </p>
+        </p></br>
         <div align="center">
             <table>
                 <tr>
