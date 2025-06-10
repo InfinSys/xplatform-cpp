@@ -125,7 +125,7 @@ This is not an HTML document.
         <ul type="circle">
             <li>
                 <strong>Configurable Fields:</strong>
-                Predefined metadata fields include:
+                predefined metadata fields include:
                 <ul type="square">
                     <li><code>PUBLISHER</code></li>
                     <li><code>PRODUCT_TYPE</code> (e.g., <em>Executable</em>, <em>Library</em>, or <em>Firmware</em>)</li>
@@ -137,6 +137,17 @@ This is not an HTML document.
                     <li><code>MAIN_BINARY_NAME</code></li>
                     <li><code>META_PREFIX</code> (<em>for generated in-code metadata symbols</em>)</li>
                 </ul>
+                <p>
+                    These metadata fields are easily modifiable in
+                    <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/scripts/cmake/configure_metadata.cmake">
+                        configure_metadata.cmake
+                    </a>
+                    using predefined macros such as <code>set_metadata()</code> and <code>create_template_reference()</code>.
+                    Both of these macros make the process of generating template source files through CMake straight-forward.
+                    The <code>set_metadata()</code> macro caches the provided variable and hides it behind the projects scope
+                    prefix, and <code>create_template_reference()</code> binds a defined metadata field to a variable name that
+                    can be used to configure template files (<em>this simplifies the referenced variable name in said files.</em>).
+                </p>
             </li>
             <li>
                 <strong>Project-Wide Consistency:</strong>
