@@ -7,7 +7,7 @@
 macro(format_source_code)
     set(
         FORMAT_SEARCH_DIRS
-        "${CMAKE_SOURCE_DIR}/libs"
+        "${CMAKE_SOURCE_DIR}/lib"
         "${CMAKE_SOURCE_DIR}/include"
         "${CMAKE_SOURCE_DIR}/src"
         "${CMAKE_SOURCE_DIR}/tests"

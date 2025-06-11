@@ -55,13 +55,13 @@ configure_template(
 )
 
 configure_template(
-    "${CMAKE_SOURCE_DIR}/libs/metadata/templ/info.h.in"
-    "${CMAKE_SOURCE_DIR}/libs/metadata/info.h"
+    "${CMAKE_SOURCE_DIR}/lib/metadata/templ/info.h.in"
+    "${CMAKE_SOURCE_DIR}/lib/metadata/info.h"
 )
 
 configure_template(
-    "${CMAKE_SOURCE_DIR}/libs/metadata/templ/version.h.in"
-    "${CMAKE_SOURCE_DIR}/libs/metadata/version.h"
+    "${CMAKE_SOURCE_DIR}/lib/metadata/templ/version.h.in"
+    "${CMAKE_SOURCE_DIR}/lib/metadata/version.h"
 )
 
 clear_temporary_cache()

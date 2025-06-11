@@ -36,7 +36,7 @@ list(APPEND CMAKE_MODULE_PATH "${PRJ_CMAKE_MODULE_DIR}")
 set(
     PRJ_INCLUDE_DIRS
     "${CMAKE_SOURCE_DIR}/include"
-    "${CMAKE_SOURCE_DIR}/libs"
+    "${CMAKE_SOURCE_DIR}/lib"
 )
 
 # Do not modify the variables below
@@ -82,7 +82,7 @@ endif()
 include_directories(${PRJ_INCLUDE_DIRS})
 
 # Sources
-add_subdirectory(libs)
+add_subdirectory(lib)
 add_subdirectory(src)
 
 # Testing
