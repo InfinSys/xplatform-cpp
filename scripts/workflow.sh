@@ -7,6 +7,7 @@
 GITHUB_DIR=".github"
 WORKFLOWS_SUBDIR="workflows"
 WORKFLOWS_PATH="${GITHUB_DIR}/${WORKFLOWS_SUBDIR}"
+DISABLED_WORKFLOWS_PATH="${GITHUB_DIR}/disabled_workflows"
 
 # --- Usage Instructions ---
 usage() {
@@ -32,7 +33,7 @@ ACTION="$1"
 WORKFLOW_FILE="$2"
 
 ENABLED_FILE_PATH="${WORKFLOWS_PATH}/${WORKFLOW_FILE}.yml"
-DISABLED_FILE_PATH="${GITHUB_DIR}/${WORKFLOW_FILE}.yml"
+DISABLED_FILE_PATH="${DISABLED_WORKFLOWS_PATH}/${WORKFLOW_FILE}.yml"
 
 cd "$(dirname "$0")/.." || { echo "Error: Could not change directory to parent. Ensure the script is run within a Git repository."; exit 1; }
 
@@ -48,15 +49,27 @@ if [ "$ACTION_LOWER" == "false" ]; then
     if [ -f "${DISABLED_FILE_PATH}" ]; then
         echo ""
         echo "The \"${WORKFLOW_FILE}\" Workflow is ALREADY disabled!"
-        echo "Found in: \"${GITHUB_DIR}\""
+        echo "Found in: \"${DISABLED_WORKFLOWS_PATH}\""
         echo "No action needed."
     else
         echo ""
         echo "Attempting to disable \"${WORKFLOW_FILE}\" GitHub Workflow:"
 
-        # Move the Workflow file to disable it
         echo "Moving \"${ENABLED_FILE_PATH}\" to \"${DISABLED_FILE_PATH}\"..."
+
+        # Create 'disabled_workflows' directory if it doesn't exist
+        if [ ! -d "${DISABLED_WORKFLOWS_PATH}" ]; then
+            echo "Creating disabled GitHub Workflow directory..."
+
+            mkdir -p "${DISABLED_WORKFLOWS_PATH}"
+            if [ $? -ne 0 ]; then
+                echo ""
+                echo "Error: FAILED to create directory \"${WORKFLOWS_PATH}\". Check permissions."
+                exit 1
+            fi
+        fi
         
+        # Move the Workflow file to disable it
         mv "${ENABLED_FILE_PATH}" "${DISABLED_FILE_PATH}" > /dev/null
         if [ $? -ne 0 ]; then
             echo ""
@@ -79,7 +92,7 @@ elif [ "$ACTION_LOWER" == "true" ]; then
 
         # Create 'workflows' directory if it doesn't exist
         if [ ! -d "${WORKFLOWS_PATH}" ]; then
-            echo "Creating GitHub Workflow directory \"${WORKFLOWS_PATH}\"..."
+            echo "Creating GitHub Workflow directory..."
 
             mkdir -p "${WORKFLOWS_PATH}"
             if [ $? -ne 0 ]; then

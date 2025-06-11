@@ -8,6 +8,7 @@ setlocal
 SET "GITHUB_DIR=.github"
 SET "WORKFLOWS_SUBDIR=workflows"
 SET "WORKFLOWS_PATH=%GITHUB_DIR%\%WORKFLOWS_SUBDIR%"
+SET "DISABLED_WORKFLOWS_PATH=%GITHUB_DIR%\disabled_workflows"
 
 IF "%~1"=="" GOTO :usage
 IF "%~2"=="" GOTO :usage
@@ -16,7 +17,7 @@ SET "ACTION=%~1"
 SET "WORKFLOW_FILE=%~2"
 
 SET "ENABLED_FILE_PATH=%WORKFLOWS_PATH%\%WORKFLOW_FILE%.yml"
-SET "DISABLED_FILE_PATH=%GITHUB_DIR%\%WORKFLOW_FILE%.yml"
+SET "DISABLED_FILE_PATH=%DISABLED_WORKFLOWS_PATH%\%WORKFLOW_FILE%.yml"
 
 cd %~dp0/..
 
@@ -32,15 +33,26 @@ IF /I "%ACTION%"=="false" (
     IF EXIST "%DISABLED_FILE_PATH%" (
         ECHO.
         ECHO The "%WORKFLOW_FILE%" Workflow is ALREADY disabled!
-        ECHO Found in: "%GITHUB_DIR%"
+        ECHO Found in: "%DISABLED_WORKFLOWS_PATH%"
         ECHO No action needed.
     ) ELSE (
         ECHO.
         ECHO Attempting to disable "%WORKFLOW_FILE%" GitHub Workflow:
 
-        :: Move the Workflow file to disable it
         ECHO Moving "%ENABLED_FILE_PATH%" to "%DISABLED_FILE_PATH%"...
+
+        :: Create 'disabled_workflows' directory if it doesn't exist
+        IF NOT EXIST "%DISABLED_WORKFLOWS_PATH%" (
+            ECHO Creating disabled GitHub Workflow directory...
+            MKDIR "%DISABLED_WORKFLOWS_PATH%"
+            IF %ERRORLEVEL% NEQ 0 (
+                ECHO.
+                ECHO Error: FAILED to create directory "%DISABLED_WORKFLOWS_PATH%". Check permissions.
+                GOTO :eof
+            )
+        )
         
+        :: Move the Workflow file to disable it
         MOVE "%ENABLED_FILE_PATH%" "%DISABLED_FILE_PATH%" >NUL
         IF %ERRORLEVEL% NEQ 0 (
             ECHO.
@@ -72,9 +84,9 @@ IF /I "%ACTION%"=="false" (
                 )
             )
 
-            :: Move the Workflow file to enable it
             ECHO Moving "%DISABLED_FILE_PATH%" to "%ENABLED_FILE_PATH%"...
 
+            :: Move the Workflow file to enable it
             MOVE "%DISABLED_FILE_PATH%" "%ENABLED_FILE_PATH%" >NUL
             IF %ERRORLEVEL% NEQ 0 (
                 ECHO.
