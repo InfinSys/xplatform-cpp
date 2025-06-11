@@ -46,17 +46,17 @@ Use this section to provide details about your operating system and any relevant
 <div id="issue_env">
     <!-- Fill out the applicable sections below -->
     <ul>
-        <li>
+        <li id="system_os">
             <strong>Operating System:</strong>
             [e.g., Windows 10, macOS Ventura, Ubuntu 22.04]
         </li>
-        <li>
+        <li id="system_arch">
             <strong>System Architecture:</strong>
             [e.g., x86, x64, ARM]
         </li>
-        <li>
+        <li id="app_version">
             <strong>Application Version:</strong>
             [e.g., v1.2.3, main branch commit SHA]
         </li>
-    </ul></br>
+    </ul>
 </div>
