@@ -5,6 +5,7 @@
 
 # Search directories recursively for formattable source files
 macro(format_source_code)
+    # TODO: Configure which directories clang-format visits recursively...
     set(
         FORMAT_SEARCH_DIRS
         "${CMAKE_SOURCE_DIR}/lib"
