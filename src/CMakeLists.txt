@@ -13,7 +13,8 @@ set(MAIN_BINARY_NAME "${${PRJ_SCOPE}_MAIN_BINARY_NAME}")
 # TODO: Handle source targets...
 
 # Example: primary target
-add_library(${MAIN_BINARY_NAME} STATIC)
+set(ENTRY_POINT_SRC main.cpp)
+add_executable(${MAIN_BINARY_NAME} ${ENTRY_POINT_SRC})
 
 # Example: include directories
 target_include_directories(
