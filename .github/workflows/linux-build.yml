@@ -1,5 +1,5 @@
 
-name: Windows Build
+name: Linux Build
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
         # Set fail-fast to false to ensure that feedback is delivered for all matrix
@@ -17,21 +17,16 @@ jobs:
         fail-fast: false
 
         matrix:
-            cmake_preset: ["win32-x64-Debug", "win32-x64-Release"]
+            cmake_preset: ["linux-x64-Debug", "linux-x64-Release"]
 
     steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
-
-        - name: Setup MSVC environment
-          uses: microsoft/setup-msbuild@v2
-          with:
-            msbuild-architecture: x64
         
         - name: Configure CMake Preset
           run: cmake --preset ${{ matrix.cmake_preset }}
-          shell: cmd
+          shell: bash
 
         - name: Build CMake Preset
           run: cmake --build --preset ${{ matrix.cmake_preset }}
-          shell: cmd
+          shell: bash
