@@ -67,7 +67,7 @@ This is not an HTML document.
 
 </br>
 
-<div>
+<div hidden>
     <h2 align="center">Designed with Several Key Characteristics to Empower C++ Development</h2>
     <h3><strong>CMake-Centric Build System:</strong></h3>
     <blockquote>
@@ -172,3 +172,4 @@ This is not an HTML document.
     </blockquote></br>
     <!--Continue-->
 </div>
+</br><h3 align="center">( ...This README is still in progress... )</h3>
