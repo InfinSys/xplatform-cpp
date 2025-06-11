@@ -6,7 +6,7 @@
 include(compiler/detector)
 include(linker/config)
 
-include(project_tools)
+include(utility/project_tools)
 
 set(MAIN_BINARY_NAME "${${PRJ_SCOPE}_MAIN_BINARY_NAME}")
 

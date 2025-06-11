@@ -3,7 +3,7 @@
 #     PROJECT METADATA MODULE
 #==================================
 
-include(metadata_tools)
+include(utility/metadata_tools)
 
 set(TEMP_CACHE_VARS "")
 
