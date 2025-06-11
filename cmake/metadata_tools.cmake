@@ -16,15 +16,11 @@ endmacro()
 
 # Cache project metadata
 macro(set_metadata FIELD VALUE)
-    set(options "")
-    set(one_value_keywords DESCRIPTION)
-    set(multi_value_keywords "")
-
     cmake_parse_arguments(
         ARGSS
-        "${options}"
-        "${one_value_keywords}"
-        "${multi_value_keywords}"
+        ""
+        "DESCRIPTION"
+        ""
         ${ARGN}
     )
 
