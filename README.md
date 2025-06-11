@@ -67,7 +67,7 @@ This is not an HTML document.
 
 </br>
 
-<div hidden>
+<div>
     <h2 align="center">Designed with Several Key Characteristics to Empower C++ Development</h2>
     <h3><strong>CMake-Centric Build System:</strong></h3>
     <blockquote>
