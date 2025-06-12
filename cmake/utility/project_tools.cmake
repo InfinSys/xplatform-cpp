@@ -46,3 +46,13 @@ macro(set_cxx_standard TARGET)
         message(FATAL_ERROR "No propogation property provided for '${TARGET}' target")
     endif()
 endmacro()
+
+# Apply the specified project C++ standard to given target
+macro(use_project_cxx_standard TARGET PROPOGATION)
+    target_compile_features(
+        ${TARGET}
+
+        ${PROPOGATION}
+        cxx_std_${PRJ_CXX_STANDARD}
+    )
+endmacro()
