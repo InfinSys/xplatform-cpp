@@ -65,7 +65,7 @@ This is not an HTML document.
         specific to your preset. Because this template makes use of CMake presets, it is not necessary to naviagte to the
         build directory before invoking the CMake build command:
     </p>
-    <h3>🔨 Building the project with CMake:</h3>
+    <h3>🔨 Build the project with CMake:</h3>
     <blockquote>
         <h3>Windows:</h3>
         <pre><code>cmake --build --preset win32-x64-Debug</code></pre>
