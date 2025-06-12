@@ -97,6 +97,7 @@ This is not an HTML document.
                 official CMake documentation here
             </a>.
         </p>
+        <img src="https://github.com/user-attachments/assets/13f0b601-17bc-481b-abbb-ed0b11ad26d4" alt="CMake Logo" width=200>
     </blockquote></br>
     <h3><strong>Flexible Foundation & Customization:</strong></h3>
     <blockquote>
