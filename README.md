@@ -109,12 +109,27 @@ This is not an HTML document.
             common tasks, and a predefined set of <code>PRJ_</code> prefixed variables that drive core template behaviors.
         </p>
         <p>
-            To enhance developer efficiency, the template incorporates several helper macros within its CMake modules.
-            These macros abstract common build system operations, including: <code>format_source_code()</code> for
-            integrated code formatting, <code>set_cxx_standard()</code> for managing C++ standards of individual targets,
-            <code>set_metadata()</code> for caching project metadata (<em>more on this later</em>),
-            <code>create_template_reference()</code> for streamlining template file configuration, and more!
+            To enhance developer efficiency, this template incorporates several helper macros within its CMake modules.
+            These macros abstract common build system operations, including (<em>but not limited to</em>):
         </p>
+        <table align="center">
+            <tr>
+                <td><code>format_source_code()</code></td>
+                <td>For integrated code formatting</td>
+            </tr>
+            <tr>
+                <td><code>set_cxx_standard()</code></td>
+                <td>For managing C++ standards of individual targets</td>
+            </tr>
+            <tr>
+                <td><code>set_metadata()</code></td>
+                <td>For caching project metadata (<em>more on this later</em>)</td>
+            </tr>
+            <tr>
+                <td><code>create_template_reference()</code></td>
+                <td>For streamlining template file configuration</td>
+            </tr>
+        </table></br>
         <p>
             Most importantly, this foundation is (<em>obviously</em>) entirely customizable! While it offers a robust starting
             point, <strong>you're encouraged to modify, extend, or even restructure the provided project directory, CMake
