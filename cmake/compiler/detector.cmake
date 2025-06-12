@@ -3,7 +3,7 @@
 #     PROJECT COMPILER DETECTOR
 #====================================
 
-# Include appropriate compiler configuration scripts
+# Include native compiler configuration scripts
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # GNU C++ compiler (g++)
     include(compiler/gnu_cxx)
