@@ -109,10 +109,15 @@ This is not an HTML document.
             common tasks, and a predefined set of <code>PRJ_</code> prefixed variables that drive core template behaviors.
         </p>
         <p>
-            To enhance developer efficiency, this template incorporates several helper macros within its CMake modules.
-            These macros abstract common build system operations, including (<em>but not limited to</em>):
+            To enhance developer efficiency, this template incorporates
+            <strong>several helper macros within its CMake modules</strong>. These macros abstract common build system
+            operations, including (<em>but not limited to</em>):
         </p>
         <table align="center">
+            <tr>
+                <th>Provided CMake Macro</th>
+                <th>Description</th>
+            </tr>
             <tr>
                 <td><code>format_source_code()</code></td>
                 <td>For integrated code formatting</td>
