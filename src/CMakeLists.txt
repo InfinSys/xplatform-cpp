@@ -25,7 +25,7 @@ target_include_directories(
 )
 
 # Example: project-wide C++ standard
-set_cxx_standard(GLOBAL_CXX_OPTIONS INTERFACE ${PRJ_CXX_STANDARD})
+use_project_cxx_standard(GLOBAL_CXX_OPTIONS INTERFACE)
 
 target_link_options(
     GLOBAL_CXX_OPTIONS
