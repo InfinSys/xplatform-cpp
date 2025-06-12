@@ -50,7 +50,7 @@ This is not an HTML document.
     </blockquote></br>
 </div>
 
-> [!IMPORTANT]
+> [!NOTE]
 > <h3>⚠️ <em>HEADS-UP!</em></h3>
 > <h4>Once you instruct CMake to configure the project, <em>this</em> README will be overwritten by the configured version!</h4>
 > <h4>
