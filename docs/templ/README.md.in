@@ -4,8 +4,11 @@
 <br/>
 
 ![Static Badge](https://img.shields.io/badge/version-@CMAKE_PROJECT_VERSION_MAJOR@.@CMAKE_PROJECT_VERSION_MINOR@.@CMAKE_PROJECT_VERSION_PATCH@.@CMAKE_PROJECT_VERSION_TWEAK@-blue)
-![Windows Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/windows-build.yml/badge.svg)
-![Linux Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/linux-build.yml/badge.svg)
+
+</br>
+
+[![Windows Build Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/windows-build.yml/badge.svg)](https://github.com/InfinSys/xplatform-cpp/actions/workflows/linux-build.yml)
+[![Linux Build Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/linux-build.yml/badge.svg)](https://github.com/InfinSys/xplatform-cpp/actions/workflows/windows-build.yml)
 
 <br/>
 
