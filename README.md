@@ -36,7 +36,7 @@ This is not an HTML document.
     <p>
         Once you have the repository locally available, you can begin modifying the template as you please and configure/build
         the project. This template is designed to achieve both of these straight out of the box, so you need not modify anything
-        to verify everything is functioning accordingly. Simply <code>cd</code> to the repositories directory and run the following
+        to verify everything is functioning accordingly. Simply <code>cd</code> to the repositories root directory and run the following
         command:
     </p>
     <h3>🔧 Configure the project with CMake:</h3>
