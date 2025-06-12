@@ -104,9 +104,10 @@ This is not an HTML document.
     <h3><strong>Flexible Foundation & Customization:</strong></h3>
     <blockquote>
         <p>
-            This repository provides a comprehensive CMake foundation to help accelerate project setup. It includes a
-            complete build script structure, predefined configure/build CMake presets, custom CMake modules to simplify
-            common tasks, and a predefined set of <code>PRJ_</code> prefixed variables that drive core template behaviors.
+            This repository provides a comprehensive foundation to help accelerate project setup. It includes
+            pre-configured GitHub Workflows, shell scripts, testing framework dependencies, a complete build
+            script structure, predefined configure/build CMake presets, custom CMake modules to simplify common
+            tasks, and a predefined set of <code>PRJ_</code> prefixed variables that drive core template behaviors.
         </p>
         <p>
             To enhance developer efficiency, this template incorporates
