@@ -1,9 +1,10 @@
 @ECHO off
 setlocal
 
-:: This script enables or disables a GitHub Actions workflow.
-:: It moves the workflow .yml file between the .github/workflows/
-:: directory and the .github/ root directory to achieve this.
+:: This script enables or disables a GitHub Actions Workflow.
+:: It moves the Workflow .yml file between the .github/workflows/
+:: directory and the .github/disabled_workflows/ directory to
+:: achieve this.
 
 SET "GITHUB_DIR=.github"
 SET "WORKFLOWS_SUBDIR=workflows"
@@ -29,7 +30,7 @@ IF NOT EXIST "%ENABLED_FILE_PATH%" (
     )
 )
 
-IF /I "%ACTION%"=="false" (
+IF /I "%ACTION%"=="disable" (
     IF EXIST "%DISABLED_FILE_PATH%" (
         ECHO.
         ECHO The "%WORKFLOW_FILE%" Workflow is ALREADY disabled!
@@ -39,7 +40,7 @@ IF /I "%ACTION%"=="false" (
         ECHO.
         ECHO Attempting to disable "%WORKFLOW_FILE%" GitHub Workflow:
 
-        ECHO Moving "%ENABLED_FILE_PATH%" to "%DISABLED_FILE_PATH%"...
+        ECHO Moving "%WORKFLOW_FILE%.yml" to "%DISABLED_FILE_PATH%"...
 
         :: Create 'disabled_workflows' directory if it doesn't exist
         IF NOT EXIST "%DISABLED_WORKFLOWS_PATH%" (
@@ -63,11 +64,11 @@ IF /I "%ACTION%"=="false" (
         )
     )
 ) ELSE (
-    IF /I "%ACTION%"=="true" (
+    IF /I "%ACTION%"=="enable" (
         IF EXIST "%ENABLED_FILE_PATH%" (
             ECHO.
             ECHO The "%WORKFLOW_FILE%" Workflow is ALREADY enabled!
-            ECHO Found in "%WORKFLOWS_PATH%"
+            ECHO Found in: "%WORKFLOWS_PATH%"
             ECHO No action needed.
         ) ELSE (
             ECHO.
@@ -84,7 +85,7 @@ IF /I "%ACTION%"=="false" (
                 )
             )
 
-            ECHO Moving "%DISABLED_FILE_PATH%" to "%ENABLED_FILE_PATH%"...
+            ECHO Moving "%WORKFLOW_FILE%.yml" to "%ENABLED_FILE_PATH%"...
 
             :: Move the Workflow file to enable it
             MOVE "%DISABLED_FILE_PATH%" "%ENABLED_FILE_PATH%" >NUL
@@ -109,14 +110,14 @@ GOTO :end
 :: --- Usage Instructions ---
 :usage
 ECHO.
-ECHO Usage: %~nx0 [true^|false] [workflow_filename]
+ECHO Usage: %~nx0 [enable^|disable] [workflow_filename]
 ECHO.
-ECHO    [true]: Enables the specified GitHub Workflow by moving it from .github/ to .github/workflows/
-ECHO   [false]: Disables the specified GitHub Workflow by moving it from .github/workflows/ to .github/
+ECHO    [enable]: Enables the specified GitHub Workflow by moving it from .github/disabled_workflows/ to .github/workflows/
+ECHO   [disable]: Disables the specified GitHub Workflow by moving it from .github/workflows/ to .github/disabled_workflows/
 ECHO.
 ECHO Examples:
-ECHO   %~nx0 false my_ci_workflow
-ECHO   %~nx0 true my_deploy_workflow
+ECHO   %~nx0 disable my_ci_workflow
+ECHO   %~nx0 enable my_deploy_workflow
 
 :: --- Return To User ---
 :end
