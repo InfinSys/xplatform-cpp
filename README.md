@@ -12,7 +12,7 @@ This is not an HTML document.
 </br>
 
 <div>
-    <h3>✨ Accelerate your cross-platform C++ development</h3>
+    <h3>⚡ Accelerate your cross-platform C++ development</h3>
     <p><strong>
         This repository offers a robust template, designed to provide a comprehensive foundation for your next C++ project.
         It eliminates the complexities of initial setup, allowing you to focus immediately on application logic across diverse
@@ -58,6 +58,7 @@ This is not an HTML document.
 >    <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/docs/templ/README.md.in">README.md.in</a>
 >    file.
 > </h4>
+> <p>(<em>More details on template files later</em>)</p>
 
 <div>
     </br><p>
@@ -75,6 +76,53 @@ This is not an HTML document.
         <pre><code>cmake --build --preset macos-x64-Debug</code></pre>
     </blockquote>
 </div></br>
+<hr></br>
+
+<div>
+    <h2 align="center">Designed with Several Key Characteristics</br>to Empower C++ Development ✨</h2>
+    <h3><strong>CMake-Centric Build System:</strong></h3>
+    <blockquote>
+        <p>
+            At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled
+            flexibility and control over your project's compilation, linking, and packaging across diverse platforms.
+            <strong>Many of the template's advanced features are powered directly by CMake's capabilities.</strong>
+        </p>
+        <p>
+            CMake's strength lies in its ability to manage external dependencies, configure project layouts, and orchestrate
+            complex build processes. It offers amazing support for various compilers, build tools, and IDEs, enabling users
+            to easily swap out toolchains and target different environments without modifying source code or project files.
+            This abstraction simplifies maintaining a consistent build process across Windows, Linux, and macOS. You can find
+            the
+            <a href="https://cmake.org/cmake/help/latest/index.html">
+                official CMake documentation here
+            </a>.
+        </p>
+    </blockquote></br>
+    <h3><strong>Flexible Foundation & Customization:</strong></h3>
+    <blockquote>
+        <p>
+            This repository provides a comprehensive CMake foundation to help accelerate project setup. It includes a
+            complete build script structure, predefined configure/build CMake presets, custom CMake modules to simplify
+            common tasks, and a predefined set of <code>PRJ_</code> prefixed variables that drive core template behaviors.
+        </p>
+        <p>
+            To enhance developer efficiency, the template incorporates several helper macros within its CMake modules.
+            These macros abstract common build system operations, including: <code>format_source_code()</code> for
+            integrated code formatting, <code>set_cxx_standard()</code> for managing C++ standards of individual targets,
+            <code>set_metadata()</code> for caching project metadata (<em>more on this later</em>),
+            <code>create_template_reference()</code> for streamlining template file configuration, and more!
+        </p>
+        <p>
+            Most importantly, this foundation is (<em>obviously</em>) entirely customizable! While it offers a robust starting
+            point, <strong>you're encouraged to modify, extend, or even restructure the provided project directory, CMake
+            scripts/modules, shell scripts, and more to perfectly align with your project's unique requirements and your
+            preferred build philosophy</strong>. The goal this repo has in mind is to provide a baseline that can evolve with
+            your needs or inspire your own cross-platform C++ template!
+        </p>
+    </blockquote></br>
+</div>
+
+<!-- DO NOT DELETE CONTENTS BELOW -->
 <hr>
 
 </br><h3 align="center">( ...This README is still in progress... )</h3>
