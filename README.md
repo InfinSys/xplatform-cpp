@@ -48,14 +48,19 @@ This is not an HTML document.
         <h3>macOS:</h3>
         <pre><code>cmake --preset macos-x64-Debug</code></pre>
     </blockquote></br>
-    <h3>⚠️ <em>HEADS-UP!</em></h3>
-    <h4>Once you instruct CMake to configure the project, <em>this</em> README will be overwritten by the configured version!</h4>
-    <h4>
-        You can modify the README by changing the template
-        <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/docs/templ/README.md.in">README.md.in</a>
-        file.
-    </h4></br>
-    <p>
+</div>
+
+> [!IMPORTANT]
+> <h3>⚠️ <em>HEADS-UP!</em></h3>
+> <h4>Once you instruct CMake to configure the project, <em>this</em> README will be overwritten by the configured version!</h4>
+> <h4>
+>    You can modify the README by changing the template
+>    <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/docs/templ/README.md.in">README.md.in</a>
+>    file.
+> </h4>
+
+<div>
+    </br><p>
         You alternatively could command CMake to build the project and the CMake configuration step will be taken care of
         automatically:
     </p>
