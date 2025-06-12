@@ -81,6 +81,9 @@ This is not an HTML document.
 <div>
     <h2 align="center">Designed with Several Key Characteristics</br>to Empower C++ Development ✨</h2>
     <h3><strong>CMake-Centric Build System:</strong></h3>
+    <div align="center">
+        <img src="https://cmake.org/wp-content/uploads/2023/08/CMake-Logo.svg" alt="CMake Logo" width=200>
+    </div></br>
     <blockquote>
         <p>
             At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled
@@ -97,7 +100,6 @@ This is not an HTML document.
                 official CMake documentation here
             </a>.
         </p>
-        <img src="https://cmake.org/wp-content/uploads/2023/08/CMake-Logo.svg" alt="CMake Logo" width=200>
     </blockquote></br>
     <h3><strong>Flexible Foundation & Customization:</strong></h3>
     <blockquote>
