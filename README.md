@@ -61,8 +61,9 @@ This is not an HTML document.
 
 <div>
     </br><p>
-        You alternatively could command CMake to build the project and the CMake configuration step will be taken care of
-        automatically:
+        Configuring the project results in a <code>build</code> folder appearing in the project root that contains a subdirectory
+        specific to your preset. Because this template makes use of CMake presets, it is not necessary to naviagte to the
+        build directory before invoking the CMake build command:
     </p>
     <h3>🔨 Building the project with CMake:</h3>
     <blockquote>
