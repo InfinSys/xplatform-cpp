@@ -37,8 +37,9 @@ This is not an HTML document.
         Once you have the repository locally available, you can begin modifying the template as you please and configure/build
         the project. This template is designed to achieve both of these straight out of the box, so you need not modify anything
         to verify everything is functioning accordingly. Simply <code>cd</code> to the repositories directory and run the following
-        command to configure the project:
+        command:
     </p>
+    <h3>🔧 Configure the project with CMake:</h3>
     <blockquote>
         <h3>Windows:</h3>
         <pre><code>cmake --preset win32-x64-Debug</code></pre>
@@ -58,6 +59,7 @@ This is not an HTML document.
         You alternatively could command CMake to build the project and the CMake configuration step will be taken care of
         automatically:
     </p>
+    <h3>🔨 Building the project with CMake:</h3>
     <blockquote>
         <h3>Windows:</h3>
         <pre><code>cmake --build --preset win32-x64-Debug</code></pre>
