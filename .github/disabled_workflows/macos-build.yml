@@ -1,0 +1,32 @@
+
+name: macOS Build
+
+on:
+  push:
+    branches: [ "api-style" ]
+  pull_request:
+    branches: [ "api-style" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+        # Set fail-fast to false to ensure that feedback is delivered for all matrix
+        # combinations. Consider changing this to true when your workflow is stable.
+        fail-fast: false
+
+        matrix:
+            cmake_preset: ["macos-x64-Debug", "macos-x64-Release"]
+
+    steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+        
+        - name: Configure macOS CMake Preset
+          run: cmake --preset ${{ matrix.cmake_preset }}
+          shell: bash
+
+        - name: Build macOS CMake Preset
+          run: cmake --build --preset ${{ matrix.cmake_preset }}
+          shell: bash

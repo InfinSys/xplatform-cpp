@@ -7,8 +7,9 @@
 
 </br>
 
-[![Windows Build Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/windows-build.yml/badge.svg)](https://github.com/InfinSys/xplatform-cpp/actions/workflows/linux-build.yml)
-[![Linux Build Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/linux-build.yml/badge.svg)](https://github.com/InfinSys/xplatform-cpp/actions/workflows/windows-build.yml)
+[![Windows Build Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/windows-build.yml/badge.svg)](https://github.com/InfinSys/xplatform-cpp/actions/workflows/windows-build.yml)
+[![Linux Build Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/linux-build.yml/badge.svg)](https://github.com/InfinSys/xplatform-cpp/actions/workflows/linux-build.yml)
+[![macOS Build Status](https://github.com/InfinSys/xplatform-cpp/actions/workflows/macos-build.yml/badge.svg)](https://github.com/InfinSys/xplatform-cpp/actions/workflows/macos-build.yml)
 
 <br/>
 

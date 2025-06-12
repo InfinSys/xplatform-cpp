@@ -44,6 +44,8 @@ This is not an HTML document.
         <pre><code>cmake --preset win32-x64-Debug</code></pre>
         <h3>Linux:</h3>
         <pre><code>cmake --preset linux-x64-Debug</code></pre>
+        <h3>macOS:</h3>
+        <pre><code>cmake --preset macos-x64-Debug</code></pre>
     </blockquote></br>
     <h3><em>HEADS-UP:</em></h3>
     <h4>Once you instruct CMake to configure the project, <em>this</em> README will be overwritten by the configured version!</h4>
@@ -61,6 +63,8 @@ This is not an HTML document.
         <pre><code>cmake --build --preset win32-x64-Debug</code></pre>
         <h3>Linux:</h3>
         <pre><code>cmake --build --preset linux-x64-Debug</code></pre>
+        <h3>macOS:</h3>
+        <pre><code>cmake --build --preset macos-x64-Debug</code></pre>
     </blockquote>
 </div></br>
 <hr>

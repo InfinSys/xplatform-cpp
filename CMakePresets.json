@@ -50,6 +50,31 @@
                 "CMAKE_CXX_COMPILER": "g++",
                 "CMAKE_ASM_COMPILER": "gcc"
             }
+        },
+
+        {
+            "name": "macos-x64-Debug",
+            "displayName": "macOS x64 (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang"
+            }
+        },
+        {
+            "name": "macos-x64-Release",
+            "displayName": "macOS x64 (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang"
+            }
         }
         
     ],
@@ -78,6 +103,19 @@
             "name": "linux-x64-Release",
             "displayName": "Release x64",
             "configurePreset": "linux-x64-Release",
+            "jobs": 0
+        },
+
+        {
+            "name": "macos-x64-Debug",
+            "displayName": "Debug x64",
+            "configurePreset": "macos-x64-Debug",
+            "jobs": 0
+        },
+        {
+            "name": "macos-x64-Release",
+            "displayName": "Release x64",
+            "configurePreset": "macos-x64-Release",
             "jobs": 0
         }
     ]
