@@ -26,10 +26,10 @@ jobs:
         - name: Setup MSVC Environment
           uses: ilammy/msvc-dev-cmd@v1.13.0
         
-        - name: Configure CMake Preset
+        - name: Configure Windows CMake Preset
           run: cmake --preset ${{ matrix.cmake_preset }}
           shell: cmd
 
-        - name: Build CMake Preset
+        - name: Build Windows CMake Preset
           run: cmake --build --preset ${{ matrix.cmake_preset }}
           shell: cmd
