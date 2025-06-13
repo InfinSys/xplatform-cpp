@@ -63,7 +63,7 @@ This is not an HTML document.
 <div>
     </br><p>
         Configuring the project results in a <code>build</code> folder appearing in the project root that contains a subdirectory
-        specific to your preset. Because this template makes use of CMake presets, it is not necessary to naviagte to the
+        specific to your preset. Because this template makes use of CMake presets, it is not necessary to navigate to the
         build directory before invoking the CMake build command:
     </p>
     <h3>🔨 Build the project with CMake:</h3>
@@ -104,10 +104,10 @@ This is not an HTML document.
     <h3><strong>Flexible Foundation & Customization:</strong></h3>
     <blockquote>
         <p>
-            This repository provides a comprehensive foundation to help accelerate project setup. It includes
-            pre-configured GitHub Workflows, shell scripts, testing framework dependencies, a complete build
-            script structure, predefined configure/build CMake presets, custom CMake modules to simplify common
-            tasks, and a predefined set of <code>PRJ_</code> prefixed variables that drive core template behaviors.
+            This repository provides a comprehensive foundation to help accelerate project setup. It includes pre-configured
+            GitHub Actions Workflows, shell scripts, testing framework dependencies, a complete build script structure,
+            predefined CMake configure/build presets, custom CMake modules to simplify common tasks, and a predefined set of
+            <code>PRJ_</code> prefixed variables that drive core template behaviors.
         </p>
         <p>
             To enhance developer efficiency, this template incorporates
