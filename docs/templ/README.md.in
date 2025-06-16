@@ -3,7 +3,8 @@
 
 <br/>
 
-![Static Badge](https://img.shields.io/badge/version-@CMAKE_PROJECT_VERSION_MAJOR@.@CMAKE_PROJECT_VERSION_MINOR@.@CMAKE_PROJECT_VERSION_PATCH@.@CMAKE_PROJECT_VERSION_TWEAK@-blue)
+<!-- TODO: Update the link below to reflect MY repositories releases... -->
+[![Static Badge](https://img.shields.io/badge/version-@CMAKE_PROJECT_VERSION_MAJOR@.@CMAKE_PROJECT_VERSION_MINOR@.@CMAKE_PROJECT_VERSION_PATCH@-blue)](https://github.com/InfinSys/xplatform-cpp/releases)
 
 </br>
 

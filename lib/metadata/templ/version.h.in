@@ -15,30 +15,31 @@
 
 #include <stdint.h>
 
-extern "C" {
+extern "C"
+{
 
 /*!
-* @brief
-* Software version major.
-*/
+ * @brief
+ * Software version major.
+ */
 const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_MAJOR = @CMAKE_PROJECT_VERSION_MAJOR@;
 
 /*!
-* @brief
-* Software version minor.
-*/
+ * @brief
+ * Software version minor.
+ */
 const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_MINOR = @CMAKE_PROJECT_VERSION_MINOR@;
 
 /*!
-* @brief
-* Software version patch number.
-*/
+ * @brief
+ * Software version patch number.
+ */
 const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_PATCH = @CMAKE_PROJECT_VERSION_PATCH@;
 
 /*!
-* @brief
-* Arbitrary software version tweak number.
-*/
+ * @brief
+ * Arbitrary software version tweak number.
+ */
 const uint8_t @RESOLVED_SFTW_META_PREFIX@_VERSION_TWEAK = @CMAKE_PROJECT_VERSION_TWEAK@;
 
 } // Extern "C"
