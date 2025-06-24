@@ -80,6 +80,9 @@ endif()
 # Includes
 include_directories(${PRJ_INCLUDE_DIRS})
 
+include(compiler/detector)
+include(linker/config)
+
 # Sources
 add_subdirectory(lib)
 add_subdirectory(src)
