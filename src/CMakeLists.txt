@@ -3,45 +3,50 @@
 #     /src Directory Script
 #================================
 
-include(utility/project_tools)
+# TODO: Handle project source targets...
 
-set(MAIN_BINARY_NAME "${${PRJ_SCOPE}_MAIN_BINARY_NAME}")
+add_executable(Demo_Executable)
 
-# TODO: Handle source targets...
-
-# Example: primary target
-set(ENTRY_POINT_SRC main.cpp)
-add_executable(${MAIN_BINARY_NAME} ${ENTRY_POINT_SRC})
-
-# Example: include directories
-target_include_directories(
-    ${MAIN_BINARY_NAME}
-
-    PUBLIC
-    ${PRJ_INCLUDE_DIRS}
-)
-
-# Example: project-wide C++ standard
-use_project_cxx_standard(GLOBAL_CXX_OPTIONS INTERFACE)
-
-target_link_options(
-    GLOBAL_CXX_OPTIONS
-
-    INTERFACE
-    ${GLOBAL_LINK_FLAGS}
-)
-
-# Example: add 'main.cpp' to library
 target_sources(
-    ${MAIN_BINARY_NAME}
+    Demo_Executable
 
-    PUBLIC
-    "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
 )
 
-target_link_libraries(
-    ${MAIN_BINARY_NAME}
+target_include_directories(
+    Demo_Executable
 
-    PUBLIC
-    GLOBAL_CXX_OPTIONS
+    PRIVATE
+    "${${PRJ_PREFIX}_SOURCE_DIR}/include"
+)
+
+# Conditionally link against compiler configuration
+if(${${PRJ_PREFIX}_CXX_GCC})
+    target_link_libraries(
+        Demo_Executable
+    
+        PRIVATE
+        ${PRJ_PREFIX}_gcc_cxx_bundle
+        ${PRJ_PREFIX}_gcc_c_defines
+    )
+# elseif(${${PRJ_PREFIX}_CXX_CLANG})
+elseif(${${PRJ_PREFIX}_CXX_MSVC})
+    target_link_libraries(
+        Demo_Executable
+    
+        PRIVATE
+        ${PRJ_PREFIX}_msvc_cxx_bundle
+        ${PRJ_PREFIX}_gcc_c_defines
+    )
+endif()
+
+# Setup installation of demo executable
+install(
+    TARGETS Demo_Executable
+    COMPONENT DemoApp
+    EXPORT Demo_Executable-targets
+
+    RUNTIME
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
