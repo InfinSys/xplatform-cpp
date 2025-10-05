@@ -8,8 +8,9 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Ignore binary output directory
+# Ignore binary output directories
 build/*
+install/*
 
 # Ignore Doxygen output directory
 docs/ref/doxygen/*
