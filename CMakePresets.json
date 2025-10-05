@@ -1,7 +1,6 @@
 {
     "version": 8,
     "configurePresets": [
-
         {
             "name": "win32-x64-Debug",
             "displayName": "Windows x64 (Debug)",
@@ -11,7 +10,8 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_ASM_COMPILER": "cl.exe"
+                "CMAKE_ASM_COMPILER": "cl.exe",
+                "XPTEMP_CLI_DEBUG": "ON"
             }
         },
         {
@@ -28,7 +28,7 @@
         },
 
         {
-            "name": "linux-x64-Debug",
+            "name": "linux-x64-debug",
             "displayName": "Linux x64 (Debug)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
@@ -36,11 +36,12 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "gcc",
                 "CMAKE_CXX_COMPILER": "g++",
-                "CMAKE_ASM_COMPILER": "gcc"
+                "CMAKE_ASM_COMPILER": "gcc",
+                "XPTEMP_CLI_DEBUG": "ON"
             }
         },
         {
-            "name": "linux-x64-Release",
+            "name": "linux-x64-release",
             "displayName": "Linux x64 (Release)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
@@ -53,7 +54,7 @@
         },
 
         {
-            "name": "macos-x64-Debug",
+            "name": "macos-x64-debug",
             "displayName": "macOS x64 (Debug)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
@@ -61,11 +62,12 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang"
+                "CMAKE_ASM_COMPILER": "clang",
+                "XPTEMP_CLI_DEBUG": "ON"
             }
         },
         {
-            "name": "macos-x64-Release",
+            "name": "macos-x64-release",
             "displayName": "macOS x64 (Release)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
@@ -76,46 +78,45 @@
                 "CMAKE_ASM_COMPILER": "clang"
             }
         }
-        
     ],
 
     "buildPresets": [
         {
             "name": "win32-x64-Debug",
-            "displayName": "Debug x64",
+            "displayName": "Debug x64 (MSVC)",
             "configurePreset": "win32-x64-Debug",
-            "jobs": 0
+            "jobs": 4
         },
         {
             "name": "win32-x64-Release",
-            "displayName": "Release x64",
+            "displayName": "Release x64 (MSVC)",
             "configurePreset": "win32-x64-Release",
+            "jobs": 4
+        },
+
+        {
+            "name": "linux-x64-debug",
+            "displayName": "Debug x64 (gcc)",
+            "configurePreset": "linux-x64-debug",
+            "jobs": 0
+        },
+        {
+            "name": "linux-x64-release",
+            "displayName": "Release x64 (gcc)",
+            "configurePreset": "linux-x64-release",
             "jobs": 0
         },
 
         {
-            "name": "linux-x64-Debug",
-            "displayName": "Debug x64",
-            "configurePreset": "linux-x64-Debug",
+            "name": "macos-x64-debug",
+            "displayName": "Debug x64 (Clang)",
+            "configurePreset": "macos-x64-debug",
             "jobs": 0
         },
         {
-            "name": "linux-x64-Release",
-            "displayName": "Release x64",
-            "configurePreset": "linux-x64-Release",
-            "jobs": 0
-        },
-
-        {
-            "name": "macos-x64-Debug",
-            "displayName": "Debug x64",
-            "configurePreset": "macos-x64-Debug",
-            "jobs": 0
-        },
-        {
-            "name": "macos-x64-Release",
-            "displayName": "Release x64",
-            "configurePreset": "macos-x64-Release",
+            "name": "macos-x64-release",
+            "displayName": "Release x64 (Clang)",
+            "configurePreset": "macos-x64-release",
             "jobs": 0
         }
     ]
