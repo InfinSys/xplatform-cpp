@@ -20,5 +20,5 @@ target_link_libraries(
     benchmark_main
 )
 
-# Benchmarking Source
+# Benchmarking Sources
 # TODO: Add benchmarking source dirs...

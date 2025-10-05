@@ -1,22 +1,11 @@
 
-#include "dev_utils.hpp"
-
-
-/* /// \\\ /// \\\ /// | TO-DO | \\\ /// \\\ /// \\\ *\
-*
-* ~ CLI Debug Executable Notes / TO-DO List ~
-*
-* -> [] n/a
-*
-\* /// \\\ /// \\\ ///  | END |  \\\ /// \\\ /// \\\ */
-
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
-	ProjectInfoOut();
+    //\\//
+    //
 
-	//\\//
-	//
-
-	return 0;
+    std::cout << "\nFunctioning properly." << std::endl;
+    return 0;
 }
