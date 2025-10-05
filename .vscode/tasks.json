@@ -1,46 +1,126 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+	"version": "2.0.0",
+	"tasks": [
+		// x64 Debug CMake Tasks:
+		{
+			"type": "cmake",
+			"label": "Configure: x64-Debug",
+			"command": "configure",
+			"problemMatcher": [],
+			"detail": "Configure CMake project (x64 Debug)",
+			
+			"windows": {
+				"preset": "win32-x64-Debug"
+			},
+			"linux": {
+				"preset": "linux-x64-Debug"
+			}
+		},
+		{
+			"type": "cmake",
+			"label": "Build: x64-Debug",
+			"command": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"detail": "Build CMake project (x64 Debug)",
+			
+			"windows": {
+				"preset": "win32-x64-Debug"
+			},
+			"linux": {
+				"preset": "linux-x64-Debug"
+			},
 
-        // Developer CLI executable configure task
-        {
-            "label": "Dev CLI: Configure (x64)",
-            "type": "shell",
-            "command": "cmake",
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": ["$msCompile", "$gcc"],
-            "group": "build",
+			"dependsOn": ["Configure: x64-Debug"]
+		},
 
-            "windows": {
-                "args": ["--preset", "win32-x64-Debug"],
-            },
-            "linux": {
-                "args": ["--preset", "linux-x64-Debug"],
-            },
-        },
+		// x64 Release CMake Tasks:
+		{
+			"type": "cmake",
+			"label": "Configure: x64-Release",
+			"command": "configure",
+			"problemMatcher": [],
+			"detail": "Configure CMake project (x64 Release)",
+			
+			"windows": {
+				"preset": "win32-x64-release"
+			},
+			"linux": {
+				"preset": "linux-x64-release"
+			}
+		},
+		{
+			"type": "cmake",
+			"label": "Build: x64-Release",
+			"command": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"detail": "Build CMake project (x64 Release)",
+			
+			"windows": {
+				"preset": "win32-x64-release"
+			},
+			"linux": {
+				"preset": "linux-x64-release"
+			},
 
-        // Developer CLI executable build task
-        {
-            "label": "Dev CLI: Build (x64)",
-            "type": "shell",
-            "command": "cmake",
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": ["$msCompile", "$gcc"],
-            "group": "build",
+			"dependsOn": ["Configure: x64-Release"]
+		},
 
-            "windows": {
-                "args": ["--build", "--preset", "win32-x64-Debug"],
-            },
-            "linux": {
-                "args": ["--build", "--preset", "linux-x64-Debug"],
-            },
+		// x64 CMake Install Tasks:
+		{
+			"type": "shell",
+			"label": "Install: x64-Debug",
+			"command": "cmake",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [],
+			"detail": "Install CMake project (x64 Debug)",
+			
+			"windows": {
+				"preset": "win32-x64-debug",
+				"args": [
+					"--install", "build/win32-x64-debug/",
+					"--prefix", "install/win32-x64-debug/"
+				]
+			},
+			"linux": {
+				"preset": "linux-x64-debug",
+				"args": [
+					"--install", "build/linux-x64-debug/",
+					"--prefix", "install/linux-x64-debug/"
+				]
+			},
 
-            "dependsOn": ["Dev CLI: Configure (x64)"]
-        },
-        
-    ]
+			"dependsOn": ["Build: x64-Debug"]
+		},
+		{
+			"type": "shell",
+			"label": "Install: x64-Release",
+			"command": "cmake",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [],
+			"detail": "Install CMake project (x64 Release)",
+			
+			"windows": {
+				"preset": "win32-x64-release",
+				"args": [
+					"--install", "build/win32-x64-release/",
+					"--prefix", "install/win32-x64-release/"
+				]
+			},
+			"linux": {
+				"preset": "linux-x64-release",
+				"args": [
+					"--install", "build/linux-x64-release/",
+					"--prefix", "install/linux-x64-release/"
+				]
+			},
+
+			"dependsOn": ["Build: x64-Release"]
+		},
+	]
 }
