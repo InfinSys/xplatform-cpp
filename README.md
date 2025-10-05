@@ -54,7 +54,7 @@ This is not an HTML document.
 >    <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/docs/templ/README.md.in">README.md.in</a>
 >    file.
 > </h4>
-> <p>(<em>More details on template files later</em>)</p>
+> <p>(<em>More details on template files <a href="#-this-readme-is-still-in-progress-">below</a></em>)</p>
 
 <div>
     </br><p>
@@ -62,7 +62,7 @@ This is not an HTML document.
         specific to your preset. Because this template makes use of CMake presets, it is not necessary to navigate to the
         build directory before invoking the CMake build command:
     </p>
-    <h3>🔨 Build the project with CMake:</h3>
+    <h3>🔨 Build your project with CMake:</h3>
     <blockquote>
         <h3>Windows:</h3>
         <pre><code>cmake --build --preset win32-x64-debug</code></pre>
@@ -74,7 +74,7 @@ This is not an HTML document.
 </div></br></br>
 
 <div>
-    <h2 align="center">Designed with Several Key Characteristics</br>to Empower C++ Development</h2>
+    <h2 align="center">N/a</h2>
     <h3><strong>CMake Build System:</strong></h3>
     <div align="center">
         <img src="https://cmake.org/wp-content/uploads/2023/08/CMake-Logo.svg" alt="CMake Logo" width=200>
