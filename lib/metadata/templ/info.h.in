@@ -3,7 +3,7 @@
  * @file info.h
  *
  * @brief
- * Software identification document.
+ * Software identification header.
  *
  * @details
  * Metadata for @RESOLVED_SFTW_NAME@.
