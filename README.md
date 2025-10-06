@@ -30,11 +30,11 @@ This is not an HTML document.
     </h4></br>
     <h3>Next Steps:</h3>
     <p>
-        Once you obtain the template you can proceed with your modifications. There are conveniently placed <code># TODO:</code> markers within the project files that point out some critical personalization points if you are unsure where to start.
+        Once you obtain the template you can proceed with your modifications. There are conveniently placed <code>TODO:</code> markers within the project files that point out some critical personalization points if you are unsure where to start.
     </p>
     <h3>You are encouraged to modify this template as much as you desire, it's yours!</h3></br>
     <p>
-        When you are ready to build the project, <em>or if you'd like to verify the template works straight out of the box</em>, you can instruct CMake to configure the project with the following:
+        When you are ready to build the project, <em>or if you'd like to verify the template works straight out of the box</em>, you can instruct CMake to create the necessary buildsystem files for your generator with the following:
     </p>
     <blockquote>
         <h3>🔧 Run the CMake configuration:</h3>
@@ -49,7 +49,7 @@ This is not an HTML document.
 
 > [!NOTE]
 > <h3>⚠️ <em>HEADS-UP!</em></h3>
-> <h4>Once you instruct CMake to configure the project, <em>this</em> README will be overwritten by the configured version!</h4>
+> <h4>Once you instruct CMake to configure the project <em>this</em> README will be overwritten by the generated version!</h4>
 > <h4>
 >    You can modify the README by changing the template
 >    <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/docs/templ/README.md.in">README.md.in</a>
