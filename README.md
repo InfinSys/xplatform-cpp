@@ -12,10 +12,10 @@ This is not an HTML document.
 <div>
     <h3>:: API Style</h3>
     <p>
-        The <strong>API style</strong> project directory is designed for <strong>building C++ libraries intended to be consumed by other developers</strong>. Unlike end-user applications, a library's project structure is part of its public interface. Downstream projects interact not only with its binaries and headers but also with its build system and dependency layout. This turns out to be part of the user experience. The intent of this template is to make a library easy to consume, extend, and maintain — whether linking it via CMake, embedding it directly, or publishing it as a package.
+        The <strong>API style</strong> project directory is designed for <strong>building C++ libraries intended to be consumed by other developers</strong>. Unlike end-user applications, a library's project structure is part of its public interface. Downstream projects interact not only with its binaries and headers but also with its build system and dependency layout. The project structure of a library is an important aspect of the user experience that should never be neglected. The point of this template is to provide new projects with a conforming starting point that is easy to consume, extend, and maintain — whether linking it via CMake, embedding it directly, or publishing it as a package.
     </p>
     <p>
-        In contrast, <strong>End-User style</strong> projects focus on producing standalone executables or tools where internal organization is flexible and developer-facing ergonomics are less critical. You can find this template on the <a href="https://github.com/InfinSys/xplatform-cpp/tree/end-user-style">End-User Style branch</a>.
+        In contrast, <strong>End-User style</strong> projects typically focus on producing standalone executables or tools where internal organization is flexible and developer-facing ergonomics are less critical. You can find this template on the <a href="https://github.com/InfinSys/xplatform-cpp/tree/end-user-style">End-User Style branch</a>.
     </p>
 </div></br>
 
@@ -34,10 +34,11 @@ This is not an HTML document.
     </p>
     <h3>You are encouraged to modify this template as much as you desire, it's yours!</h3></br>
     <p>
-        When you are ready to build the project, <em>or if you'd like to verify the template works straight out of the box</em>, you can instruct CMake to create the necessary buildsystem files for your generator with the following:
+        When you are ready to build the project, <em>or if you'd like to verify the template works straight out of the box</em>, you can instruct CMake to create the necessary build system files for your generator with the following:
     </p>
+    <h3>🔧 Run the CMake configuration:</h3>
+    <p>(in the root directory of the template)</p>
     <blockquote>
-        <h3>🔧 Run the CMake configuration:</h3>
         <h3>Windows (x64):</h3>
         <pre><code>cmake --preset win32-x64-debug</code></pre>
         <h3>Linux (x64):</h3>
