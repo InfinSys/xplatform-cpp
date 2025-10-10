@@ -37,7 +37,7 @@ This is not an HTML document.
         When you are ready to build the project, <em>or if you'd like to verify the template works straight out of the box</em>, you can instruct CMake to create the necessary build system files for your generator with the following:
     </p>
     <h3>🔧 Run the CMake configuration:</h3>
-    <p>(in the root directory of the template)</p>
+    <p>(<em>in the root directory of the template</em>)</p>
     <blockquote>
         <h3>Windows (x64):</h3>
         <pre><code>cmake --preset win32-x64-debug</code></pre>
