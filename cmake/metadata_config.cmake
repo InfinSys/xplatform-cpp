@@ -30,11 +30,6 @@ create_template_reference(SFTW_MAIN_BINARY  MAIN_BINARY_NAME)
 create_template_reference(SFTW_META_PREFIX  META_NAMESPACE)
 
 # configure_template(
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/LICENSE.in"
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/LICENSE"
-# )
-# 
-# configure_template(
 #     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/README.md.in"
 #     "${${PRJ_PREFIX}_SOURCE_DIR}/README.md"
 # )
