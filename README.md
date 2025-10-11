@@ -23,7 +23,8 @@ This is not an HTML document.
     <h2>License</h2>
     <h3>There are no legal restrictions imposed on the use of this repository by the author. You may use the materials without attribution.</h3>
     <p>
-        This template and its contents are free to use with no restriction for any purpose. An MIT license is attached to the repository as indication of this fact and as standard procedure. <strong>The author does not require you to retain a license or copyright notice for this template in your derivative work</strong>. This is an explicit written notice from the author to all recipients of the template. This template is free software.
+        This is an explicit written notice from the author of this repository to all recipients of its contents
+: This template and its contents are free to use for any purpose with no restrictions. An MIT license is attached to this repository as indication of this fact and as standard procedure. <strong>The author does not require you to retain a license or copyright notice for this template in your derivative work</strong>. This template is <strong>free software</strong>.
     </p>
 </div></br>
 
