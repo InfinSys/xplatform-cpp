@@ -6,7 +6,7 @@ This is not an HTML document.
 -->
 
 <div align="center">
-    <h1>Cross-Platform C++ Template</h1>
+    <h1>Cross-Platform C/C++ Template</h1>
 </div></br>
 
 <div> <!--| Template Style Introduction |-->
