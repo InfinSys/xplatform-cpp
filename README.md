@@ -40,7 +40,8 @@ This is not an HTML document.
     <p>
         Once you obtain the template you can proceed with your modifications. There are conveniently placed <code>TODO:</code> markers within the project files that point out some critical personalization points if you are unsure where to start.
     </p>
-    <h3>You are encouraged to modify this template as much as you desire, make it yours!</h3></br>
+    <h3>You are encouraged to modify this template as much as you desire, make it yours!</h3>
+    <p>(<em>More details on template project structure <a href="#-this-readme-is-still-in-progress-">below</a></em>)</p></br>
     <p>
         When you are ready to build the project, <em>or if you'd like to verify the template works straight out of the box</em>, you can instruct CMake to create the necessary build system files for your generator with the following:
     </p>
