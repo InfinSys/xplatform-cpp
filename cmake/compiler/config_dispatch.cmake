@@ -10,7 +10,7 @@
 if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
     # GCC C compiler
     set(${PRJ_PREFIX}_C_GCC TRUE)
-    include(cmake/compiler/gnu_c.cmake)
+    include(cmake/compiler/gcc_c.cmake)
 elseif(CMAKE_C_COMPILER_ID MATCHES "(Apple)?[Cc]lang")
     # Clang C compiler
     set(${PRJ_PREFIX}_C_CLANG TRUE)
@@ -26,7 +26,7 @@ endif()
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # GCC C++ compiler
     set(${PRJ_PREFIX}_CXX_GCC TRUE)
-    include(cmake/compiler/gnu_cxx.cmake)
+    include(cmake/compiler/gcc_cxx.cmake)
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?[Cc]lang")
     # Clang C++ compiler
     set(${PRJ_PREFIX}_CXX_CLANG TRUE)

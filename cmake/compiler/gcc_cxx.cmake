@@ -1,6 +1,6 @@
 
 #===============================================
-#     GNU C++ COMPILER CONFIGURATION (g++)
+#     GCC C++ COMPILER CONFIGURATION (g++)
 #===============================================
 
 # TODO: Setup g++ compiler configuration (if applicable)
@@ -9,7 +9,7 @@ set(${PRJ_PREFIX}_GCC_CXX_VERSION_MIN 14 CACHE STRING "Minimum g++ compiler vers
 
 # Confirm supported g++ compiler version
 if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS ${${PRJ_PREFIX}_GCC_CXX_VERSION_MIN})
-    message(FATAL_ERROR "Incompatible version of GNU C++ compiler for ${CMAKE_PROJECT_NAME}.")
+    message(FATAL_ERROR "Incompatible version of GCC C++ compiler for ${CMAKE_PROJECT_NAME}.")
 endif()
 
 # Compiler feature configuration target
@@ -89,7 +89,7 @@ target_compile_definitions(
         >
 )
 
-# Complete GNU C++ compiler package
+# Complete GCC C++ compiler package
 add_library(${PRJ_PREFIX}_gcc_cxx_bundle INTERFACE)
 
 target_link_libraries(
