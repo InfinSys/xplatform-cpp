@@ -53,8 +53,8 @@
         },
 
         {
-            "name": "linux-x64-debug",
-            "displayName": "Linux x64 (Debug)",
+            "name": "linux-x64-gcc-debug",
+            "displayName": "Linux x64 GCC (Debug)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
@@ -66,8 +66,21 @@
             }
         },
         {
-            "name": "linux-x64-release",
-            "displayName": "Linux x64 (Release)",
+            "name": "linux-x64-clang-debug",
+            "displayName": "Linux x64 Clang (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang",
+                "XPTEMP_CLI_DEBUG": "ON"
+            }
+        },
+        {
+            "name": "linux-x64-gcc-release",
+            "displayName": "Linux x64 GCC (Release)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
@@ -75,6 +88,18 @@
                 "CMAKE_C_COMPILER": "gcc",
                 "CMAKE_CXX_COMPILER": "g++",
                 "CMAKE_ASM_COMPILER": "gcc"
+            }
+        },
+        {
+            "name": "linux-x64-clang-release",
+            "displayName": "Linux x64 Clang (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang"
             }
         },
 
@@ -132,15 +157,27 @@
         },
 
         {
-            "name": "linux-x64-debug",
-            "displayName": "Debug x64 (gcc)",
-            "configurePreset": "linux-x64-debug",
+            "name": "linux-x64-gcc-debug",
+            "displayName": "Debug x64 (GCC)",
+            "configurePreset": "linux-x64-gcc-debug",
             "jobs": 0
         },
         {
-            "name": "linux-x64-release",
-            "displayName": "Release x64 (gcc)",
-            "configurePreset": "linux-x64-release",
+            "name": "linux-x64-clang-debug",
+            "displayName": "Debug x64 (Clang)",
+            "configurePreset": "linux-x64-clang-debug",
+            "jobs": 0
+        },
+        {
+            "name": "linux-x64-gcc-release",
+            "displayName": "Release x64 (GCC)",
+            "configurePreset": "linux-x64-gcc-release",
+            "jobs": 0
+        },
+        {
+            "name": "linux-x64-clang-release",
+            "displayName": "Release x64 (Clang)",
+            "configurePreset": "linux-x64-clang-release",
             "jobs": 0
         },
 
