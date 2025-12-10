@@ -1,7 +1,7 @@
 
-#========================================================
-#     CODEBASE FORMAT UTILITY TARGET (Clang-Format)
-#========================================================
+#============================================
+#     CLANG-FORMAT UTILITY TARGET SETUP
+#============================================
 
 # TODO: Configure clang-format utility target...
 
