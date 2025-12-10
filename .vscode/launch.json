@@ -10,6 +10,7 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/install/bin/Demo_Executable.exe",
+            // TODO: Replace 'Demo_Executable.exe' above with your executable name
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -21,6 +22,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/install/bin/Demo_Executable.exe",
+            // TODO: Replace 'Demo_Executable.exe' above with your executable name
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
