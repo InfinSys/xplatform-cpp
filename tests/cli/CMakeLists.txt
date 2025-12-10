@@ -22,3 +22,13 @@ elseif(${${PRJ_PREFIX}_CXX_MSVC})
         ${PRJ_PREFIX}_msvc_cxx_bundle
     )
 endif()
+
+# Setup installation of developer executable
+install(
+    TARGETS dev_cli_debug
+    COMPONENT DevDebugApp
+    EXPORT dev_cli_debug-targets
+
+    RUNTIME
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
