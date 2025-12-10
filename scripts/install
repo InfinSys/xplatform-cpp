@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Check for missing CMake preset name argument
+if [ -z "$1" ]; then
+    echo ""
+    echo "Usage: $(basename "$0") [cmake_preset] [component]"
+    echo ""
+    echo "Examples:"
+    echo "  $(basename "$0") linux-x64-gnu-debug DemoApp     (installs 'DemoApp' component)"
+    echo "                  OR"
+    echo "  $(basename "$0") linux-x64-llvm-release          (installs all components)"
+    echo ""
+    exit 0
+fi
+
+CMAKE_PRESET="$1"
+COMPONENT="$2"
+
+# Change to project root directory
+cd "$(dirname "$0")/.." || exit 1
+
+# Get the current directory for install prefix
+PROJECT_ROOT="$(pwd)"
+
+# Installation path prefix
+INSTALL_PATH_PREFIX="$PROJECT_ROOT/install"
+# TODO: Configure build installation path prefix
+
+# Check if COMPONENT is empty
+if [ -z "$COMPONENT" ]; then
+    # Install without component specification
+    cmake --install "./build/$CMAKE_PRESET" --prefix "$INSTALL_PATH_PREFIX"
+else
+    # Install with component specification
+    cmake --install "./build/$CMAKE_PRESET" --component "$COMPONENT" --prefix "$INSTALL_PATH_PREFIX"
+fi
+
+echo "Done."
+echo ""
+read -p "Press Enter to continue..."
+echo ""

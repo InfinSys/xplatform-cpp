@@ -21,3 +21,4 @@ cmake --build --preset "$CMAKE_PRESET" --target XPTEMP_clang_tidy
 echo "Done."
 echo
 read -p "Press Enter to continue..."
+echo ""
