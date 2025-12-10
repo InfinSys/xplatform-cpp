@@ -37,7 +37,6 @@ elseif(${${PRJ_PREFIX}_CXX_MSVC})
     
         PRIVATE
         ${PRJ_PREFIX}_msvc_cxx_bundle
-        ${PRJ_PREFIX}_gcc_c_defines
     )
 endif()
 
