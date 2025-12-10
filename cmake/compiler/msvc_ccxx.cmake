@@ -52,7 +52,7 @@ target_compile_options(
 
     INTERFACE
         # Compiler warning flags
-        "/W4"
+        # "/W4"
 )
 
 # Conditionally add more aggressive warnings
