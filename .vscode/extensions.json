@@ -5,10 +5,10 @@
         "ms-vscode.cpptools",
         "ms-vscode.cpptools-extension-pack",
         "ms-vscode.cmake-tools",
-        "VisualStudioExptTeam.vscodeintellicode",
+        "ms-vscode.hexeditor",
+        "GitHub.copilot-chat",
         "GitHub.vscode-pull-request-github",
-        "github.vscode-github-actions",
-        "ms-vscode.hexeditor"
+        "github.vscode-github-actions"
     ],
     "unwantedRecommendations": ["twxs.cmake"]
 }

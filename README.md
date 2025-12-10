@@ -2,149 +2,115 @@
 <!--
     (June 2025 - Jamon T. Bailey)
 
-This is not an HTML document.
+This is not an HTML document, obviously.
 -->
 
 <div align="center">
-    <h1>Cross-Platform C++ Template</h1>
-</div>
+    <h1>Cross-Platform C/C++ Template</h1>
+</div></br>
 
-</br>
-
-<div>
-    <h3>⚡ Accelerate your cross-platform C++ development</h3>
-    <p><strong>
-        This repository offers a robust template, designed to provide a comprehensive foundation for your next C++ project.
-        It eliminates the complexities of initial setup, allowing you to focus immediately on application logic across diverse
-        operating systems such as Windows, Linux, and macOS. Using CMake, this template integrates seamlessly with modern
-        development tools and environments like VS Code, Visual Studio, CLion, and more, while maintaining the flexibility to
-        adapt to your preferred toolchain.
-    </strong></p>
-</div>
-
-</br>
+<div> <!--| Template Style Introduction |-->
+    <h3>:: API Style</h3>
+    <p>
+        The <strong>API style</strong> project directory is designed for <strong>writing libraries intended to be consumed by other developers</strong>. Unlike end-user applications, a library's project structure is part of its public interface and consequently the user experience. Downstream projects interact not only with its binaries and headers but also with its build system and dependency layout. The goal this template has in mind is providing new projects with a conforming starting point that is easy to consume, extend, and maintain; whether linking it via CMake, embedding it directly, or publishing it as a package.
+    </p>
+    <p>
+        In contrast, <strong>End-User style</strong> projects typically focus on producing standalone executables or tools where internal organization is flexible and developer-facing ergonomics are less critical. You can find this template on the <a href="https://github.com/InfinSys/xplatform-cpp/tree/end-user-style">End-User Style branch</a>.
+    </p>
+</div></br>
 
 <div>
-    <h2>🚀 Setup</h2>
+    <h2>License</h2>
+    <h3>There are no legal restrictions imposed on the use of this repository by the author. You may use the materials without attribution.</h3>
+    <p>
+        This is an explicit written notice from the author of this repository to all recipients of its contents
+: This template is free to use for any purpose with no restrictions. An MIT license is attached to this repository as indication of this fact and as standard procedure. <strong>The author does not require you to retain a license or copyright notice for this template in your derivative work</strong>. This template is <strong>free software</strong>.
+    </p>
+</div></br>
+
+<div> <!--| Template Setup Instructions |-->
+    <h2>Project Template Setup</h2>
     <h4>Clone this repository using the CLI:</h4>
-    <pre align="center"><code>git clone https://github.com/InfinSys/xplatform-cpp.git [destination]</code></pre>
+    <pre align="center"><code>git clone https://github.com/InfinSys/xplatform-cpp.git -b api-style [destination path]</code></pre>
     <strong><h3 align="center">OR</h3></strong>
     <h4 align="center">
-        <a href="https://github.com/InfinSys/xplatform-cpp/archive/refs/heads/main.zip">📂download the source ZIP file</a>
-        and extract it to a preferred location.
+        <a href="https://github.com/InfinSys/xplatform-cpp/archive/refs/heads/api-style.zip">📂download the source ZIP file</a> and extract it to a preferred location.
     </h4></br>
+    <h3>Next Steps:</h3>
     <p>
-        Once you have the repository locally available, you can begin modifying the template as you please and configure/build
-        the project. This template is designed to achieve both of these straight out of the box, so you need not modify anything
-        to verify everything is functioning accordingly. Simply <code>cd</code> to the repositories root directory and run the
-        following command:
+        Once you obtain the template you can proceed with your modifications. There are conveniently placed <code>TODO:</code> markers within the project files that point out some critical personalization points if you are unsure where to start.
     </p>
-    <h3>🔧 Configure the project with CMake:</h3>
+    <h3>You are encouraged to modify this template as much as you desire, make it yours!</h3>
+    <p>(<em>More details on project structure <a href="#-this-readme-is-still-in-progress-">below</a></em>)</p></br>
+    <p>
+        When you are ready to build the project, <em>or if you'd like to verify the template works straight out of the box</em>, you can instruct CMake to create the necessary build system files for your generator with the following:
+    </p>
+    <h3>🔧 Run the CMake configuration:</h3>
+    <p>(<em>in the root directory of the template</em>)</p>
     <blockquote>
-        <h3>Windows:</h3>
-        <pre><code>cmake --preset win32-x64-Debug</code></pre>
-        <h3>Linux:</h3>
-        <pre><code>cmake --preset linux-x64-Debug</code></pre>
-        <h3>macOS:</h3>
-        <pre><code>cmake --preset macos-x64-Debug</code></pre>
+        <h3>Windows (x64):</h3>
+        <pre><code>cmake --preset win32-x64-debug</code></pre>
+        <h3>Linux (x64):</h3>
+        <pre><code>cmake --preset linux-x64-debug</code></pre>
+        <h3>macOS (x64):</h3>
+        <pre><code>cmake --preset macos-x64-debug</code></pre>
     </blockquote></br>
 </div>
 
-> [!NOTE]
+> [!NOTE] <!--| GitHub Notice: README Overwrite |-->
 > <h3>⚠️ <em>HEADS-UP!</em></h3>
-> <h4>Once you instruct CMake to configure the project, <em>this</em> README will be overwritten by the configured version!</h4>
+> <h4>Once you instruct CMake to configure the project <em>this</em> README will be overwritten by the generated version!</h4>
 > <h4>
 >    You can modify the README by changing the template
 >    <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/docs/templ/README.md.in">README.md.in</a>
 >    file.
 > </h4>
-> <p>(<em>More details on template files later</em>)</p>
+> <p>(<em>More details on template files <a href="#-this-readme-is-still-in-progress-">below</a></em>)</p>
 
+<!--
 <div>
     </br><p>
         Configuring the project results in a <code>build</code> folder appearing in the project root that contains a subdirectory
         specific to your preset. Because this template makes use of CMake presets, it is not necessary to navigate to the
         build directory before invoking the CMake build command:
     </p>
-    <h3>🔨 Build the project with CMake:</h3>
+    <h3>🔨 Build your project with CMake:</h3>
     <blockquote>
         <h3>Windows:</h3>
-        <pre><code>cmake --build --preset win32-x64-Debug</code></pre>
+        <pre><code>cmake --build --preset win32-x64-debug</code></pre>
         <h3>Linux:</h3>
-        <pre><code>cmake --build --preset linux-x64-Debug</code></pre>
+        <pre><code>cmake --build --preset linux-x64-debug</code></pre>
         <h3>macOS:</h3>
-        <pre><code>cmake --build --preset macos-x64-Debug</code></pre>
+        <pre><code>cmake --build --preset macos-x64-debug</code></pre>
     </blockquote>
-</div></br>
-<hr></br>
+</div></br></br>
+-->
 
+<!--
 <div>
-    <h2 align="center">Designed with Several Key Characteristics</br>to Empower C++ Development ✨</h2>
-    <h3><strong>CMake-Centric Build System:</strong></h3>
+    <h2 align="center">N/a</h2>
+    <h3><strong>CMake Build System:</strong></h3>
     <div align="center">
         <img src="https://cmake.org/wp-content/uploads/2023/08/CMake-Logo.svg" alt="CMake Logo" width=200>
     </div></br>
     <blockquote>
         <p>
-            At the core of this template is CMake, serving as the primary build abstraction. This provides unparalleled
+            At the core of this template is CMake, serving as the primary build tool. This provides
             flexibility and control over your project's compilation, linking, and packaging across diverse platforms.
-            <strong>Many of the template's advanced features are powered directly by CMake's capabilities.</strong>
+            <strong>Many of the template's features are powered directly by CMake's capabilities.</strong>
         </p>
         <p>
-            CMake's strength lies in its ability to manage external dependencies, configure project layouts, and orchestrate
-            complex build processes. It offers amazing support for various compilers, build tools, and IDEs, enabling users
+            CMake offers amazing support for various compilers, build tools, and IDEs, enabling users
             to easily swap out toolchains and target different environments without modifying source code or project files.
-            This abstraction simplifies maintaining a consistent build process across Windows, Linux, and macOS. You can find
+            This simplifies maintaining a consistent build process across Windows, Linux, and macOS. You can find
             the
             <a href="https://cmake.org/cmake/help/latest/index.html">
                 official CMake documentation here
             </a>.
         </p>
     </blockquote></br>
-    <h3><strong>Flexible Foundation & Customization:</strong></h3>
-    <blockquote>
-        <p>
-            This repository provides a comprehensive foundation to help accelerate project setup. It includes pre-configured
-            GitHub Actions Workflows, shell scripts, testing framework dependencies, a complete build script structure,
-            predefined CMake configure/build presets, custom CMake modules to simplify common tasks, and a predefined set of
-            <code>PRJ_</code> prefixed variables that drive core template behaviors.
-        </p>
-        <p>
-            To enhance developer efficiency, this template incorporates
-            <strong>several helper macros within its CMake modules</strong>. These macros abstract common build system
-            operations, including (<em>but not limited to</em>):
-        </p>
-        <table align="center">
-            <tr>
-                <th>Provided CMake Macro</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td><code>format_source_code()</code></td>
-                <td>For integrated code formatting</td>
-            </tr>
-            <tr>
-                <td><code>set_cxx_standard()</code></td>
-                <td>For managing C++ standards of individual targets</td>
-            </tr>
-            <tr>
-                <td><code>set_metadata()</code></td>
-                <td>For caching project metadata (<em>more on this later</em>)</td>
-            </tr>
-            <tr>
-                <td><code>create_template_reference()</code></td>
-                <td>For streamlining template file configuration</td>
-            </tr>
-        </table></br>
-        <p>
-            Most importantly, this foundation is (<em>obviously</em>) entirely customizable! While it offers a robust starting
-            point, <strong>you're encouraged to modify, extend, or even restructure the provided project directory, CMake
-            scripts/modules, shell scripts, and more to perfectly align with your project's unique requirements and your
-            preferred build philosophy</strong>. The goal this repo has in mind is to provide a baseline that can evolve with
-            your needs or inspire your own cross-platform C++ template!
-        </p>
-    </blockquote></br>
 </div>
+-->
 
 <!-- DO NOT DELETE CONTENTS BELOW -->
 <hr>

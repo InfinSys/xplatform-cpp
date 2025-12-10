@@ -3,7 +3,7 @@
 * @file version.h
 *
 * @brief
-* Software version document.
+* Software version header.
 *
 * @details
 * Version information for @RESOLVED_SFTW_NAME@.

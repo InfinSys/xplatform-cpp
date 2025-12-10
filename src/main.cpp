@@ -2,7 +2,8 @@
 #include<iostream>
 #include"xptemp/main.hpp"
 
-int main(const int argc, char* argv[]) {
+
+int main(const int argc, const char* argv[]) {
     const int value1 = 1;
     const int value2 = 9;
 

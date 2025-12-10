@@ -1,22 +1,35 @@
 {
     "version": 8,
     "configurePresets": [
-
         {
-            "name": "win32-x64-Debug",
-            "displayName": "Windows x64 (Debug)",
+            "name": "win32-x64-msvc-debug",
+            "displayName": "Windows x64 MSVC (Debug)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_ASM_COMPILER": "cl.exe"
+                "CMAKE_ASM_COMPILER": "cl.exe",
+                "XPTEMP_CLI_DEBUG": "ON"
             }
         },
         {
-            "name": "win32-x64-Release",
-            "displayName": "Windows x64 (Release)",
+            "name": "win32-x64-mingw-debug",
+            "displayName": "Windows x64 MinGW (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "gcc.exe",
+                "CMAKE_CXX_COMPILER": "g++.exe",
+                "CMAKE_ASM_COMPILER": "gcc.exe",
+                "XPTEMP_CLI_DEBUG": "ON"
+            }
+        },
+        {
+            "name": "win32-x64-msvc-release",
+            "displayName": "Windows x64 MSVC (Release)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
@@ -26,22 +39,48 @@
                 "CMAKE_ASM_COMPILER": "cl.exe"
             }
         },
+        {
+            "name": "win32-x64-mingw-release",
+            "displayName": "Windows x64 MinGW (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "gcc.exe",
+                "CMAKE_CXX_COMPILER": "g++.exe",
+                "CMAKE_ASM_COMPILER": "gcc.exe"
+            }
+        },
 
         {
-            "name": "linux-x64-Debug",
-            "displayName": "Linux x64 (Debug)",
+            "name": "linux-x64-gcc-debug",
+            "displayName": "Linux x64 GCC (Debug)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "gcc",
                 "CMAKE_CXX_COMPILER": "g++",
-                "CMAKE_ASM_COMPILER": "gcc"
+                "CMAKE_ASM_COMPILER": "gcc",
+                "XPTEMP_CLI_DEBUG": "ON"
             }
         },
         {
-            "name": "linux-x64-Release",
-            "displayName": "Linux x64 (Release)",
+            "name": "linux-x64-clang-debug",
+            "displayName": "Linux x64 Clang (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang",
+                "XPTEMP_CLI_DEBUG": "ON"
+            }
+        },
+        {
+            "name": "linux-x64-gcc-release",
+            "displayName": "Linux x64 GCC (Release)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
@@ -51,22 +90,9 @@
                 "CMAKE_ASM_COMPILER": "gcc"
             }
         },
-
         {
-            "name": "macos-x64-Debug",
-            "displayName": "macOS x64 (Debug)",
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang"
-            }
-        },
-        {
-            "name": "macos-x64-Release",
-            "displayName": "macOS x64 (Release)",
+            "name": "linux-x64-clang-release",
+            "displayName": "Linux x64 Clang (Release)",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
@@ -74,48 +100,142 @@
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_ASM_COMPILER": "clang"
+            }
+        },
+
+        {
+            "name": "macos-arm64-clang-debug",
+            "displayName": "macOS ARM64 Clang (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang",
+                "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0",
+                "CMAKE_OSX_ARCHITECTURES": "arm64",
+                "XPTEMP_CLI_DEBUG": "ON"
+            }
+        },
+        {
+            "name": "macos-x64-clang-debug",
+            "displayName": "macOS x64 Clang (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang",
+                "CMAKE_OSX_DEPLOYMENT_TARGET": "10.0",
+                "CMAKE_OSX_ARCHITECTURES": "x86_64",
+                "XPTEMP_CLI_DEBUG": "ON"
+            }
+        },
+        {
+            "name": "macos-arm64-clang-release",
+            "displayName": "macOS ARM64 Clang (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang",
+                "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0",
+                "CMAKE_OSX_ARCHITECTURES": "arm64"
+            }
+        },
+        {
+            "name": "macos-x64-clang-release",
+            "displayName": "macOS x64 Clang (Release)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_ASM_COMPILER": "clang",
+                "CMAKE_OSX_DEPLOYMENT_TARGET": "10.0",
+                "CMAKE_OSX_ARCHITECTURES": "x86_64"
             }
         }
-        
     ],
 
     "buildPresets": [
         {
-            "name": "win32-x64-Debug",
-            "displayName": "Debug x64",
-            "configurePreset": "win32-x64-Debug",
+            "name": "win32-x64-msvc-debug",
+            "displayName": "Debug x64 (MSVC)",
+            "configurePreset": "win32-x64-msvc-debug",
+            "jobs": 4
+        },
+        {
+            "name": "win32-x64-mingw-debug",
+            "displayName": "Debug x64 (MinGW)",
+            "configurePreset": "win32-x64-mingw-debug",
+            "jobs": 4
+        },
+        {
+            "name": "win32-x64-msvc-release",
+            "displayName": "Release x64 (MSVC)",
+            "configurePreset": "win32-x64-msvc-release",
+            "jobs": 4
+        },
+        {
+            "name": "win32-x64-mingw-release",
+            "displayName": "Release x64 (MinGW)",
+            "configurePreset": "win32-x64-mingw-release",
+            "jobs": 4
+        },
+
+        {
+            "name": "linux-x64-gcc-debug",
+            "displayName": "Debug x64 (GCC)",
+            "configurePreset": "linux-x64-gcc-debug",
             "jobs": 0
         },
         {
-            "name": "win32-x64-Release",
-            "displayName": "Release x64",
-            "configurePreset": "win32-x64-Release",
+            "name": "linux-x64-clang-debug",
+            "displayName": "Debug x64 (Clang)",
+            "configurePreset": "linux-x64-clang-debug",
+            "jobs": 0
+        },
+        {
+            "name": "linux-x64-gcc-release",
+            "displayName": "Release x64 (GCC)",
+            "configurePreset": "linux-x64-gcc-release",
+            "jobs": 0
+        },
+        {
+            "name": "linux-x64-clang-release",
+            "displayName": "Release x64 (Clang)",
+            "configurePreset": "linux-x64-clang-release",
             "jobs": 0
         },
 
         {
-            "name": "linux-x64-Debug",
-            "displayName": "Debug x64",
-            "configurePreset": "linux-x64-Debug",
+            "name": "macos-arm64-clang-debug",
+            "displayName": "Debug ARM64 (Clang)",
+            "configurePreset": "macos-arm64-clang-debug",
             "jobs": 0
         },
         {
-            "name": "linux-x64-Release",
-            "displayName": "Release x64",
-            "configurePreset": "linux-x64-Release",
-            "jobs": 0
-        },
-
-        {
-            "name": "macos-x64-Debug",
-            "displayName": "Debug x64",
-            "configurePreset": "macos-x64-Debug",
+            "name": "macos-x64-clang-debug",
+            "displayName": "Debug x64 (Clang)",
+            "configurePreset": "macos-x64-clang-debug",
             "jobs": 0
         },
         {
-            "name": "macos-x64-Release",
-            "displayName": "Release x64",
-            "configurePreset": "macos-x64-Release",
+            "name": "macos-arm64-clang-release",
+            "displayName": "Release ARM64 (Clang)",
+            "configurePreset": "macos-arm64-clang-release",
+            "jobs": 0
+        },
+        {
+            "name": "macos-x64-clang-release",
+            "displayName": "Release x64 (Clang)",
+            "configurePreset": "macos-x64-clang-release",
             "jobs": 0
         }
     ]

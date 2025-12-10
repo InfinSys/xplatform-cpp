@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Check for missing CMake preset name argument
+if [ -z "$1" ]; then
+    echo
+    echo "Usage: $(basename "$0") [cmake_preset]"
+    echo
+    echo "Examples:"
+    echo "  $(basename "$0") linux-x64-gcc-debug"
+    echo "  $(basename "$0") macos-arm64-clang-release"
+    echo
+    exit 1
+fi
+
+CMAKE_PRESET="$1"
+
+cd "$(dirname "$0")"/.. || exit 1
+cmake --build --preset "$CMAKE_PRESET" --target XPTEMP_clang_tidy
+# TODO: Change 'XPTEMP_clang_tidy' to my Clang-Tidy utility target name
+
+echo "Done."
+echo
+read -p "Press Enter to continue..."
+echo ""

@@ -3,4 +3,5 @@
 #     /lib/metadata Directory Script
 #=========================================
 
-include(configure_metadata)
+# Configure and generate metadata dependent documents
+include("${${PRJ_PREFIX}_CMAKE_MODULES_DIR}/metadata_config.cmake")

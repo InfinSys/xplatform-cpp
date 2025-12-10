@@ -13,3 +13,4 @@ cmake --build --preset "$cmake_preset"
 
 echo ""
 read -p "Press Enter to continue..."
+echo ""

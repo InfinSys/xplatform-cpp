@@ -1,11 +1,14 @@
 
-#ifndef XPTEMP_LIB_SAMPLE_SOURCE_H_
-#define XPTEMP_LIB_SAMPLE_SOURCE_H_
+#ifndef XPLATFORM_TEMPLATE_EXAMPLE_HEADER_H_
+#define XPLATFORM_TEMPLATE_EXAMPLE_HEADER_H_
 
 /*!
 * @brief
-* Returns the sum of val1 and val2.
+* Calculates sum of val1 and val2.
+* 
+* @return
+* Sum of two integers
 */
 int myAdd(const int val1, const int val2);
 
-#endif // XPTEMP_LIB_SAMPLE_SOURCE_H_
+#endif // XPLATFORM_TEMPLATE_EXAMPLE_HEADER_H_

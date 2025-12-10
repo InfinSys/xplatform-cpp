@@ -17,7 +17,7 @@ jobs:
         fail-fast: false
 
         matrix:
-            cmake_preset: ["macos-x64-Debug", "macos-x64-Release"]
+            cmake_preset: ["macos-x64-clang-debug", "macos-x64-clang-release"]
 
     steps:
         - name: Checkout Repository

@@ -20,5 +20,5 @@ target_link_libraries(
     gtest_main
 )
 
-# Unit-testing Source
+# Unit-Test Sources
 # TODO: Add unit-testing source dirs...
