@@ -4,7 +4,6 @@
 .vscode/*
 
 # EXCEPT THE FOLLOWING IDE PROJECT FILES:
-!.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
