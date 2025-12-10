@@ -17,7 +17,12 @@ jobs:
         fail-fast: false
 
         matrix:
-            cmake_preset: ["win32-x64-Debug", "win32-x64-Release"]
+            cmake_preset: [
+              "win32-x64-msvc-debug",
+              "win32-x64-mingw-debug",
+              "win32-x64-msvc-release",
+              "win32-x64-mingw-release"
+            ]
 
     steps:
         - name: Checkout Repository
