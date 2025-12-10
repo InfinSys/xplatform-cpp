@@ -45,9 +45,10 @@ endforeach()
 
 # Create Clang-Format utility target
 add_custom_target(
-    ${PRJ_PREFIX}_codebase_format
+    ${PRJ_PREFIX}_clang_format
 
     COMMAND clang-format -i ${FORMAT_FILE_LIST}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    COMMENT "Formatting source files..."
+    COMMENT "Running Clang-Format on source files..."
+    VERBATIM
 )

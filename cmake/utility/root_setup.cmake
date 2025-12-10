@@ -28,7 +28,7 @@ macro(setup_testing_dependencies)
 endmacro()
 
 # Check for codebase formatting flag and create utility target
-macro(setup_codebase_format_target)
+macro(setup_clang_format_target)
     # Check for Clang-Format flag
     if(${PRJ_PREFIX}_CLANG_FORMAT)
         # Find existing Clang-Format installation
@@ -39,6 +39,22 @@ macro(setup_codebase_format_target)
         else()
             # Create formatting utility target
             include(cmake/utility/clang_format.cmake)
+        endif()
+    endif()
+endmacro()
+
+# Check for codebase static analysis flag and create utility
+macro(setup_clang_tidy_target)
+    # Check for Clang-Tidy flag
+    if(${PRJ_PREFIX}_CLANG_TIDY)
+        # Find existing Clang-Tidy installation
+        find_program(CLANG_TIDY_EXECUTABLE clang-tidy)
+
+        if(NOT CLANG_TIDY_EXECUTABLE)
+            message(WARNING "clang-tidy not found: Cannot create static analysis target.")
+        else()
+            # Create static analysis utility target
+            include(cmake/utility/clang_tidy.cmake)
         endif()
     endif()
 endmacro()

@@ -25,10 +25,14 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
     # should not keep the `PRJ_PREFIX` variable around.
     set(PRJ_PREFIX "XPTEMP")
 
+    # Export compilation commands to build dir
+    set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
     # Include root CML helper module
     include(cmake/utility/root_setup.cmake)
     setup_testing_dependencies()
-    setup_codebase_format_target()
+    setup_clang_format_target()
+    setup_clang_tidy_target()
 
     # Include compiler configuration script
     include(cmake/compiler/config_dispatch.cmake)
