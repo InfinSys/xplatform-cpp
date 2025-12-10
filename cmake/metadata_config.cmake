@@ -29,34 +29,34 @@ create_template_reference(SFTW_SHORT_NAME   SHORT_NAME)
 create_template_reference(SFTW_MAIN_BINARY  MAIN_BINARY_NAME)
 create_template_reference(SFTW_META_PREFIX  META_NAMESPACE)
 
-# configure_template(
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/README.md.in"
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/README.md"
-# )
-# 
-# configure_template(
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/Doxyfile.in"
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/Doxyfile"
-# )
-# 
-# configure_template(
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/index.html.in"
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/ref/index.html"
-# )
-# 
-# configure_template(
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/inaug.md.in"
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/docs/prj/inaug.md"
-# )
-# 
-# configure_template(
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/templ/info.h.in"
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/info.h"
-# )
-# 
-# configure_template(
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/templ/version.h.in"
-#     "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/version.h"
-# )
+configure_template(
+    "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/README.md.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/README.md"
+)
+
+configure_template(
+    "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/Doxyfile.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/docs/Doxyfile"
+)
+
+configure_template(
+    "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/index.html.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/docs/ref/index.html"
+)
+
+configure_template(
+    "${${PRJ_PREFIX}_SOURCE_DIR}/docs/templ/inaug.md.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/docs/prj/inaug.md"
+)
+
+configure_template(
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/templ/info.h.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/info.h"
+)
+
+configure_template(
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/templ/version.h.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/version.h"
+)
 
 clear_temporary_cache()
