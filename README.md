@@ -2,7 +2,7 @@
 <!--
     (June 2025 - Jamon T. Bailey)
 
-This is not an HTML document.
+This is not an HTML document, obviously.
 -->
 
 <div align="center">
