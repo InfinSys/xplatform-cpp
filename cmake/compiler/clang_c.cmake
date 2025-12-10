@@ -1,7 +1,7 @@
 
-#================================================
-#     LLVM C COMPILER CONFIGURATION (clang)
-#================================================
+#=================================================
+#     Clang C COMPILER CONFIGURATION (clang)
+#=================================================
 
 # TODO: Setup clang compiler configuration (if applicable)
 
@@ -9,7 +9,7 @@ set(${PRJ_PREFIX}_CLANG_C_VERSION_MIN 14 CACHE STRING "Minimum clang compiler ve
 
 # Confirm supported clang compiler version
 if(CMAKE_C_COMPILER_VERSION VERSION_LESS ${${PRJ_PREFIX}_CLANG_C_VERSION_MIN})
-    message(FATAL_ERROR "Incompatible version of LLVM C compiler for ${CMAKE_PROJECT_NAME}.")
+    message(FATAL_ERROR "Incompatible version of Clang C compiler for ${CMAKE_PROJECT_NAME}.")
 endif()
 
 # Compiler feature configuration target
@@ -89,7 +89,7 @@ target_compile_definitions(
         >
 )
 
-# Complete LLVM C++ compiler package
+# Complete Clang C++ compiler package
 add_library(${PRJ_PREFIX}_clang_c_bundle INTERFACE)
 
 target_link_libraries(

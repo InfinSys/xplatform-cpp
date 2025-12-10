@@ -6,8 +6,8 @@ if [ -z "$1" ]; then
     echo "Usage: $(basename "$0") [cmake_preset]"
     echo
     echo "Examples:"
-    echo "  $(basename "$0") linux-x64-gnu-debug"
-    echo "  $(basename "$0") linux-x64-llvm-release"
+    echo "  $(basename "$0") linux-x64-gcc-debug"
+    echo "  $(basename "$0") macos-arm64-clang-release"
     echo
     exit 1
 fi

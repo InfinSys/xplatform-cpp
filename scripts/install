@@ -6,9 +6,9 @@ if [ -z "$1" ]; then
     echo "Usage: $(basename "$0") [cmake_preset] [component]"
     echo ""
     echo "Examples:"
-    echo "  $(basename "$0") linux-x64-gnu-debug DemoApp     (installs 'DemoApp' component)"
+    echo "  $(basename "$0") linux-x64-gcc-debug DemoApp     (installs 'DemoApp' component)"
     echo "                  OR"
-    echo "  $(basename "$0") linux-x64-llvm-release          (installs all components)"
+    echo "  $(basename "$0") linux-x64-clang-release         (installs all components)"
     echo ""
     exit 0
 fi
