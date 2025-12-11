@@ -4,5 +4,5 @@
 #================================
 
 # Library sources
-add_subdirectory(metadata)
+add_subdirectory(xptemp_metadata)
 # TODO: Add other project library source directories...

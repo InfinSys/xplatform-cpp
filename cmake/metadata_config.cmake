@@ -50,13 +50,13 @@ configure_template(
 )
 
 configure_template(
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/templ/info.h.in"
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/info.h"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/xptemp_metadata/templ/info.h.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/xptemp_metadata/info.h"
 )
 
 configure_template(
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/templ/version.h.in"
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/metadata/version.h"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/xptemp_metadata/templ/version.h.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/xptemp_metadata/version.h"
 )
 
 clear_temporary_cache()
