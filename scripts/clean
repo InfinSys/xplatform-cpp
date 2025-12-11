@@ -1,0 +1,128 @@
+#!/bin/bash
+
+# Change to project root directory (from ./scripts dir to root)
+cd "$(dirname "$0")/.."
+
+# Clean category flags
+CLEAN_GENSRC=0
+CLEAN_BUILD=0
+CLEAN_INSTALL=0
+CLEAN_ALL=0
+
+# Parse command line arguments
+parse_args() {
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            -gensrc)
+                CLEAN_GENSRC=1
+                shift
+                ;;
+            -build)
+                CLEAN_BUILD=1
+                shift
+                ;;
+            -install)
+                CLEAN_INSTALL=1
+                shift
+                ;;
+            -all)
+                CLEAN_ALL=1
+                shift
+                ;;
+            *)
+                echo "Unknown argument: $1"
+                usage
+                exit 1
+                ;;
+        esac
+    done
+}
+
+# Clean functions
+clean_build() {
+    # Delete build directory
+    if [[ -d ./build ]]; then
+        echo "Removing build directory..."
+        rm -rf ./build
+    fi
+}
+
+clean_install() {
+    # Delete install directory
+    if [[ -d ./install ]]; then
+        echo "Removing install directory..."
+        rm -rf ./install
+    fi
+}
+
+clean_gensrc() {
+    # Delete CMake generated files
+    echo "Removing generated files:"
+    
+    # Generated files array
+    GEN_FILES=(
+        "./docs/Doxyfile"
+        "./docs/prj/inaug.md"
+        "./docs/ref/index.html"
+        "./lib/xptemp_metadata/info.h"
+        "./lib/xptemp_metadata/version.h"
+    )
+    
+    # Loop through and delete files
+    for file in "${GEN_FILES[@]}"; do
+        if [[ -f "$file" ]]; then
+            echo "Removing \"$file\"..."
+            rm -f "$file"
+        else
+            echo "\"$file\" not found!"
+        fi
+    done
+}
+
+# Main cleaning execution
+execute_clean() {
+    # Check for missing argument
+    if [[ $CLEAN_BUILD$CLEAN_INSTALL$CLEAN_GENSRC$CLEAN_ALL == "0000" ]]; then
+        usage
+        exit 1
+    fi
+    
+    echo ""
+    echo "Cleaning source tree:"
+    
+    # Execute based on flags
+    if [[ $CLEAN_ALL -eq 1 ]]; then
+        clean_gensrc
+        clean_build
+        clean_install
+        return
+    fi
+    
+    [[ $CLEAN_GENSRC -eq 1 ]] && clean_gensrc
+    [[ $CLEAN_BUILD -eq 1 ]] && clean_build
+    [[ $CLEAN_INSTALL -eq 1 ]] && clean_install
+}
+
+# Usage instructions
+usage() {
+    echo ""
+    echo "Usage: $(basename "$0") <-gensrc|-build|-install|-all>"
+    echo ""
+    echo "    [-gensrc]: Deletes all generated files in source tree"
+    echo "     [-build]: Deletes entire build tree"
+    echo "   [-install]: Deletes entire install tree"
+    echo "       [-all]: Deletes all specified above"
+    echo ""
+    echo "         NOTE: You can combine multiple options."
+    echo ""
+}
+
+# --- Main execution ---
+parse_args "$@"
+execute_clean
+
+echo ""
+echo "Done."
+echo ""
+read -p "Press any key to continue . . . "
+echo ""
