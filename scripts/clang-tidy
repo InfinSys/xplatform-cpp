@@ -3,7 +3,7 @@
 # Check for missing CMake preset name argument
 if [ -z "$1" ]; then
     echo ""
-    echo "Usage: $(basename "$0") [cmake_preset]"
+    echo "Usage: $(basename "$0") <cmake_preset>"
     echo ""
     echo "Examples:"
     echo "  $(basename "$0") linux-x64-gcc-debug"
