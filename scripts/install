@@ -23,7 +23,7 @@ cd "$(dirname "$0")/.." || exit 1
 PROJECT_ROOT="$(pwd)"
 
 # Installation path prefix
-INSTALL_PATH_PREFIX="$PROJECT_ROOT/install"
+INSTALL_PATH_PREFIX="$PROJECT_ROOT/install/$CMAKE_PRESET"
 # TODO: Configure build installation path prefix
 
 # Check if COMPONENT is empty
