@@ -1,15 +1,36 @@
-@echo off
+@ECHO off
+setlocal
 
-set "cmake_preset=%1"
-
-if "%cmake_preset%"=="" (
-    echo Error: No CMake preset provided.
-    echo Usage: %~nx0 ^<cmake_preset^>
-    exit /b 1
+:: Check for missing CMake preset name argument
+IF "%~1"=="" (
+    ECHO.
+	ECHO Error: No CMake preset provided.
+	GOTO :usage
 )
 
-cd %~dp0/..
-cmake --preset %cmake_preset%
+SET "CMAKE_PRESET=%~1"
 
-echo.
+:: Change to project root directory
+cd %~dp0/..
+
+cmake --preset "%CMAKE_PRESET%"
+
+ECHO Done.
+ECHO.
 pause
+
+GOTO :end
+
+:: --- Usage Instructions ---
+:usage
+ECHO.
+ECHO Usage: %~nx0 ^<cmake_preset^>
+ECHO.
+ECHO Examples:
+ECHO   %~nx0 win32-x64-msvc-debug
+ECHO   %~nx0 win32-x64-mingw-release
+
+:: --- Return To User ---
+:end
+endlocal
+EXIT /B 0

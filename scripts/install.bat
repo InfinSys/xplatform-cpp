@@ -35,7 +35,7 @@ GOTO :end
 :: --- Usage Instructions ---
 :usage
 ECHO.
-ECHO Usage: %~nx0 [cmake_preset] [component]
+ECHO Usage: %~nx0 ^<cmake_preset^> [component]
 ECHO.
 ECHO Examples:
 ECHO   %~nx0 win32-x64-msvc-debug DemoApp     (installs 'DemoApp' component)
