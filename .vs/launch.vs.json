@@ -1,0 +1,25 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "cppdbg",
+      "name": "Windows x64 MinGW (GDB) - Demo_Executable.exe",
+      "project": "install\\win32-x64-mingw-debug\\bin\\Demo_Executable.exe",
+      // TODO: Replace 'Demo_Executable.exe' above with your executable name
+      "projectTarget": "",
+      "cwd": "${workspaceRoot}",
+      "program": "${debugInfo.target}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe",
+      "externalConsole": true
+    },
+    {
+      "type": "native",
+      "name": "Windows x64 MSVC (VSDBG) - Demo_Executable.exe",
+      "project": "install\\win32-x64-msvc-debug\\bin\\Demo_Executable.exe",
+      // TODO: Replace 'Demo_Executable.exe' above with your executable name
+      "projectTarget": ""
+    }
+  ]
+}

@@ -6,10 +6,10 @@
     "configurations": [
         
         {
-            "name": "Windows MSVC (VSDBG)",
+            "name": "Windows x64 MSVC (vsdbg)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/install/bin/Demo_Executable.exe",
+            "program": "${workspaceFolder}/install/win32-x64-msvc-debug/bin/Demo_Executable.exe",
             // TODO: Replace 'Demo_Executable.exe' above with your executable name
             "args": [],
             "stopAtEntry": false,
@@ -18,10 +18,10 @@
             "console": "externalTerminal"
         },
         {
-            "name": "Windows MinGW (GDB)",
+            "name": "Windows x64 MinGW (gdb)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/install/bin/Demo_Executable.exe",
+            "program": "${workspaceFolder}/install/win32-x64-mingw-debug/bin/Demo_Executable.exe",
             // TODO: Replace 'Demo_Executable.exe' above with your executable name
             "args": [],
             "stopAtEntry": false,
@@ -44,10 +44,10 @@
             ]
         },
         {
-            "name": "Linux GCC (GDB)",
+            "name": "Linux x64 GCC (gdb)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/install/bin/Demo_Executable",
+            "program": "${workspaceFolder}/install/linux-x64-gcc-debug/bin/Demo_Executable",
             // TODO: Replace 'Demo_Executable' above with your executable name
             "args": [],
             "stopAtEntry": false,
@@ -64,6 +64,27 @@
                 {
                     "description": "Set Disassembly Flavor to Intel",
                     "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Linux x64 Clang (lldb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/install/linux-x64-clang-debug/bin/Demo_Executable",
+            // TODO: Replace 'Demo_Executable' above with your executable name
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
             ]
