@@ -6,7 +6,7 @@
     "configurations": [
         
         {
-            "name": "Windows MSVC (Debug)",
+            "name": "Windows MSVC (VSDBG)",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/install/bin/Demo_Executable.exe",
@@ -18,7 +18,7 @@
             "console": "externalTerminal"
         },
         {
-            "name": "Windows MinGW (Debug)",
+            "name": "Windows MinGW (GDB)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/install/bin/Demo_Executable.exe",
@@ -42,7 +42,32 @@
                     "ignoreFailures": true
                 }
             ]
-        }
+        },
+        {
+            "name": "Linux GCC (GDB)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/install/bin/Demo_Executable",
+            // TODO: Replace 'Demo_Executable' above with your executable name
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
 
     ]
 }
