@@ -110,7 +110,7 @@ GOTO :end
 :: --- Usage Instructions ---
 :usage
 ECHO.
-ECHO Usage: %~nx0 [enable^|disable] [workflow_filename]
+ECHO Usage: %~nx0 ^<enable^|disable^> ^<workflow_filename^>
 ECHO.
 ECHO    [enable]: Enables the specified GitHub Workflow by moving it from .github/disabled_workflows/ to .github/workflows/
 ECHO   [disable]: Disables the specified GitHub Workflow by moving it from .github/workflows/ to .github/disabled_workflows/

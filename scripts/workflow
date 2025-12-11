@@ -13,7 +13,7 @@ DISABLED_WORKFLOWS_PATH="${GITHUB_DIR}/disabled_workflows"
 # --- Usage Instructions ---
 usage() {
     echo ""
-    echo "Usage: $(basename "$0") [enable|disable] [workflow_filename]"
+    echo "Usage: $(basename "$0") <enable|disable> <workflow_filename>"
     echo ""
     echo "   [enable]: Enables the specified GitHub Workflow by moving it from .github/disabled_workflows/ to .github/workflows/"
     echo "  [disable]: Disables the specified GitHub Workflow by moving it from .github/workflows/ to .github/disabled_workflows/"
