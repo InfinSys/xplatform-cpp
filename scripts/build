@@ -1,16 +1,27 @@
 #!/bin/bash
 
-cmake_preset="$1"
-
-if [ -z "$cmake_preset" ]; then
+# Check for missing CMake preset name argument
+if [ -z "$1" ]; then
+    echo ""
     echo "Error: No CMake preset provided."
+    echo ""
     echo "Usage: $(basename "$0") <cmake_preset>"
+    echo ""
+    echo "Examples:"
+    echo "  $(basename "$0") linux-x64-gcc-debug"
+    echo "  $(basename "$0") macos-arm64-clang-release"
+    echo ""
     exit 1
 fi
 
-cd "$(dirname "$0")/.."
-cmake --build --preset "$cmake_preset"
+CMAKE_PRESET="$1"
 
+# Change to project root directory
+cd "$(dirname "$0")/.." || exit 1
+
+cmake --build --preset "$CMAKE_PRESET"
+
+echo "Done."
 echo ""
 read -p "Press Enter to continue..."
 echo ""
