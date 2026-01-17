@@ -30,7 +30,14 @@ if(${${PRJ_PREFIX}_CXX_GCC})
         ${PRJ_PREFIX}_gcc_cxx_bundle
         ${PRJ_PREFIX}_gcc_c_defines
     )
-# elseif(${${PRJ_PREFIX}_CXX_CLANG})
+elseif(${${PRJ_PREFIX}_CXX_CLANG})
+    target_link_libraries(
+        Demo_Executable
+    
+        PRIVATE
+        ${PRJ_PREFIX}_clang_cxx_bundle
+        ${PRJ_PREFIX}_clang_c_defines
+    )
 elseif(${${PRJ_PREFIX}_CXX_MSVC})
     target_link_libraries(
         Demo_Executable
