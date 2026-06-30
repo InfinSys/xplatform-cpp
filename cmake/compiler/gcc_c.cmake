@@ -37,7 +37,7 @@ set(${PRJ_PREFIX}_GCC_C_VERSION_MIN 14 CACHE STRING "Minimum gcc compiler versio
 
 # Confirm supported gcc compiler version
 if(CMAKE_C_COMPILER_VERSION VERSION_LESS ${${PRJ_PREFIX}_GCC_C_VERSION_MIN})
-    message(FATAL_ERROR "Incompatible version of GCC C compiler for ${CMAKE_PROJECT_NAME}.")
+    message(FATAL_ERROR "Incompatible version of GCC C compiler for ${CMAKE_PROJECT_NAME}.\n")
 endif()
 
 # Compiler feature configuration target

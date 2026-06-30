@@ -37,7 +37,7 @@ set(${PRJ_PREFIX}_GCC_CXX_VERSION_MIN 14 CACHE STRING "Minimum g++ compiler vers
 
 # Confirm supported g++ compiler version
 if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS ${${PRJ_PREFIX}_GCC_CXX_VERSION_MIN})
-    message(FATAL_ERROR "Incompatible version of g++ compiler for ${CMAKE_PROJECT_NAME}.")
+    message(FATAL_ERROR "Incompatible version of g++ compiler for ${CMAKE_PROJECT_NAME}.\n")
 endif()
 
 # Compiler feature configuration target

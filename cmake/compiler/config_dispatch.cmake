@@ -56,7 +56,7 @@ if(CMAKE_C_COMPILER_ID)
             FATAL_ERROR
             "A configuration module is required to compile "
             "${CMAKE_PROJECT_NAME} with ${CMAKE_C_COMPILER_ID} "
-            "C compiler."
+            "C compiler.\n"
         )
     endif()
 endif()
@@ -76,7 +76,7 @@ if(CMAKE_CXX_COMPILER_ID)
             FATAL_ERROR
             "A configuration module is required to compile "
             "${CMAKE_PROJECT_NAME} with ${CMAKE_CXX_COMPILER_ID} "
-            "C++ compiler."
+            "C++ compiler.\n"
         )
     endif()
 endif()

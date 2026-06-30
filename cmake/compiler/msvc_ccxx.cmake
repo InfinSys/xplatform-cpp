@@ -46,7 +46,7 @@ set(${PRJ_PREFIX}_MSVC_VERSION_MIN 1940 CACHE STRING "Minimum MSVC compiler vers
 
 # Confirm supported MSVC compiler version
 if(MSVC_VERSION VERSION_LESS ${${PRJ_PREFIX}_MSVC_VERSION_MIN})
-    message(FATAL_ERROR "Incompatible version of MSVC C/C++ compiler for ${CMAKE_PROJECT_NAME}.")
+    message(FATAL_ERROR "Incompatible version of MSVC C/C++ compiler for ${CMAKE_PROJECT_NAME}.\n")
 endif()
 
 # C++ compiler feature configuration target

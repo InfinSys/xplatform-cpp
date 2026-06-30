@@ -37,7 +37,7 @@ set(${PRJ_PREFIX}_CLANG_C_VERSION_MIN 14 CACHE STRING "Minimum clang compiler ve
 
 # Confirm supported clang compiler version
 if(CMAKE_C_COMPILER_VERSION VERSION_LESS ${${PRJ_PREFIX}_CLANG_C_VERSION_MIN})
-    message(FATAL_ERROR "Incompatible version of Clang C compiler for ${CMAKE_PROJECT_NAME}.")
+    message(FATAL_ERROR "Incompatible version of Clang C compiler for ${CMAKE_PROJECT_NAME}.\n")
 endif()
 
 # Compiler feature configuration target
