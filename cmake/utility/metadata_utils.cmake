@@ -40,7 +40,7 @@ function(set_${PRJ_PREFIX_L}_metadata FIELD VALUE)
         set(ARG_DESCRIPTION "No description provided for '${FIELD}'")
     endif()
 
-    set(_${PRJ_PREFIX}_${FIELD} "${VALUE}" CACHE STRING "${ARG_DESCRIPTION}" FORCE)
+    set(${PRJ_PREFIX}_${FIELD} "${VALUE}" CACHE STRING "${ARG_DESCRIPTION}" FORCE)
 endfunction()
 
 # Cache a temporary short-named variable for use in file configuration
@@ -50,7 +50,7 @@ macro(create_${PRJ_PREFIX_L}_template_reference REF_NAME REF_KEY)
     endif()
     
     # Note: 'REF_NAME' provided is prefixed with 'RESOLVED_'
-    set(RESOLVED_${REF_NAME} ${_${PRJ_PREFIX}_${REF_KEY}} CACHE STRING "Temporary" FORCE)
+    set(RESOLVED_${REF_NAME} ${${PRJ_PREFIX}_${REF_KEY}} CACHE STRING "Temporary" FORCE)
     list(APPEND _${PRJ_PREFIX}_temp_cache_vars RESOLVED_${REF_NAME})
 endmacro()
 
