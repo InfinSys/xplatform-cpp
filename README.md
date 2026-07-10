@@ -28,11 +28,25 @@ This is not an HTML document, obviously.
     </p>
 </div></br>
 
-<div> <!--| Template License Notice |-->
-    <h2>License</h2>
+<!--
+    - Showcase project directory (structure)
+    - Discuss top-level project directories (convention)
+    - Discuss CMake build architecture (structure)
+-->
+
+<div> <!--| Project Structure Overview |-->
+    <h2>Project Structure</h2>
+    <p>
+        This template makes an emphasis on organization because that typically leads to an increase
+        in maintainability. It is fairly easy to understand this project template and its inner
+        workings after understanding its structure in general.
+    </p>
+</div></br>
+
+<div> <!--| UNTITLED |-->
+    <h2>UNTITLED</h2>
     <h3>
-        There are no attribution requirements imposed on the use of this repository.
-        You may use the materials without attribution.
+        Large Text
     </h3>
 </div></br>
 
@@ -69,7 +83,7 @@ This is not an HTML document, obviously.
 
 > [!NOTE] <!--| GitHub Notice: README Overwrite |-->
 > <h3>⚠️ <em>HEADS-UP!</em></h3>
-> <h4>Once you instruct CMake to configure the project <em>this</em> README will be overwritten by the generated version!</h4>
+> <h4>Once you instruct CMake to configure the project, <em>this</em> README will be overwritten by the generated version!</h4>
 > <h4>
 >    You can modify the README by changing the template
 >    <a href="https://github.com/InfinSys/xplatform-cpp/blob/api-style/docs/templ/README.md.in">README.md.in</a>
