@@ -30,7 +30,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/platform/detective.cmake)
 #
 # Replace these with your preferred project prefix (all-caps and
 # lowercase). There are a lot of these so you should use search
-# and replace for consistency. (215 + 150 = 365 to be exact)
+# and replace for consistency. (214 + 150 = 364 to be exact)
 #
 # Delete the `PRJ_PREFIX` and `PRJ_PREFIX_L` variables defined
 # below to avoid naming collisions. They are no longer necessary.
@@ -67,6 +67,8 @@ include(GNUInstallDirs)
 
 # Include compiler configuration script
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/compiler/config_dispatch.cmake)
+# Include project dependency module
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/project/dependencies.cmake)
 # Include project metadata module
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/project/metadata.cmake)
 

@@ -40,21 +40,18 @@ endmacro()
 #
 # Implementation Example:
 # macro(setup_${PRJ_PREFIX_L}_wxwidgets)
-#     # Check if we are using wxWidgets (optional)
-#     if(${PRJ_PREFIX}_WX)
-#         # Fetch wxWidgets library source
-#         add_subdirectory(3rdparty/wxWidgets)
-# 
-#         # wxWidgets library target
-#         add_library(wxwidgets_external INTERFACE)
+#     # Fetch wxWidgets library source
+#     add_subdirectory(3rdparty/wxWidgets)
 #
-#         target_link_libraries(
-#             wxwidgets_external
+#     # Establish wxWidgets library target
+#     add_library(wxwidgets_external INTERFACE)
 # 
-#             INTERFACE
-#               wxbase
-#               wxcore
-#               wxwebview
-#         )
-#     endif()
+#     target_link_libraries(
+#         wxwidgets_external
+# 
+#         INTERFACE
+#           wxbase
+#           wxcore
+#           wxwebview
+#     )
 # endmacro()
