@@ -4,5 +4,5 @@
 #================================
 
 # Project library sources
-add_subdirectory(include/${PRJ_PREFIX_L}_metadata)
+add_subdirectory(src/demolib)
 # TODO: Add other project library source directories...

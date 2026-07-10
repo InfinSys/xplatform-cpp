@@ -48,8 +48,8 @@ GOTO :usage
     SET "GEN_FILES[0]=.\docs\Doxyfile"
     SET "GEN_FILES[1]=.\docs\prj\inaug.md"
     SET "GEN_FILES[2]=.\docs\ref\index.html"
-    SET "GEN_FILES[3]=.\lib\xptemp_metadata\info.h"
-    SET "GEN_FILES[4]=.\lib\xptemp_metadata\version.h"
+    SET "GEN_FILES[3]=.\lib\src_metadata\info.h"
+    SET "GEN_FILES[4]=.\lib\src_metadata\version.h"
 
     :: Loop through and delete files
     SET /a count=0

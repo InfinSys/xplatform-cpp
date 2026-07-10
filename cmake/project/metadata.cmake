@@ -82,13 +82,13 @@ configure_${PRJ_PREFIX_L}_template(
 )
 
 configure_${PRJ_PREFIX_L}_template(
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/${PRJ_PREFIX_L}_metadata/templ/info.h.in"
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/${PRJ_PREFIX_L}_metadata/info.h"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/include/src_metadata/templ/info.h.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/include/src_metadata/info.h"
 )
 
 configure_${PRJ_PREFIX_L}_template(
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/${PRJ_PREFIX_L}_metadata/templ/version.h.in"
-    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/${PRJ_PREFIX_L}_metadata/version.h"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/include/src_metadata/templ/version.h.in"
+    "${${PRJ_PREFIX}_SOURCE_DIR}/lib/include/src_metadata/version.h"
 )
 
 # --------------------------------------------------------------------
