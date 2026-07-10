@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script displays the project's C/C++ source tree.
+
 # Get the directory this script is currently located in
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Project root is one level above this scripts directory
