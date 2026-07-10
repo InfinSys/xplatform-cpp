@@ -12,23 +12,32 @@ This is not an HTML document, obviously.
 <div> <!--| Template Style Introduction |-->
     <h3>:: API Style</h3>
     <p>
-        The <strong>API style</strong> project directory is designed for <strong>writing libraries intended to be consumed by other developers</strong>. Unlike end-user applications, a library's project structure is part of its public interface and consequently the user experience. Downstream projects interact not only with its binaries and headers but also with its build system and dependency layout. The goal this template has in mind is providing new projects with a conforming starting point that is easy to consume, extend, and maintain; whether linking it via CMake, embedding it directly, or publishing it as a package.
+        This is the <strong>API Style</strong> project directory template, which is designed for
+        <strong>writing libraries intended to be consumed by other developers</strong>. Unlike
+        end-user applications, the project structure of a library is part of its public interface
+        and consequently the user experience. The goal this template has in mind is providing new
+        projects with a good starting point that is easy to consume, extend, and maintain.
     </p>
     <p>
-        In contrast, <strong>End-User style</strong> projects typically focus on producing standalone executables or tools where internal organization is flexible and developer-facing ergonomics are less critical. You can find this template on the <a href="https://github.com/InfinSys/xplatform-cpp/tree/end-user-style">End-User Style branch</a>.
+        In contrast, the <strong>End-User Style</strong> project directory template focuses on
+        producing standalone executables or tools where internal organization is more flexible.
+        You can find this template on the 
+        <a href="https://github.com/InfinSys/xplatform-cpp/tree/end-user-style">
+            End-User Style branch
+        </a>.
     </p>
 </div></br>
 
-<div>
+<div> <!--| Template License Notice |-->
     <h2>License</h2>
-    <h3>There are no legal restrictions imposed on the use of this repository by the author. You may use the materials without attribution.</h3>
-    <p>
-        This is an explicit written notice from the author of this repository to all recipients of its contents
-: This template is free to use for any purpose with no restrictions. An MIT license is attached to this repository as indication of this fact and as standard procedure. <strong>The author does not require you to retain a license or copyright notice for this template in your derivative work</strong>. This template is <strong>free software</strong>.
-    </p>
+    <h3>
+        There are no attribution requirements imposed on the use of this repository.
+        You may use the materials without attribution.
+    </h3>
 </div></br>
 
-<div> <!--| Template Setup Instructions |-->
+<!--
+<div> <!--| Template Setup Instructions |
     <h2>Project Template Setup</h2>
     <h4>Clone this repository using the CLI:</h4>
     <pre align="center"><code>git clone https://github.com/InfinSys/xplatform-cpp.git -b api-style [destination path]</code></pre>
@@ -56,6 +65,7 @@ This is not an HTML document, obviously.
         <pre><code>cmake --preset macos-x64-debug</code></pre>
     </blockquote></br>
 </div>
+-->
 
 > [!NOTE] <!--| GitHub Notice: README Overwrite |-->
 > <h3>⚠️ <em>HEADS-UP!</em></h3>
