@@ -41,22 +41,26 @@ This is not an HTML document, obviously.
 # The scripts and modules are very deliberate in their modular approach.
 -->
 
-<div> <!--| Project Structure Overview |-->
+<!--
+<div> <!--| Project Structure Overview |
     <h2>Project Structure</h2>
     <p>
         This template makes an emphasis on organization because that typically leads to an increase
         in maintainability. The project directory is organized into purpose-driven top-level
         directories that each have a clear defined role. It is fairly easy to understand this
-        project template and its inner workings after understanding its structure in general.
+        project template and its inner workings after taking the time to understand its structure in
+        general.
     </p>
 </div></br>
 
-<div> <!--| UNTITLED |-->
+
+<div> <!--| UNTITLED |
     <h2>UNTITLED</h2>
     <h3>
         Large Text
     </h3>
 </div></br>
+-->
 
 <!--
 <div> <!--| Template Setup Instructions |
