@@ -30,7 +30,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/platform/detective.cmake)
 #
 # Replace these with your preferred project prefix (all-caps and
 # lowercase). There are a lot of these so you should use search
-# and replace for consistency. (214 + 150 = 364 to be exact)
+# and replace for consistency. (213 + 150 = 363 to be exact)
 #
 # Delete the `PRJ_PREFIX` and `PRJ_PREFIX_L` variables defined
 # below to avoid naming collisions. They are no longer necessary.
