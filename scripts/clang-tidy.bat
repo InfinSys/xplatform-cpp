@@ -9,8 +9,7 @@ SET "CMAKE_PRESET=%~1"
 :: Change to project root directory
 cd %~dp0/..
 
-cmake --build --preset "%CMAKE_PRESET%" --target XPTEMP_clang_tidy
-:: TODO: Change 'XPTEMP_clang_tidy' to my Clang-Tidy utility target name
+cmake --build --preset "%CMAKE_PRESET%" --target ${PRJ_PREFIX_L}_clang_tidy
 
 echo Done.
 echo.
