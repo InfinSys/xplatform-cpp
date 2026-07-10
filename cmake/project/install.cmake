@@ -27,6 +27,8 @@ include_guard(GLOBAL)
 # @date 01-17-2026
 # --------------------------------------------------------------------
 
+# TODO: Setup distribution directory...
+
 # Install main binary
 install(
     TARGETS

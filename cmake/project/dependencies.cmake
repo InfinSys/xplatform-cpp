@@ -24,9 +24,6 @@ include_guard(GLOBAL)
 # @date 01-13-2026
 # --------------------------------------------------------------------
 
-# This script should be invoked from the root
-# CMakeLists.txt file.
-
 # Setup all third-party project dependencies
 macro(setup_${PRJ_PREFIX_L}_dependencies)
     # TODO: Call individual dependency setup macros here...

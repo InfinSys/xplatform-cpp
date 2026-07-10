@@ -41,8 +41,8 @@ set_${PRJ_PREFIX_L}_metadata(UUID             "<Unique identifier>" DESCRIPTION 
 set_${PRJ_PREFIX_L}_metadata(LICENSE_TYPE     "<MIT, GPLv3, Proprietary, etc.>" DESCRIPTION "Product license type")
 set_${PRJ_PREFIX_L}_metadata(FULL_NAME        "<Software name>" DESCRIPTION "Product name")
 set_${PRJ_PREFIX_L}_metadata(SHORT_NAME       "<Shortend software name>" DESCRIPTION "Product short name")
-set_${PRJ_PREFIX_L}_metadata(MAIN_BINARY_NAME "demo" DESCRIPTION "Main binary")
-set_${PRJ_PREFIX_L}_metadata(META_NAMESPACE   "${PRJ_PREFIX}" DESCRIPTION "Project metadata namespace prefix")
+set_${PRJ_PREFIX_L}_metadata(MAIN_BINARY_NAME "demoapp" DESCRIPTION "Main binary")
+set_${PRJ_PREFIX_L}_metadata(META_NAMESPACE   "${PRJ_PREFIX}" DESCRIPTION "Source metadata namespace prefix")
 
 # Create temporary cache variables for code generation
 # Note: These create temporary cache variables (prefix is auto handled)
