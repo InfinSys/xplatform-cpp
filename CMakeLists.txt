@@ -39,8 +39,8 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/platform/detective.cmake)
 # replace these placeholders first. Some placeholders are in non-
 # build script files as well.
 #
-# You can't give the prefixes the same name or all hell will break
-# loose.
+# You can't give the prefixes the same characters or all hell will
+# break loose.
 set(PRJ_PREFIX "DEMO")
 set(PRJ_PREFIX_L "demo")
 # You can delete the above after you have successfully replaced the
