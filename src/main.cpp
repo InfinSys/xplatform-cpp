@@ -1,21 +1,21 @@
 
-#include<iostream>
-#include"xptemp/main.hpp"
-
+#include "demoapp/main.hpp"
+#include "demolib/calculator.hpp"
 
 int main(const int argc, const char* argv[]) {
-    const int value1 = 1;
-    const int value2 = 9;
+    printProjectInfo();
 
-    std::cout << "\nThe sum of " << value1 << " and " << value2 << " is:";
+    constexpr int value1 = 20;
+    constexpr int value2 = 5;
 
-    const int sum = myAdd(value1, value2);
-
-    std::cout << '\n' << sum << std::endl;
+    std::cout << "\nThe sum of " << value1 << " and " << value2
+        << " is " << MyCalculator::add(value1, value2)
+        << std::endl;
 
     return 0;
 }
 
-int myAdd(const int val1, const int val2) {
-    return val1+val2;
+void printProjectInfo() noexcept
+{
+    std::cout << "Ready." << std::endl;
 }
