@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# This script displays the project's CMake scripts tree.
+
+# Get the directory this script is currently located in
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Project root is one level above this scripts directory
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# Run tree command in project root
+tree "$PROJECT_ROOT" -P 'CMakeLists.txt|*.cmake' -I 'build' --prune -n

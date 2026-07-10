@@ -10,8 +10,7 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_ASM_COMPILER": "cl.exe",
-                "XPTEMP_CLI_DEBUG": "ON"
+                "${PRJ_PREFIX}_CLI_DEBUG": "ON"
             }
         },
         {
@@ -23,8 +22,7 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "gcc.exe",
                 "CMAKE_CXX_COMPILER": "g++.exe",
-                "CMAKE_ASM_COMPILER": "gcc.exe",
-                "XPTEMP_CLI_DEBUG": "ON"
+                "${PRJ_PREFIX}_CLI_DEBUG": "ON"
             }
         },
         {
@@ -35,8 +33,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_ASM_COMPILER": "cl.exe"
+                "CMAKE_CXX_COMPILER": "cl.exe"
             }
         },
         {
@@ -47,8 +44,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_C_COMPILER": "gcc.exe",
-                "CMAKE_CXX_COMPILER": "g++.exe",
-                "CMAKE_ASM_COMPILER": "gcc.exe"
+                "CMAKE_CXX_COMPILER": "g++.exe"
             }
         },
 
@@ -61,8 +57,7 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "gcc",
                 "CMAKE_CXX_COMPILER": "g++",
-                "CMAKE_ASM_COMPILER": "gcc",
-                "XPTEMP_CLI_DEBUG": "ON"
+                "${PRJ_PREFIX}_CLI_DEBUG": "ON"
             }
         },
         {
@@ -74,8 +69,7 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang",
-                "XPTEMP_CLI_DEBUG": "ON"
+                "${PRJ_PREFIX}_CLI_DEBUG": "ON"
             }
         },
         {
@@ -86,8 +80,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_C_COMPILER": "gcc",
-                "CMAKE_CXX_COMPILER": "g++",
-                "CMAKE_ASM_COMPILER": "gcc"
+                "CMAKE_CXX_COMPILER": "g++"
             }
         },
         {
@@ -98,8 +91,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang"
+                "CMAKE_CXX_COMPILER": "clang++"
             }
         },
 
@@ -112,10 +104,9 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang",
                 "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0",
                 "CMAKE_OSX_ARCHITECTURES": "arm64",
-                "XPTEMP_CLI_DEBUG": "ON"
+                "${PRJ_PREFIX}_CLI_DEBUG": "ON"
             }
         },
         {
@@ -127,10 +118,9 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang",
                 "CMAKE_OSX_DEPLOYMENT_TARGET": "10.0",
                 "CMAKE_OSX_ARCHITECTURES": "x86_64",
-                "XPTEMP_CLI_DEBUG": "ON"
+                "${PRJ_PREFIX}_CLI_DEBUG": "ON"
             }
         },
         {
@@ -142,7 +132,6 @@
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang",
                 "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0",
                 "CMAKE_OSX_ARCHITECTURES": "arm64"
             }
@@ -156,7 +145,6 @@
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_ASM_COMPILER": "clang",
                 "CMAKE_OSX_DEPLOYMENT_TARGET": "10.0",
                 "CMAKE_OSX_ARCHITECTURES": "x86_64"
             }

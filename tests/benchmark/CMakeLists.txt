@@ -3,22 +3,8 @@
 #     /tests/benchmark Directory Script
 #============================================
 
-add_library(benchmark_external INTERFACE)
+# Use benchmark_external target from
+# `cmake/utility/root_setup.cmake`
 
-target_include_directories(
-    benchmark_external
-
-    INTERFACE
-    "${benchmark_SOURCE_DIR}/include"
-)
-
-target_link_libraries(
-    benchmark_external
-
-    INTERFACE
-    benchmark
-    benchmark_main
-)
-
-# Benchmarking Sources
+# Benchmarking sources
 # TODO: Add benchmarking source dirs...

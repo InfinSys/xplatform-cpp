@@ -1,0 +1,43 @@
+
+#
+# https://help.github.com/articles/dealing-with-line-endings/
+#
+
+# Normalize all text files
+* text=auto
+
+# Unix scripts
+*.sh            text eol=lf
+*.bash          text eol=lf
+
+# Windows scripts
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+
+# C/C++
+*.c             text eol=lf
+*.cc            text eol=lf
+*.cpp           text eol=lf
+*.cxx           text eol=lf
+*.h             text eol=lf
+*.hh            text eol=lf
+*.hpp           text eol=lf
+*.hxx           text eol=lf
+*.ipp           text eol=lf
+*.tpp           text eol=lf
+*.inl           text eol=lf
+
+# CMake
+*.cmake         text eol=lf
+CMakeLists.txt  text eol=lf
+
+# Binary files
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.pdf           binary
+*.zip           binary
+*.7z            binary
+

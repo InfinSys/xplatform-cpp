@@ -22,3 +22,7 @@ ghidra/*
 # Ignore all draw.io metadata files
 docs/prj/*.bkp
 docs/prj/*.dtmp
+
+# Ignore generated sources
+lib/include/src_metadata/info.h
+lib/include/src_metadata/version.h

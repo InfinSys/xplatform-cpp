@@ -3,6 +3,6 @@
 #     /lib Directory Script
 #================================
 
-# Library sources
-add_subdirectory(xptemp_metadata)
+# Project library sources
+add_subdirectory(src/demolib)
 # TODO: Add other project library source directories...

@@ -64,8 +64,8 @@ clean_gensrc() {
         "./docs/Doxyfile"
         "./docs/prj/inaug.md"
         "./docs/ref/index.html"
-        "./lib/xptemp_metadata/info.h"
-        "./lib/xptemp_metadata/version.h"
+        "./lib/src_metadata/info.h"
+        "./lib/src_metadata/version.h"
     )
     
     # Loop through and delete files
