@@ -65,7 +65,7 @@ set(${PRJ_PREFIX}_CMAKE_MODULES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 # Include native install directory variables
 include(GNUInstallDirs)
 
-# Include compiler configuration script
+# Include compiler configuration module
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/compiler/config_dispatch.cmake)
 # Include project dependency module
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/project/dependencies.cmake)
