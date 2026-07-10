@@ -17,5 +17,12 @@ int main(const int argc, const char* argv[]) {
 
 void printProjectInfo() noexcept
 {
-    std::cout << "Ready." << std::endl;
+    std::cout << "\n[ " << ${PRJ_PREFIX}_FULL_NAME << " Developer Executable ]"
+        << "\nCopyright (C) " << ${PRJ_PREFIX}_PUBLISHER << '\n'
+        << "\nSoftware type: " << ${PRJ_PREFIX}_SOFTWARE_TYPE
+        << "\nInterface: " << ${PRJ_PREFIX}_INTERFACE_TYPE
+        << "\nLicense: " << ${PRJ_PREFIX}_LICENSE_TYPE
+        << "\nUUID: " << ${PRJ_PREFIX}_UUID << '\n'
+        << "\nMain binary: '" << ${PRJ_PREFIX}_MAIN_BINARY << '\''
+        << std::endl;
 }
