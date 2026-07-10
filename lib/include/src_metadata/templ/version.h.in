@@ -1,14 +1,18 @@
 
 /*!
-* @file version.h
-*
-* @brief
-* Software version header.
-*
-* @details
-* Version information for @RESOLVED_SFTW_NAME@.
-*/
-
+ * @file version.h
+ *
+ * @note
+ * This is a generated header. Direct modifications to this
+ * file will be overriden. To make changes to this header,
+ * modify `lib/include/src_metadata/templ/version.h.in`.
+ *
+ * @brief
+ * Software version header.
+ *
+ * @details
+ * Version information for @RESOLVED_SFTW_NAME@.
+ */
 
 #ifndef @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_VERSION_H_
 #define @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_VERSION_H_

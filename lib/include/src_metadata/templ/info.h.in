@@ -2,13 +2,17 @@
 /*!
  * @file info.h
  *
+ * @note
+ * This is a generated header. Direct modifications to this
+ * file will be overriden. To make changes to this header,
+ * modify `lib/include/src_metadata/templ/info.h.in`.
+ *
  * @brief
  * Software identification header.
  *
  * @details
  * Metadata for @RESOLVED_SFTW_NAME@.
  */
-
 
 #ifndef @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_IDENTITY_H_
 #define @RESOLVED_SFTW_META_PREFIX@_SOFTWARE_IDENTITY_H_
