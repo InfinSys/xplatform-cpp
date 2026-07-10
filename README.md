@@ -32,14 +32,22 @@ This is not an HTML document, obviously.
     - Showcase project directory (structure)
     - Discuss top-level project directories (convention)
     - Discuss CMake build architecture (structure)
+
+
+# The root CMakeLists.txt script is the gateway to understanding the structure of this
+# templates build system. You should walk the logic of the build scripts at least once
+# to get a good idea of how it works, you will likely find that it is not too difficult.
+
+# The scripts and modules are very deliberate in their modular approach.
 -->
 
 <div> <!--| Project Structure Overview |-->
     <h2>Project Structure</h2>
     <p>
         This template makes an emphasis on organization because that typically leads to an increase
-        in maintainability. It is fairly easy to understand this project template and its inner
-        workings after understanding its structure in general.
+        in maintainability. The project directory is organized into purpose-driven top-level
+        directories that each have a clear defined role. It is fairly easy to understand this
+        project template and its inner workings after understanding its structure in general.
     </p>
 </div></br>
 
